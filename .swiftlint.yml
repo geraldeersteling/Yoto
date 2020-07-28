@@ -1,0 +1,15 @@
+disabled_rules: # rule identifiers to exclude from running
+  - switch_case_alignment
+  - identifier_name # This one should actually be enabled, but this is a bug
+
+opt_in_rules:
+  - empty_count
+
+custom_rules:
+  comma_space_rule:
+    regex: ",[ ]{2,}"
+    message: "Expected only one space after ',"
+
+excluded:
+  - Pods # Exclude the pods from the linter; dun care bout the Cocoapods
+  - Rocklist/Common/VIPER # The VIPER support files don't need to be linted

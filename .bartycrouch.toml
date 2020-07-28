@@ -1,0 +1,27 @@
+[update]
+tasks = ["interfaces", "transform", "normalize"]
+
+[update.interfaces]
+paths = ["Yoto/Sources"]
+defaultToBase = false
+ignoreEmptyStrings = false
+unstripped = false
+
+[update.transform]
+codePaths = ["Yoto/Sources"]
+localizablePaths = ["."]
+transformer = "swiftgenStructured"
+supportedLanguageEnumPath = "Yoto/Supporting Files/"
+typeName = "BartyCrouch"
+translateMethodName = "translate"
+
+[update.normalize]
+paths = ["Yoto/Sources", "Yoto/Resources"]
+sourceLocale = "en"
+harmonizeWithSource = true
+sortByKeys = true
+
+[lint]
+paths = ["."]
+duplicateKeys = true
+emptyValues = true

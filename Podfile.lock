@@ -1,0 +1,62 @@
+PODS:
+  - Nimble (8.1.1)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
+  - Quick (3.0.0)
+  - Reveal-SDK (26)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxNimble (4.7.1):
+    - RxNimble/RxBlocking (= 4.7.1)
+  - RxNimble/Core (4.7.1):
+    - Nimble (~> 8.0)
+    - RxSwift (~> 5.0)
+  - RxNimble/RxBlocking (4.7.1):
+    - RxBlocking
+    - RxNimble/Core
+  - RxSwift (5.1.1)
+  - SwiftGen (6.1.0)
+
+DEPENDENCIES:
+  - Nimble
+  - OHHTTPStubs/Swift
+  - Quick
+  - Reveal-SDK
+  - RxNimble
+  - SwiftGen
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - OHHTTPStubs
+    - Quick
+    - Reveal-SDK
+    - RxBlocking
+    - RxNimble
+    - RxSwift
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  Reveal-SDK: 5f94f14aff3d5f2a49f246edcd266fa4472679e9
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxNimble: dca9840cfa96ce73847813432ddc6e84e1fcdd61
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+
+PODFILE CHECKSUM: aa65235a435713203199b407436f450e01fda8e7
+
+COCOAPODS: 1.8.4
