@@ -5,6 +5,7 @@
 //  Created by Gerald Eersteling on 13/07/2020.
 //  Copyright (c) 2020 Rockstars. All rights reserved.
 
+import Cuckoo
 import Nimble
 import Quick
 import XCTest
@@ -23,13 +24,9 @@ class SearchGamePresenterTests: QuickSpec {
 
     // MARK: Test doubles
 
-    class SearchGameDisplayLogicSpy: SearchGameDisplayLogic {
-        var displaySearchForGameResultsCalled = false
-        var searchForGameModel: SearchGame.SearchForGame.ViewModel!
-
-        func displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel) {
-            displaySearchForGameResultsCalled = true
-            searchForGameModel = viewModel
+    func stubDisplayLogic(_ logic: MockSearchGameDisplayLogic) {
+        stub(logic) { mock in
+            when(mock).displaySearchForGameResults(viewModel: any()).thenDoNothing()
         }
     }
 
@@ -37,34 +34,44 @@ class SearchGamePresenterTests: QuickSpec {
 
     override func spec() {
         describe("The presenter") {
+            let logic = MockSearchGameDisplayLogic()
+
             beforeEach {
+                self.stubDisplayLogic(logic)
                 self.setupSearchGamePresenter()
+                self.sut.viewController = logic
+            }
+
+            afterEach {
+                reset(logic)
             }
 
             context("when asked to present the search results") {
-                var spy: SearchGameDisplayLogicSpy!
+                var results = [SearchGame.SearchForGame.ViewModel.DisplayedGame]()
                 var response: SearchGame.SearchForGame.Response!
 
                 // Given
                 beforeEach {
-                    spy = SearchGameDisplayLogicSpy()
-                    self.sut.viewController = spy
+                    stub(logic) { mock in
+                        when(mock)
+                            .displaySearchForGameResults(viewModel: any())
+                            .then { results = $0.results }
+                    }
                     response = SearchGame.SearchForGame.Response(results: GameSeeds.seeds)
                     self.sut.presentSearchForGameResults(response: response)
                 }
 
                 // Then
                 it("should format the results properly") {
-                    expect { spy.searchForGameModel.results.isEmpty }
+                    expect { results.isEmpty }
                         .to(beFalse())
-                    expect { spy.searchForGameModel.results.first!.name }
-                        .to(contain(GameSeeds.seed.name))
+                    expect { results.first!.name }
+                        .to(contain(GameSeeds.firstSeed.name))
                 }
 
                 // Then
                 it("should ask to display the search results") {
-                    expect { spy.displaySearchForGameResultsCalled }
-                        .to(beTrue())
+                    verify(logic).displaySearchForGameResults(viewModel: any())
                 }
             }
         }

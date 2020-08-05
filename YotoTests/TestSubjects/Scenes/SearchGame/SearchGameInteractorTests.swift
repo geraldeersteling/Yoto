@@ -5,6 +5,7 @@
 //  Created by Gerald Eersteling on 13/07/2020.
 //  Copyright (c) 2020 Rockstars. All rights reserved.
 
+import Cuckoo
 import Nimble
 import Quick
 import XCTest
@@ -23,20 +24,17 @@ class SearchGameInteractorTests: QuickSpec {
 
     // MARK: Test doubles
 
-    class SearchGamePresentationLogicSpy: SearchGamePresentationLogic {
-        var presentSearchForGameResultsCalled = false
-
-        func presentSearchForGameResults(response: SearchGame.SearchForGame.Response) {
-            presentSearchForGameResultsCalled = true
+    func stubRepository(_ repo: MockGamesRepository) {
+        stub(repo) { mock in
+            when(mock)
+                .searchGames(any(), completion: any())
+                .then { $1(GameSeeds.seeds) }
         }
     }
 
-    class SearchGameWorkerSpy: SearchGameWorker {
-        var searchGameCalled = false
-
-        override func searchGame(_ query: String, completion: ([Game]) -> Void) {
-            searchGameCalled = true
-            completion(GameSeeds.seeds)
+    func stubPresentationLogic(_ logic: MockSearchGamePresentationLogic) {
+        stub(logic) { mock in
+            when(mock).presentSearchForGameResults(response: any()).thenDoNothing()
         }
     }
 
@@ -44,35 +42,37 @@ class SearchGameInteractorTests: QuickSpec {
 
     override func spec() {
         describe("The interactor") {
+            let repo = MockGamesRepository()
+            let logic = MockSearchGamePresentationLogic()
+
             beforeEach {
+                self.stubRepository(repo)
+                self.stubPresentationLogic(logic)
                 self.setupSearchGameInteractor()
+                self.sut.presenter = logic
+                self.sut.repository = repo
+            }
+            afterEach {
+                reset(repo, logic)
             }
 
             context("when asked to search for a game") {
-                var spy: SearchGamePresentationLogicSpy!
-                var workerSpy: SearchGameWorkerSpy!
                 var request: SearchGame.SearchForGame.Request!
 
                 // Given
                 beforeEach {
-                    spy = SearchGamePresentationLogicSpy()
-                    workerSpy = SearchGameWorkerSpy(SearchGameMemRepository())
                     request = SearchGame.SearchForGame.Request(query: "")
-                    self.sut.presenter = spy
-                    self.sut.worker = workerSpy
                     self.sut.searchForGame(request: request)
                 }
 
                 // Then
-                it("should ask its worker to search for the game") {
-                    expect { workerSpy.searchGameCalled }
-                        .to(beTrue())
+                it("should ask the repo to search for the game") {
+                    verify(repo).searchGames(any(), completion: any())
                 }
 
                 // Then
                 it("should ask to present the search results") {
-                    expect { spy.presentSearchForGameResultsCalled }
-                        .to(beTrue())
+                    verify(logic).presentSearchForGameResults(response: any())
                 }
             }
         }

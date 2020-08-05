@@ -11,11 +11,7 @@ import Foundation
 class GameListMemRepository: GameListRepository {
     // MARK: - Stub data -
     let games = [
-        Game(name: "Game 1"),
-        Game(name: "Game 2"),
-        Game(name: "Game 3"),
-        Game(name: "Game 4"),
-        Game(name: "Game 5")
+        try! Game(JSON: ["id": 1, "name": "The Game"])
     ]
 
     func getGames(completion: ([Game]) -> Void) {

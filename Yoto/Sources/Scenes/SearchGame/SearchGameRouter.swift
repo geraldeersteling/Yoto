@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol SearchGameRoutingLogic {
-    func routeToGameDetails()
+    func routeToGameSearchDetails()
 }
 
 protocol SearchGameDataPassing {
@@ -22,8 +22,8 @@ class SearchGameRouter: NSObject, SearchGameRoutingLogic, SearchGameDataPassing 
 
     // MARK: Routing
 
-    func routeToGameDetails() {
-        let destinationVC = GameDetailsViewController(nibName: nil, bundle: nil)
+    func routeToGameSearchDetails() {
+        let destinationVC = SearchGameDetailsViewController(nibName: nil, bundle: nil)
         var destinationDS = destinationVC.router!.dataStore!
         passDataToSomewhere(source: dataStore!, destination: &destinationDS)
         navigateToGameDetails(source: viewController, destination: destinationVC)
@@ -31,13 +31,13 @@ class SearchGameRouter: NSObject, SearchGameRoutingLogic, SearchGameDataPassing 
 
     // MARK: Navigation
 
-    func navigateToGameDetails(source: SearchGameViewController?, destination: GameDetailsViewController) {
+    func navigateToGameDetails(source: SearchGameViewController?, destination: SearchGameDetailsViewController) {
         source?.show(destination, sender: nil)
     }
 
     // MARK: Passing data
 
-    func passDataToSomewhere(source: SearchGameDataStore, destination: inout GameDetailsDataStore) {
+    func passDataToSomewhere(source: SearchGameDataStore, destination: inout SearchGameDetailsDataStore) {
         guard let selectedRow = viewController?.tableView.indexPathForSelectedRow?.row
         else { return }
         destination.game = source.searchResults[selectedRow]

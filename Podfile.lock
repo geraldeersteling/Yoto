@@ -1,5 +1,24 @@
 PODS:
+  - Alamofire (5.2.1)
+  - Cuckoo (1.4.1):
+    - Cuckoo/Swift (= 1.4.1)
+  - Cuckoo/Swift (1.4.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya-ObjectMapper/Core (2.9):
+    - Moya (~> 14.0.0-beta.6)
+    - ObjectMapper
+  - Moya-ObjectMapper/RxSwift (2.9):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
   - Nimble (8.1.1)
+  - ObjectMapper (4.2.0)
   - OHHTTPStubs/Core (9.0.0)
   - OHHTTPStubs/Default (9.0.0):
     - OHHTTPStubs/Core
@@ -27,18 +46,28 @@ PODS:
     - RxNimble/Core
   - RxSwift (5.1.1)
   - SwiftGen (6.1.0)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - Cuckoo
+  - Moya-ObjectMapper/RxSwift
+  - Moya/RxSwift
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
   - Reveal-SDK
   - RxNimble
   - SwiftGen
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Cuckoo
+    - Moya
+    - Moya-ObjectMapper
     - Nimble
+    - ObjectMapper
     - OHHTTPStubs
     - Quick
     - Reveal-SDK
@@ -46,9 +75,15 @@ SPEC REPOS:
     - RxNimble
     - RxSwift
     - SwiftGen
+    - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Cuckoo: 4625f7f54d9bb880123270e8969898d6c1d036b5
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Reveal-SDK: 5f94f14aff3d5f2a49f246edcd266fa4472679e9
@@ -56,7 +91,8 @@ SPEC CHECKSUMS:
   RxNimble: dca9840cfa96ce73847813432ddc6e84e1fcdd61
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: aa65235a435713203199b407436f450e01fda8e7
+PODFILE CHECKSUM: f1a7b2c7bce7157b7baf47c1b17d808b13643895
 
 COCOAPODS: 1.8.4

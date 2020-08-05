@@ -1,12 +1,16 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.0'
 
+# Don't show pod warnings
+inhibit_all_warnings!
+
 # All pods used in testing or generating screenshots
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
   pod 'RxNimble'
   pod 'OHHTTPStubs/Swift'
+  pod "Cuckoo"
 end
 
 target 'Yoto' do
@@ -23,6 +27,8 @@ target 'Yoto' do
   pod 'SwiftGen'
 
   ## Others
+  pod 'Moya/RxSwift'
+  pod 'Moya-ObjectMapper/RxSwift'
 
   target 'YotoTests' do
     inherit! :search_paths

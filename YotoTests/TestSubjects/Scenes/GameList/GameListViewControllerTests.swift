@@ -5,6 +5,7 @@
 //  Created by Gerald Eersteling on 15/07/2020.
 //  Copyright (c) 2020 Rockstars. All rights reserved.
 
+import Cuckoo
 import Nimble
 import Quick
 import XCTest
@@ -42,21 +43,16 @@ class GameListViewControllerTests: QuickSpec {
 
     // MARK: Test doubles
 
-    class GameListBusinessLogicSpy: GameListBusinessLogic {
-        var getListCalled = false
-
-        func getList(request: GameList.GetList.Request) {
-            getListCalled = true
+    func stubBusinessLogic(_ logic: MockGameListBusinessLogic) {
+        stub(logic) { mock in
+            when(logic).getStubbingProxy().getList(request: any()).thenDoNothing()
         }
     }
 
-    class GameListRouterSpy: GameListRouter {
-        var routeToGameDetailsCalled = false
-
-        override func routeToGameDetails() {
-            routeToGameDetailsCalled = true
+    func stubRouter(_ router: MockGameListRouter) {
+        stub(router) { mock in
+            when(mock).routeToGameDetails().thenDoNothing()
         }
-
     }
 
     class TableViewSpy: UITableView {
@@ -71,27 +67,32 @@ class GameListViewControllerTests: QuickSpec {
 
     override func spec() {
         describe("The viewcontroller") {
+            let logic = MockGameListBusinessLogic()
+            let router = MockGameListRouter()
+
             beforeEach {
                 self.window = UIWindow()
+                self.stubBusinessLogic(logic)
+                self.stubRouter(router)
                 self.setupGameListViewController()
+                self.sut.interactor = logic
+                self.sut.router = router
             }
             afterEach {
                 self.window = nil
+                reset(logic, router)
             }
 
             context("when the view is loaded") {
-                var spy: GameListBusinessLogicSpy!
 
                 // Given
                 beforeEach {
-                    spy = GameListBusinessLogicSpy()
-                    self.sut.interactor = spy
                     self.loadView()
                 }
 
                 // Then
                 it("should ask for the list of games") {
-                    expect { spy.getListCalled }.to(beTrue())
+                    verify(logic).getList(request: any())
                 }
             }
 
@@ -101,9 +102,10 @@ class GameListViewControllerTests: QuickSpec {
 
                 // Given
                 beforeEach {
-                    viewModel = GameList.GetList.ViewModel(displayedGames: [
-                        GameList.GetList.ViewModel.DisplayedGame(name: "Game 1")
-                    ])
+//                    viewModel = GameList.GetList.ViewModel(displayedGames: [
+//                        GameList.GetList.ViewModel.DisplayedGame(name: "Game 1")
+//                    ])
+                    viewModel = GameSeeds.ViewModels.gameListGetList
                     self.loadView()
                 }
 
@@ -136,23 +138,19 @@ class GameListViewControllerTests: QuickSpec {
             }
 
             context("when a game is selected in the list") {
-                var spy:GameListRouterSpy!
                 var viewModel: GameList.GetList.ViewModel!
 
                 // Given
                 beforeEach {
-                    spy = GameListRouterSpy()
                     viewModel = GameSeeds.ViewModels.gameListGetList
                     self.loadView()
                 }
 
                 it("should navigate to the game details") {
-                    self.sut.router = spy
                     self.sut.displayGameList(viewModel: viewModel)
                     let tableView = self.sut.tableView
                     tableView?.delegate?.tableView?(tableView!, didSelectRowAt: IndexPath(row: 0, section: 0))
-                    expect { spy.routeToGameDetailsCalled }
-                        .to(beTrue())
+                    verify(router).routeToGameDetails()
                 }
             }
         }

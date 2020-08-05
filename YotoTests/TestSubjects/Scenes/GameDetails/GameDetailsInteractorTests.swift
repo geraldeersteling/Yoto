@@ -30,7 +30,7 @@ class GameDetailsInteractorTests: QuickSpec {
 
     func setupGameDetailsInteractor() {
         sut = GameDetailsInteractor()
-        sut.game = GameSeeds.seed
+        sut.game = GameSeeds.firstSeed
     }
 
     // MARK: Test doubles

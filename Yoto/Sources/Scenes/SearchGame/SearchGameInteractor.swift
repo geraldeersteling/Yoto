@@ -18,17 +18,16 @@ protocol SearchGameDataStore {
 
 class SearchGameInteractor: SearchGameBusinessLogic, SearchGameDataStore {
     var presenter: SearchGamePresentationLogic?
-    var worker = SearchGameWorker(SearchGameMemRepository())
+    var repository: GamesRepository = GamesRemoteRepository()
     var searchResults = [Game]()
 
     // MARK: Searching
 
     func searchForGame(request: SearchGame.SearchForGame.Request) {
-        worker.searchGame(request.query) {
-            searchResults = $0
-            let response = SearchGame.SearchForGame.Response(results: searchResults)
-            presenter?.presentSearchForGameResults(response: response)
+        repository.searchGames(request.query) {
+            self.searchResults = $0
+            let response = SearchGame.SearchForGame.Response(results: self.searchResults)
+            self.presenter?.presentSearchForGameResults(response: response)
         }
-
     }
 }

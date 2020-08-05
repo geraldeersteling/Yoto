@@ -17,10 +17,15 @@ class GameListWorkerTests: QuickSpec {
     // MARK: Test setup
 
     func setupGameListWorker() {
-        sut = GameListWorker(withRepository: GameListMemRepository())
+        sut = GameListWorker(withRepository: GameListRepositoryMock())
     }
 
     // MARK: Test doubles
+    class GameListRepositoryMock: GameListRepository {
+        func getGames(completion: ([Game]) -> Void) {
+            completion(GameSeeds.seeds)
+        }
+    }
 
     // MARK: Tests
 
@@ -32,11 +37,12 @@ class GameListWorkerTests: QuickSpec {
             
             context("when asked for a list of games") {
 
-                // Given
-
                 // Then
-                it("should do something") {
-
+                it("should return a list of games") {
+                    self.sut.getGames { games in
+                        expect { games }
+                            .to(contain(GameSeeds.seeds))
+                    }
                 }
             }
         }

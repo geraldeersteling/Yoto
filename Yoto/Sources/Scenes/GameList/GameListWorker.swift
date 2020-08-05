@@ -12,7 +12,7 @@ protocol GameListRepository {
 }
 
 class GameListWorker {
-    var repository: GameListRepository
+    private var repository: GameListRepository
 
     init(withRepository repo: GameListRepository) {
         repository = repo

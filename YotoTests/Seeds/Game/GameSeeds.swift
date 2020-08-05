@@ -11,19 +11,18 @@ import Foundation
 
 struct GameSeeds {
     static let seeds = [
-        Game(name: "Mocked game 1"),
-        Game(name: "Mocked game 2"),
-        Game(name: "Mocked game 3"),
-        Game(name: "Mocked game 4"),
-        Game(name: "Mocked game 5")
+        try! Game(JSON: ["id": 1, "name": "The Game"]),
+        try! Game(JSON: ["id": 2, "name": "The Real Game"]),
+        try! Game(JSON: ["id": 3, "name": "The Fake Game"])
     ]
 
-    static var seed: Game {
+    static var firstSeed: Game {
         return seeds[0]
     }
 
     struct ViewModels {
         // MARK: - GameList -
+
         static var gameListGetList: GameList.GetList.ViewModel {
             let displayedGame = GameList.GetList.ViewModel.DisplayedGame(name: seeds.randomElement()!.name)
             return GameList.GetList.ViewModel(displayedGames: [displayedGame])

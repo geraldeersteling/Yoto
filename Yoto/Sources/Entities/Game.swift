@@ -7,7 +7,25 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct Game {
-    let name: String
+class Game: ImmutableMappable {
+    var id: Int
+    var name: String
+
+    required init(map: Map) throws {
+        id = try map.value("id")
+        name = try map.value("name")
+    }
+
+    func mapping(map: Map) {
+        id <- map["id"]
+        name <- map["name"]
+    }
+}
+
+extension Game: Equatable {
+    static func == (lhs: Game, rhs: Game) -> Bool {
+        lhs.id == rhs.id
+    }
 }

@@ -15,25 +15,17 @@ enum SearchGame {
         struct Request {
             var query: String
         }
+
         struct Response {
             var results: [Game]
         }
+
         struct ViewModel {
             struct DisplayedGame {
                 let name: String
             }
+
             var results: [DisplayedGame]
         }
-    }
-
-    enum Something {
-        struct Request
-        {}
-
-        struct Response
-        {}
-
-        struct ViewModel
-        {}
     }
 }

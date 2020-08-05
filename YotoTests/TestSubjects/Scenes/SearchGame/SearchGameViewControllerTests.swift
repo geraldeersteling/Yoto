@@ -5,6 +5,7 @@
 //  Created by Gerald Eersteling on 13/07/2020.
 //  Copyright (c) 2020 Rockstars. All rights reserved.
 
+import Cuckoo
 import Nimble
 import Quick
 import XCTest
@@ -42,11 +43,15 @@ class SearchGameViewControllerTests: QuickSpec {
 
     // MARK: Test doubles
 
-    class SearchGameBusinessLogicSpy: SearchGameBusinessLogic {
-        var searchForGameCalled = false
+    func stubBusinessLogic(_ logic: MockSearchGameBusinessLogic) {
+        stub(logic) { mock in
+            when(mock).searchForGame(request: any()).thenDoNothing()
+        }
+    }
 
-        func searchForGame(request: SearchGame.SearchForGame.Request) {
-            searchForGameCalled = true
+    func stubRouter(_ router: MockSearchGameRouter) {
+        stub(router) { mock in
+            when(mock).routeToGameSearchDetails().thenDoNothing()
         }
     }
 
@@ -58,34 +63,29 @@ class SearchGameViewControllerTests: QuickSpec {
         }
     }
 
-    class SearchGameRouterSpy: SearchGameRouter {
-        var routeToGameDetailsCalled = false
-
-        override func routeToGameDetails() {
-            routeToGameDetailsCalled = true
-        }
-
-    }
-
     // MARK: Tests
 
     override func spec() {
         describe("The viewcontroller") {
+            let logic = MockSearchGameBusinessLogic()
+            let router = MockSearchGameRouter()
+
             beforeEach {
                 self.window = UIWindow()
+                self.stubBusinessLogic(logic)
+                self.stubRouter(router)
                 self.setupSearchGameViewController()
+                self.sut.interactor = logic
+                self.sut.router = router
             }
             afterEach {
                 self.window = nil
+                reset(logic, router)
             }
 
             context("when a search query is entered") {
-                var spy: SearchGameBusinessLogicSpy!
-
                 // Given
                 beforeEach {
-                    spy = SearchGameBusinessLogicSpy()
-                    self.sut.interactor = spy
                     self.loadView()
                     let controller = self.sut.navigationItem.searchController
                     controller?.searchBar.text = "Some game"
@@ -94,8 +94,7 @@ class SearchGameViewControllerTests: QuickSpec {
 
                 // Then
                 it("should ask the interactor to search for a game") {
-                    expect { spy.searchForGameCalled }
-                        .to(beTrue())
+                    verify(logic, atLeastOnce()).searchForGame(request: any())
                 }
             }
 
@@ -117,19 +116,14 @@ class SearchGameViewControllerTests: QuickSpec {
                 it("should refresh the list with the results") {
                     expect { spy.reloadDataCalled }
                         .to(beTrue())
-
                 }
             }
 
             context("when selecting a game from the list") {
-                var spy: SearchGameRouterSpy!
                 var viewModel: SearchGame.SearchForGame.ViewModel!
 
                 beforeEach {
-                    spy = SearchGameRouterSpy()
                     viewModel = GameSeeds.ViewModels.searchGameSearchForGame
-
-                    self.sut.router = spy
                     self.loadView()
                     self.sut.displaySearchForGameResults(viewModel: viewModel)
                 }
@@ -137,8 +131,7 @@ class SearchGameViewControllerTests: QuickSpec {
                 it("should navigate to the game's details") {
                     let tableView = self.sut.tableView!
                     tableView.delegate?.tableView?(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-                    expect { spy.routeToGameDetailsCalled }
-                        .to(beTrue())
+                    verify(router).routeToGameSearchDetails()
                 }
             }
         }

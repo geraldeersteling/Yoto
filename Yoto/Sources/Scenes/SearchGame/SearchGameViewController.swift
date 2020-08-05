@@ -114,7 +114,7 @@ extension SearchGameViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router?.routeToGameDetails()
+        router?.routeToGameSearchDetails()
     }
 }
 

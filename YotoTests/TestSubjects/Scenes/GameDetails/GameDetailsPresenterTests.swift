@@ -48,7 +48,7 @@ class GameDetailsPresenterTests: QuickSpec {
                 // Given
                 beforeEach {
                     spy = GameDetailsDisplayLogicSpy()
-                    response = GameDetails.GetGame.Response(game: GameSeeds.seed)
+                    response = GameDetails.GetGame.Response(game: GameSeeds.firstSeed)
                     self.sut.viewController = spy
                 }
 
