@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameInteractor.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameInteractor.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  SearchGameInteractor.swift
@@ -11,6 +11,7 @@
 import Cuckoo
 @testable import Yoto
 
+import Cleanse
 import UIKit
 
 
@@ -32,6 +33,30 @@ import UIKit
     }
     
 
+    
+    
+    
+     var presenter: SearchGamePresentationLogic {
+        get {
+            return cuckoo_manager.getter("presenter",
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.presenter)
+        }
+        
+        set {
+            cuckoo_manager.setter("presenter",
+                value: newValue,
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.presenter = newValue)
+        }
+        
+    }
     
 
     
@@ -61,6 +86,11 @@ import UIKit
 	    }
 	    
 	    
+	    var presenter: Cuckoo.ProtocolToBeStubbedProperty<MockSearchGameBusinessLogic, SearchGamePresentationLogic> {
+	        return .init(manager: cuckoo_manager, name: "presenter")
+	    }
+	    
+	    
 	    func searchForGame<M1: Cuckoo.Matchable>(request: M1) -> Cuckoo.ProtocolStubNoReturnFunction<(SearchGame.SearchForGame.Request)> where M1.MatchedType == SearchGame.SearchForGame.Request {
 	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.Request)>] = [wrap(matchable: request) { $0 }]
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameBusinessLogic.self, method: "searchForGame(request: SearchGame.SearchForGame.Request)", parameterMatchers: matchers))
@@ -80,6 +110,11 @@ import UIKit
 	    }
 	
 	    
+	    
+	    var presenter: Cuckoo.VerifyProperty<SearchGamePresentationLogic> {
+	        return .init(manager: cuckoo_manager, name: "presenter", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
 	
 	    
 	    @discardableResult
@@ -92,6 +127,16 @@ import UIKit
 }
 
  class SearchGameBusinessLogicStub: SearchGameBusinessLogic {
+    
+    
+     var presenter: SearchGamePresentationLogic {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (SearchGamePresentationLogic).self)
+        }
+        
+        set { }
+        
+    }
     
 
     
@@ -219,7 +264,7 @@ import UIKit
     
     
     
-     override var presenter: SearchGamePresentationLogic? {
+     override var presenter: SearchGamePresentationLogic {
         get {
             return cuckoo_manager.getter("presenter",
                 superclassCall:
@@ -237,30 +282,6 @@ import UIKit
                     super.presenter = newValue
                     ,
                 defaultCall: __defaultImplStub!.presenter = newValue)
-        }
-        
-    }
-    
-    
-    
-     override var repository: GamesRepository {
-        get {
-            return cuckoo_manager.getter("repository",
-                superclassCall:
-                    
-                    super.repository
-                    ,
-                defaultCall: __defaultImplStub!.repository)
-        }
-        
-        set {
-            cuckoo_manager.setter("repository",
-                value: newValue,
-                superclassCall:
-                    
-                    super.repository = newValue
-                    ,
-                defaultCall: __defaultImplStub!.repository = newValue)
         }
         
     }
@@ -317,13 +338,8 @@ import UIKit
 	    }
 	    
 	    
-	    var presenter: Cuckoo.ClassToBeStubbedOptionalProperty<MockSearchGameInteractor, SearchGamePresentationLogic> {
+	    var presenter: Cuckoo.ClassToBeStubbedProperty<MockSearchGameInteractor, SearchGamePresentationLogic> {
 	        return .init(manager: cuckoo_manager, name: "presenter")
-	    }
-	    
-	    
-	    var repository: Cuckoo.ClassToBeStubbedProperty<MockSearchGameInteractor, GamesRepository> {
-	        return .init(manager: cuckoo_manager, name: "repository")
 	    }
 	    
 	    
@@ -352,13 +368,8 @@ import UIKit
 	
 	    
 	    
-	    var presenter: Cuckoo.VerifyOptionalProperty<SearchGamePresentationLogic> {
+	    var presenter: Cuckoo.VerifyProperty<SearchGamePresentationLogic> {
 	        return .init(manager: cuckoo_manager, name: "presenter", callMatcher: callMatcher, sourceLocation: sourceLocation)
-	    }
-	    
-	    
-	    var repository: Cuckoo.VerifyProperty<GamesRepository> {
-	        return .init(manager: cuckoo_manager, name: "repository", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
 	    
@@ -380,19 +391,9 @@ import UIKit
  class SearchGameInteractorStub: SearchGameInteractor {
     
     
-     override var presenter: SearchGamePresentationLogic? {
+     override var presenter: SearchGamePresentationLogic {
         get {
-            return DefaultValueRegistry.defaultValue(for: (SearchGamePresentationLogic?).self)
-        }
-        
-        set { }
-        
-    }
-    
-    
-     override var repository: GamesRepository {
-        get {
-            return DefaultValueRegistry.defaultValue(for: (GamesRepository).self)
+            return DefaultValueRegistry.defaultValue(for: (SearchGamePresentationLogic).self)
         }
         
         set { }

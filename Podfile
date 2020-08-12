@@ -26,9 +26,16 @@ target 'Yoto' do
   ## Resource generation
   pod 'SwiftGen'
 
-  ## Others
+  ## Essentials
+  pod 'Cleanse'
+  pod 'Resolver'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'Moya/RxSwift'
   pod 'Moya-ObjectMapper/RxSwift'
+
+  ## Others
+  pod 'IQKeyboardManagerSwift'
 
   target 'YotoTests' do
     inherit! :search_paths

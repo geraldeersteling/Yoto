@@ -10,6 +10,7 @@ import Foundation
 import Nimble
 import OHHTTPStubs
 import Quick
+import RxSwift
 @testable import Yoto
 
 class GameRemoteRepositoryTests: QuickSpec {

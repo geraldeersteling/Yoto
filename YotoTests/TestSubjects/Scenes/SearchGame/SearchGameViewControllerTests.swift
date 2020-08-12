@@ -8,6 +8,7 @@
 import Cuckoo
 import Nimble
 import Quick
+import Resolver
 import XCTest
 @testable import Yoto
 
@@ -33,7 +34,15 @@ class SearchGameViewControllerTests: QuickSpec {
     // MARK: Test setup
 
     func setupSearchGameViewController() {
-        sut = SearchGameViewController(nibName: nil, bundle: Bundle.main)
+        Resolver.register { MockSearchGameBusinessLogic() as MockSearchGameBusinessLogic }
+        Resolver.register { MockSearchGamePresentationLogic() as MockSearchGamePresentationLogic }
+        Resolver.register { MockGamesRemoteRepository() as GamesRemoteRepository }
+        Resolver.register { MockSearchGameDetailsViewController() as SearchGameDetailsViewController }
+//        let interactor = MockSearchGameInteractor(presenter: MockSearchGamePresenter(),
+//                                                  repository: MockGamesRemoteRepository())
+//        let router = MockSearchGameRouter(dataStore: Resolver.resolve(),
+//                                          searchGameDetails: Resolver.resolve())
+        sut = Resolver.resolve()
     }
 
     func loadView() {
@@ -68,15 +77,14 @@ class SearchGameViewControllerTests: QuickSpec {
     override func spec() {
         describe("The viewcontroller") {
             let logic = MockSearchGameBusinessLogic()
-            let router = MockSearchGameRouter()
+            let router = MockSearchGameRouter(dataStore: MockSearchGameDataStore(),
+                                              searchGameDetails: MockSearchGameDetailsViewController())
 
             beforeEach {
                 self.window = UIWindow()
                 self.stubBusinessLogic(logic)
                 self.stubRouter(router)
                 self.setupSearchGameViewController()
-                self.sut.interactor = logic
-                self.sut.router = router
             }
             afterEach {
                 self.window = nil

@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGamePresenter.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGamePresenter.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  SearchGamePresenter.swift
@@ -11,6 +11,7 @@
 import Cuckoo
 @testable import Yoto
 
+import Cleanse
 import UIKit
 
 
@@ -32,6 +33,30 @@ import UIKit
     }
     
 
+    
+    
+    
+     var viewController: SearchGameDisplayLogic? {
+        get {
+            return cuckoo_manager.getter("viewController",
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.viewController)
+        }
+        
+        set {
+            cuckoo_manager.setter("viewController",
+                value: newValue,
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.viewController = newValue)
+        }
+        
+    }
     
 
     
@@ -61,6 +86,11 @@ import UIKit
 	    }
 	    
 	    
+	    var viewController: Cuckoo.ProtocolToBeStubbedOptionalProperty<MockSearchGamePresentationLogic, SearchGameDisplayLogic> {
+	        return .init(manager: cuckoo_manager, name: "viewController")
+	    }
+	    
+	    
 	    func presentSearchForGameResults<M1: Cuckoo.Matchable>(response: M1) -> Cuckoo.ProtocolStubNoReturnFunction<(SearchGame.SearchForGame.Response)> where M1.MatchedType == SearchGame.SearchForGame.Response {
 	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.Response)>] = [wrap(matchable: response) { $0 }]
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGamePresentationLogic.self, method: "presentSearchForGameResults(response: SearchGame.SearchForGame.Response)", parameterMatchers: matchers))
@@ -80,6 +110,11 @@ import UIKit
 	    }
 	
 	    
+	    
+	    var viewController: Cuckoo.VerifyOptionalProperty<SearchGameDisplayLogic> {
+	        return .init(manager: cuckoo_manager, name: "viewController", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
 	
 	    
 	    @discardableResult
@@ -92,6 +127,16 @@ import UIKit
 }
 
  class SearchGamePresentationLogicStub: SearchGamePresentationLogic {
+    
+    
+     var viewController: SearchGameDisplayLogic? {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (SearchGameDisplayLogic?).self)
+        }
+        
+        set { }
+        
+    }
     
 
     

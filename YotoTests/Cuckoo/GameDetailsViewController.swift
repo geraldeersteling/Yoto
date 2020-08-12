@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/GameDetails/GameDetailsViewController.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/GameDetails/GameDetailsViewController.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  GameDetailsViewController.swift

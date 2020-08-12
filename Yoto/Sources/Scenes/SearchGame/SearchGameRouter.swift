@@ -7,25 +7,36 @@
 //
 
 import UIKit
+import Resolver
 
 @objc protocol SearchGameRoutingLogic {
+    weak var viewController: SearchGameViewController? { get set }
     func routeToGameSearchDetails()
 }
 
 protocol SearchGameDataPassing {
-    var dataStore: SearchGameDataStore? { get }
+    var dataStore: SearchGameDataStore { get }
 }
 
-class SearchGameRouter: NSObject, SearchGameRoutingLogic, SearchGameDataPassing {
+typealias SearchGameRouterable = (NSObject & SearchGameRoutingLogic & SearchGameDataPassing)
+
+class SearchGameRouter: SearchGameRouterable {
     weak var viewController: SearchGameViewController?
-    var dataStore: SearchGameDataStore?
+    let dataStore: SearchGameDataStore
+    let searchGameDetails: SearchGameDetailsViewController
+
+    init(dataStore: SearchGameDataStore, searchGameDetails: SearchGameDetailsViewController) {
+        self.dataStore = dataStore
+        self.searchGameDetails = searchGameDetails
+        super.init()
+    }
 
     // MARK: Routing
 
     func routeToGameSearchDetails() {
-        let destinationVC = SearchGameDetailsViewController(nibName: nil, bundle: nil)
+        let destinationVC = searchGameDetails
         var destinationDS = destinationVC.router!.dataStore!
-        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+        passDataToSomewhere(source: dataStore, destination: &destinationDS)
         navigateToGameDetails(source: viewController, destination: destinationVC)
     }
 

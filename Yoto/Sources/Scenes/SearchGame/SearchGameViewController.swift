@@ -13,8 +13,8 @@ protocol SearchGameDisplayLogic: AnyObject {
 }
 
 class SearchGameViewController: UITableViewController, SearchGameDisplayLogic {
-    var interactor: SearchGameBusinessLogic?
-    var router: (NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)?
+    var interactor: SearchGameBusinessLogic
+    let router: SearchGameRouterable
     var searchResults = [SearchGame.SearchForGame.ViewModel.DisplayedGame]()
 
     override var title: String? {
@@ -24,29 +24,14 @@ class SearchGameViewController: UITableViewController, SearchGameDisplayLogic {
 
     // MARK: Object lifecycle
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+    init(interactor: SearchGameBusinessLogic, router: SearchGameRouterable) {
+        self.interactor = interactor
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-    // MARK: Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = SearchGameInteractor()
-        let presenter = SearchGamePresenter()
-        let router = SearchGameRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
+        fatalError("Use the correct initializer for SearchGameViewController")
     }
 
     // MARK: View lifecycle
@@ -76,7 +61,7 @@ class SearchGameViewController: UITableViewController, SearchGameDisplayLogic {
 
     func searchForGame(_ name: String) {
         let request = SearchGame.SearchForGame.Request(query: name)
-        interactor?.searchForGame(request: request)
+        interactor.searchForGame(request: request)
     }
 
     // MARK: - Displaying results -
@@ -114,7 +99,7 @@ extension SearchGameViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router?.routeToGameSearchDetails()
+        router.routeToGameSearchDetails()
     }
 }
 

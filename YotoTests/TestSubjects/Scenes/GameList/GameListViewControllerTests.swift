@@ -102,9 +102,6 @@ class GameListViewControllerTests: QuickSpec {
 
                 // Given
                 beforeEach {
-//                    viewModel = GameList.GetList.ViewModel(displayedGames: [
-//                        GameList.GetList.ViewModel.DisplayedGame(name: "Game 1")
-//                    ])
                     viewModel = GameSeeds.ViewModels.gameListGetList
                     self.loadView()
                 }

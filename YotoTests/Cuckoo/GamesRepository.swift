@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Services/Games/GamesRepository.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Services/Games/GamesRepository.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  GamesRepository.swift
@@ -11,7 +11,9 @@
 import Cuckoo
 @testable import Yoto
 
+import Cleanse
 import Foundation
+import RxSwift
 
 
  class MockGamesRepository: GamesRepository, Cuckoo.ProtocolMock {

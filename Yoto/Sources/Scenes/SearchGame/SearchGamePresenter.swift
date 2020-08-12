@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Cleanse
 
 protocol SearchGamePresentationLogic {
+    var viewController: SearchGameDisplayLogic? { get set }
     func presentSearchForGameResults(response: SearchGame.SearchForGame.Response)
 }
 

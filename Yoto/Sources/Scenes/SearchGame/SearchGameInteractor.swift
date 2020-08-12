@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Cleanse
 
 protocol SearchGameBusinessLogic {
+    var presenter: SearchGamePresentationLogic { get set }
     func searchForGame(request: SearchGame.SearchForGame.Request)
 }
 
@@ -17,9 +19,14 @@ protocol SearchGameDataStore {
 }
 
 class SearchGameInteractor: SearchGameBusinessLogic, SearchGameDataStore {
-    var presenter: SearchGamePresentationLogic?
-    var repository: GamesRepository = GamesRemoteRepository()
+    var presenter: SearchGamePresentationLogic
+    let repository: GamesRepository
     var searchResults = [Game]()
+
+    init(presenter: SearchGamePresentationLogic, repository: GamesRepository) {
+        self.presenter = presenter
+        self.repository = repository
+    }
 
     // MARK: Searching
 
@@ -27,7 +34,9 @@ class SearchGameInteractor: SearchGameBusinessLogic, SearchGameDataStore {
         repository.searchGames(request.query) {
             self.searchResults = $0
             let response = SearchGame.SearchForGame.Response(results: self.searchResults)
-            self.presenter?.presentSearchForGameResults(response: response)
+            self.presenter.presentSearchForGameResults(response: response)
         }
     }
 }
+
+

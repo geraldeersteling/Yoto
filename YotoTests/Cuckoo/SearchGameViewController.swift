@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  SearchGameViewController.swift
@@ -126,7 +126,7 @@ import UIKit
     
     
     
-     override var interactor: SearchGameBusinessLogic? {
+     override var interactor: SearchGameBusinessLogic {
         get {
             return cuckoo_manager.getter("interactor",
                 superclassCall:
@@ -144,30 +144,6 @@ import UIKit
                     super.interactor = newValue
                     ,
                 defaultCall: __defaultImplStub!.interactor = newValue)
-        }
-        
-    }
-    
-    
-    
-     override var router: (NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)? {
-        get {
-            return cuckoo_manager.getter("router",
-                superclassCall:
-                    
-                    super.router
-                    ,
-                defaultCall: __defaultImplStub!.router)
-        }
-        
-        set {
-            cuckoo_manager.setter("router",
-                value: newValue,
-                superclassCall:
-                    
-                    super.router = newValue
-                    ,
-                defaultCall: __defaultImplStub!.router = newValue)
         }
         
     }
@@ -308,13 +284,8 @@ import UIKit
 	    }
 	    
 	    
-	    var interactor: Cuckoo.ClassToBeStubbedOptionalProperty<MockSearchGameViewController, SearchGameBusinessLogic> {
+	    var interactor: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewController, SearchGameBusinessLogic> {
 	        return .init(manager: cuckoo_manager, name: "interactor")
-	    }
-	    
-	    
-	    var router: Cuckoo.ClassToBeStubbedOptionalProperty<MockSearchGameViewController, (NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)> {
-	        return .init(manager: cuckoo_manager, name: "router")
 	    }
 	    
 	    
@@ -368,13 +339,8 @@ import UIKit
 	
 	    
 	    
-	    var interactor: Cuckoo.VerifyOptionalProperty<SearchGameBusinessLogic> {
+	    var interactor: Cuckoo.VerifyProperty<SearchGameBusinessLogic> {
 	        return .init(manager: cuckoo_manager, name: "interactor", callMatcher: callMatcher, sourceLocation: sourceLocation)
-	    }
-	    
-	    
-	    var router: Cuckoo.VerifyOptionalProperty<(NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)> {
-	        return .init(manager: cuckoo_manager, name: "router", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
 	    
@@ -425,19 +391,9 @@ import UIKit
  class SearchGameViewControllerStub: SearchGameViewController {
     
     
-     override var interactor: SearchGameBusinessLogic? {
+     override var interactor: SearchGameBusinessLogic {
         get {
-            return DefaultValueRegistry.defaultValue(for: (SearchGameBusinessLogic?).self)
-        }
-        
-        set { }
-        
-    }
-    
-    
-     override var router: (NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)? {
-        get {
-            return DefaultValueRegistry.defaultValue(for: ((NSObjectProtocol & SearchGameRoutingLogic & SearchGameDataPassing)?).self)
+            return DefaultValueRegistry.defaultValue(for: (SearchGameBusinessLogic).self)
         }
         
         set { }

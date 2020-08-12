@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Resolver
 
 class MainTabbarController: UITabBarController {
 
@@ -15,7 +16,7 @@ class MainTabbarController: UITabBarController {
 
         viewControllers = [
             UINavigationController(rootViewController: GameListViewController(nibName: nil, bundle: nil)),
-            UINavigationController(rootViewController: SearchGameViewController(nibName: nil, bundle: nil))
+            UINavigationController(rootViewController: Resolver.resolve(SearchGameViewController.self))
         ]
     }
 

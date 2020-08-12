@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameRouter.swift at 2020-08-05 11:14:22 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameRouter.swift at 2020-08-11 14:49:27 +0000
 
 //
 //  SearchGameRouter.swift
@@ -11,6 +11,7 @@
 import Cuckoo
 @testable import Yoto
 
+import Resolver
 import UIKit
 
 
@@ -32,6 +33,30 @@ import UIKit
     }
     
 
+    
+    
+    
+     var viewController: SearchGameViewController? {
+        get {
+            return cuckoo_manager.getter("viewController",
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.viewController)
+        }
+        
+        set {
+            cuckoo_manager.setter("viewController",
+                value: newValue,
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.viewController = newValue)
+        }
+        
+    }
     
 
     
@@ -61,6 +86,11 @@ import UIKit
 	    }
 	    
 	    
+	    var viewController: Cuckoo.ProtocolToBeStubbedOptionalProperty<MockSearchGameRoutingLogic, SearchGameViewController> {
+	        return .init(manager: cuckoo_manager, name: "viewController")
+	    }
+	    
+	    
 	    func routeToGameSearchDetails() -> Cuckoo.ProtocolStubNoReturnFunction<()> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameRoutingLogic.self, method: "routeToGameSearchDetails()", parameterMatchers: matchers))
@@ -80,6 +110,11 @@ import UIKit
 	    }
 	
 	    
+	    
+	    var viewController: Cuckoo.VerifyOptionalProperty<SearchGameViewController> {
+	        return .init(manager: cuckoo_manager, name: "viewController", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
 	
 	    
 	    @discardableResult
@@ -92,6 +127,16 @@ import UIKit
 }
 
  class SearchGameRoutingLogicStub: SearchGameRoutingLogic {
+    
+    
+     var viewController: SearchGameViewController? {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (SearchGameViewController?).self)
+        }
+        
+        set { }
+        
+    }
     
 
     
@@ -126,7 +171,7 @@ import UIKit
     
     
     
-     var dataStore: SearchGameDataStore? {
+     var dataStore: SearchGameDataStore {
         get {
             return cuckoo_manager.getter("dataStore",
                 superclassCall:
@@ -151,7 +196,7 @@ import UIKit
 	    }
 	    
 	    
-	    var dataStore: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSearchGameDataPassing, SearchGameDataStore?> {
+	    var dataStore: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSearchGameDataPassing, SearchGameDataStore> {
 	        return .init(manager: cuckoo_manager, name: "dataStore")
 	    }
 	    
@@ -171,7 +216,7 @@ import UIKit
 	
 	    
 	    
-	    var dataStore: Cuckoo.VerifyReadOnlyProperty<SearchGameDataStore?> {
+	    var dataStore: Cuckoo.VerifyReadOnlyProperty<SearchGameDataStore> {
 	        return .init(manager: cuckoo_manager, name: "dataStore", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
@@ -183,9 +228,9 @@ import UIKit
  class SearchGameDataPassingStub: SearchGameDataPassing {
     
     
-     var dataStore: SearchGameDataStore? {
+     var dataStore: SearchGameDataStore {
         get {
-            return DefaultValueRegistry.defaultValue(for: (SearchGameDataStore?).self)
+            return DefaultValueRegistry.defaultValue(for: (SearchGameDataStore).self)
         }
         
     }
@@ -237,30 +282,6 @@ import UIKit
                     super.viewController = newValue
                     ,
                 defaultCall: __defaultImplStub!.viewController = newValue)
-        }
-        
-    }
-    
-    
-    
-     override var dataStore: SearchGameDataStore? {
-        get {
-            return cuckoo_manager.getter("dataStore",
-                superclassCall:
-                    
-                    super.dataStore
-                    ,
-                defaultCall: __defaultImplStub!.dataStore)
-        }
-        
-        set {
-            cuckoo_manager.setter("dataStore",
-                value: newValue,
-                superclassCall:
-                    
-                    super.dataStore = newValue
-                    ,
-                defaultCall: __defaultImplStub!.dataStore = newValue)
         }
         
     }
@@ -328,11 +349,6 @@ import UIKit
 	    }
 	    
 	    
-	    var dataStore: Cuckoo.ClassToBeStubbedOptionalProperty<MockSearchGameRouter, SearchGameDataStore> {
-	        return .init(manager: cuckoo_manager, name: "dataStore")
-	    }
-	    
-	    
 	    func routeToGameSearchDetails() -> Cuckoo.ClassStubNoReturnFunction<()> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameRouter.self, method: "routeToGameSearchDetails()", parameterMatchers: matchers))
@@ -367,11 +383,6 @@ import UIKit
 	        return .init(manager: cuckoo_manager, name: "viewController", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
-	    
-	    var dataStore: Cuckoo.VerifyOptionalProperty<SearchGameDataStore> {
-	        return .init(manager: cuckoo_manager, name: "dataStore", callMatcher: callMatcher, sourceLocation: sourceLocation)
-	    }
-	    
 	
 	    
 	    @discardableResult
@@ -401,16 +412,6 @@ import UIKit
      override var viewController: SearchGameViewController? {
         get {
             return DefaultValueRegistry.defaultValue(for: (SearchGameViewController?).self)
-        }
-        
-        set { }
-        
-    }
-    
-    
-     override var dataStore: SearchGameDataStore? {
-        get {
-            return DefaultValueRegistry.defaultValue(for: (SearchGameDataStore?).self)
         }
         
         set { }

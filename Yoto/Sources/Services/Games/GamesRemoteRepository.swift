@@ -25,6 +25,14 @@ class GamesRemoteRepository: GamesRepository {
             .disposed(by: disposeBag)
     }
 
+//    func searchGames(_ query: String) -> Observable<[Game]> {
+//        let provider = MoyaProvider<GamesTarget>()
+//        return provider.rx
+//            .request(.searchForGame(query: query))
+//            .mapArray(Game.self)
+//            .asObservable()
+//    }
+
     func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void) {
         let provider = MoyaProvider<GamesTarget>()
         provider.rx

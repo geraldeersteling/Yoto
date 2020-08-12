@@ -19,7 +19,8 @@ class SearchGameInteractorTests: QuickSpec {
     // MARK: Test setup
 
     func setupSearchGameInteractor() {
-        sut = SearchGameInteractor()
+        sut = SearchGameInteractor(presenter: MockSearchGamePresenter(),
+                                   repository: MockGamesRemoteRepository())
     }
 
     // MARK: Test doubles
@@ -49,8 +50,6 @@ class SearchGameInteractorTests: QuickSpec {
                 self.stubRepository(repo)
                 self.stubPresentationLogic(logic)
                 self.setupSearchGameInteractor()
-                self.sut.presenter = logic
-                self.sut.repository = repo
             }
             afterEach {
                 reset(repo, logic)
