@@ -17,8 +17,8 @@ class SearchGameTableViewCell: UITableViewCell {
         nameLabel.text = nil
     }
 
-    func updateWithGame(_ game: SearchGame.SearchForGame.ViewModel.DisplayedGame) {
-        nameLabel.text = game.name
+    func updateWithItem(_ item: SearchGameTableItem) {
+        nameLabel.text = item.name
     }
 
 }

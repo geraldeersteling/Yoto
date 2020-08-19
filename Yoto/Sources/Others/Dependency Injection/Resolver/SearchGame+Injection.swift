@@ -16,30 +16,19 @@ extension Resolver {
     }
 
     fileprivate static func registerSearchGameScene() {
-        register {
-            SearchGameViewController(interactor: resolve(), router: resolve())
+        register { SearchGameViewController(nibName: nil, bundle: nil) }
+        register { (_, arg) -> SearchGameViewModel in
+            let repositoryType = (arg as? String) ?? RepositoryNames.Games.remote.rawValue
+            return SearchGameViewModel(repository: resolve(name: repositoryType))
         }
-        .resolveProperties { (_, siq) in
-            siq.router.viewController = siq
-            siq.interactor.presenter.viewController = siq
-        }
-        .implements(SearchGameDisplayLogic.self)
-
-
-        register {
-            SearchGameInteractor(presenter: resolve(),
-                                 repository: resolve(name: RepositoryNames.Games.remote.rawValue))
-        }
-        .implements(SearchGameBusinessLogic.self)
-        .implements(SearchGameDataStore.self)
-
-        register { SearchGamePresenter() as SearchGamePresentationLogic }
-        register { SearchGameRouter(dataStore: resolve(),
-                                    searchGameDetails: resolve()) as SearchGameRouterable }
+        register { SearchGameRouter() as SearchGameRoutingLogic }
     }
 
     fileprivate static func registerSearchGameDetailsScene() {
-        register { SearchGameDetailsViewController(nibName: nil, bundle: nil) }
-            .implements(SearchGameDetailsDisplayLogic.self)
+        register { (_, arg) -> SearchGameDetailsViewController in
+            let gameUri = arg as? GameUri
+            return SearchGameDetailsViewController(nibName: nil, bundle: nil)
+        }
+        .implements(SearchGameDetailsDisplayLogic.self)
     }
 }

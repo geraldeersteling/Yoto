@@ -14,34 +14,20 @@ import RxSwift
 class GamesRemoteRepository: GamesRepository {
     let disposeBag = DisposeBag()
 
-    func searchGames(_ query: String, completion: @escaping ([Game]) -> Void) {
-        let provider = MoyaProvider<GamesTarget>()
+    let provider = MoyaProvider<GamesTarget>()
+
+    func searchGames(_ query: String) -> Single<[Game]> {
         provider.rx
             .request(.searchForGame(query: query))
+            .filterSuccessfulStatusCodes()
             .mapArray(Game.self)
-            .subscribe(
-                onSuccess: { completion($0) },
-                onError: { print("//TODO: UNHANDLED ERROR: \($0)") })
-            .disposed(by: disposeBag)
     }
 
-//    func searchGames(_ query: String) -> Observable<[Game]> {
-//        let provider = MoyaProvider<GamesTarget>()
-//        return provider.rx
-//            .request(.searchForGame(query: query))
-//            .mapArray(Game.self)
-//            .asObservable()
-//    }
-
-    func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void) {
-        let provider = MoyaProvider<GamesTarget>()
+    func fetchGameDetails(gameID: Int) -> Single<Game> {
         provider.rx
             .request(.detailsForGame(id: gameID))
+            .filterSuccessfulStatusCodes()
             .mapArray(Game.self)
-            .subscribe(
-                // TODO: Handle the possibility of the array being empty (instead of using the index)
-                onSuccess: { completion($0[0]) },
-                onError: { print("//TODO: UNHANDLED ERROR: \($0)") })
-            .disposed(by: disposeBag)
+            .map { $0[0] }
     }
 }

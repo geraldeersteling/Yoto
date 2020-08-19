@@ -34,12 +34,5 @@ struct GameSeeds {
             let displayedGame = GameDetails.GetGame.ViewModel.DisplayedGame(name: seeds.randomElement()!.name)
             return GameDetails.GetGame.ViewModel(displayedGame: displayedGame)
         }
-
-        // MARK: - SearchGame -
-
-        static var searchGameSearchForGame: SearchGame.SearchForGame.ViewModel {
-            let game = SearchGame.SearchForGame.ViewModel.DisplayedGame(name: seeds.randomElement()!.name)
-            return SearchGame.SearchForGame.ViewModel(results: [game])
-        }
     }
 }

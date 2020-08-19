@@ -9,6 +9,8 @@ def testing_pods
   pod 'Quick'
   pod 'Nimble'
   pod 'RxNimble'
+  pod 'RxTest'
+  pod 'RxBlocking'
   pod 'OHHTTPStubs/Swift'
   pod "Cuckoo"
 end
@@ -17,7 +19,7 @@ target 'Yoto' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CleanStore
+  # Pods for Yoto
 
   ## Debugging and linting
   pod 'Reveal-SDK', :configurations => ['Debug']
@@ -26,11 +28,15 @@ target 'Yoto' do
   ## Resource generation
   pod 'SwiftGen'
 
-  ## Essentials
-  pod 'Cleanse'
-  pod 'Resolver'
+  ## Rx related
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
+
+  ## Dependency Injection
+  pod 'Resolver'
+
+  ## Networking
   pod 'Moya/RxSwift'
   pod 'Moya-ObjectMapper/RxSwift'
 

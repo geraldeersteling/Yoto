@@ -3,24 +3,30 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchGameViewController">
             <connections>
-                <outlet property="view" destination="aj8-h6-Yae" id="IE6-bh-4Tg"/>
+                <outlet property="tableView" destination="aj8-h6-Yae" id="eSK-7O-60F"/>
+                <outlet property="view" destination="HJZ-0y-cjB" id="wgb-Wp-ytx"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aj8-h6-Yae">
+        <view contentMode="scaleToFill" id="HJZ-0y-cjB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aj8-h6-Yae">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <connections>
-                <outlet property="dataSource" destination="-1" id="Af5-xS-Fl7"/>
-                <outlet property="delegate" destination="-1" id="0LY-no-bhK"/>
-            </connections>
-            <point key="canvasLocation" x="135" y="150"/>
-        </tableView>
+            <viewLayoutGuide key="safeArea" id="sMv-nv-EWN"/>
+            <point key="canvasLocation" x="-525" y="-239"/>
+        </view>
     </objects>
 </document>

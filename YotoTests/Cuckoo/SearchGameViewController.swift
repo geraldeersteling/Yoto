@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-11 14:49:27 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-19 13:10:15 +0000
 
 //
 //  SearchGameViewController.swift
@@ -11,98 +11,10 @@
 import Cuckoo
 @testable import Yoto
 
+import Resolver
+import RxCocoa
+import RxSwift
 import UIKit
-
-
- class MockSearchGameDisplayLogic: SearchGameDisplayLogic, Cuckoo.ProtocolMock {
-    
-     typealias MocksType = SearchGameDisplayLogic
-    
-     typealias Stubbing = __StubbingProxy_SearchGameDisplayLogic
-     typealias Verification = __VerificationProxy_SearchGameDisplayLogic
-
-     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
-
-    
-    private var __defaultImplStub: SearchGameDisplayLogic?
-
-     func enableDefaultImplementation(_ stub: SearchGameDisplayLogic) {
-        __defaultImplStub = stub
-        cuckoo_manager.enableDefaultStubImplementation()
-    }
-    
-
-    
-
-    
-
-    
-    
-    
-     func displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)  {
-        
-    return cuckoo_manager.call("displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)",
-            parameters: (viewModel),
-            escapingParameters: (viewModel),
-            superclassCall:
-                
-                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
-                ,
-            defaultCall: __defaultImplStub!.displaySearchForGameResults(viewModel: viewModel))
-        
-    }
-    
-
-	 struct __StubbingProxy_SearchGameDisplayLogic: Cuckoo.StubbingProxy {
-	    private let cuckoo_manager: Cuckoo.MockManager
-	
-	     init(manager: Cuckoo.MockManager) {
-	        self.cuckoo_manager = manager
-	    }
-	    
-	    
-	    func displaySearchForGameResults<M1: Cuckoo.Matchable>(viewModel: M1) -> Cuckoo.ProtocolStubNoReturnFunction<(SearchGame.SearchForGame.ViewModel)> where M1.MatchedType == SearchGame.SearchForGame.ViewModel {
-	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.ViewModel)>] = [wrap(matchable: viewModel) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameDisplayLogic.self, method: "displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)", parameterMatchers: matchers))
-	    }
-	    
-	}
-
-	 struct __VerificationProxy_SearchGameDisplayLogic: Cuckoo.VerificationProxy {
-	    private let cuckoo_manager: Cuckoo.MockManager
-	    private let callMatcher: Cuckoo.CallMatcher
-	    private let sourceLocation: Cuckoo.SourceLocation
-	
-	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
-	        self.cuckoo_manager = manager
-	        self.callMatcher = callMatcher
-	        self.sourceLocation = sourceLocation
-	    }
-	
-	    
-	
-	    
-	    @discardableResult
-	    func displaySearchForGameResults<M1: Cuckoo.Matchable>(viewModel: M1) -> Cuckoo.__DoNotUse<(SearchGame.SearchForGame.ViewModel), Void> where M1.MatchedType == SearchGame.SearchForGame.ViewModel {
-	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.ViewModel)>] = [wrap(matchable: viewModel) { $0 }]
-	        return cuckoo_manager.verify("displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	}
-}
-
- class SearchGameDisplayLogicStub: SearchGameDisplayLogic {
-    
-
-    
-
-    
-     func displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-}
-
 
 
  class MockSearchGameViewController: SearchGameViewController, Cuckoo.ClassMock {
@@ -126,48 +38,72 @@ import UIKit
     
     
     
-     override var interactor: SearchGameBusinessLogic {
+     override var viewModel: SearchGameViewModel {
         get {
-            return cuckoo_manager.getter("interactor",
+            return cuckoo_manager.getter("viewModel",
                 superclassCall:
                     
-                    super.interactor
+                    super.viewModel
                     ,
-                defaultCall: __defaultImplStub!.interactor)
+                defaultCall: __defaultImplStub!.viewModel)
         }
         
         set {
-            cuckoo_manager.setter("interactor",
+            cuckoo_manager.setter("viewModel",
                 value: newValue,
                 superclassCall:
                     
-                    super.interactor = newValue
+                    super.viewModel = newValue
                     ,
-                defaultCall: __defaultImplStub!.interactor = newValue)
+                defaultCall: __defaultImplStub!.viewModel = newValue)
         }
         
     }
     
     
     
-     override var searchResults: [SearchGame.SearchForGame.ViewModel.DisplayedGame] {
+     override var router: SearchGameRoutingLogic {
         get {
-            return cuckoo_manager.getter("searchResults",
+            return cuckoo_manager.getter("router",
                 superclassCall:
                     
-                    super.searchResults
+                    super.router
                     ,
-                defaultCall: __defaultImplStub!.searchResults)
+                defaultCall: __defaultImplStub!.router)
         }
         
         set {
-            cuckoo_manager.setter("searchResults",
+            cuckoo_manager.setter("router",
                 value: newValue,
                 superclassCall:
                     
-                    super.searchResults = newValue
+                    super.router = newValue
                     ,
-                defaultCall: __defaultImplStub!.searchResults = newValue)
+                defaultCall: __defaultImplStub!.router = newValue)
+        }
+        
+    }
+    
+    
+    
+     override var tableView: UITableView! {
+        get {
+            return cuckoo_manager.getter("tableView",
+                superclassCall:
+                    
+                    super.tableView
+                    ,
+                defaultCall: __defaultImplStub!.tableView)
+        }
+        
+        set {
+            cuckoo_manager.setter("tableView",
+                value: newValue,
+                superclassCall:
+                    
+                    super.tableView = newValue
+                    ,
+                defaultCall: __defaultImplStub!.tableView = newValue)
         }
         
     }
@@ -247,31 +183,16 @@ import UIKit
     
     
     
-     override func searchForGame(_ name: String)  {
+     override func setupBindings()  {
         
-    return cuckoo_manager.call("searchForGame(_: String)",
-            parameters: (name),
-            escapingParameters: (name),
+    return cuckoo_manager.call("setupBindings()",
+            parameters: (),
+            escapingParameters: (),
             superclassCall:
                 
-                super.searchForGame(name)
+                super.setupBindings()
                 ,
-            defaultCall: __defaultImplStub!.searchForGame(name))
-        
-    }
-    
-    
-    
-     override func displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)  {
-        
-    return cuckoo_manager.call("displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)",
-            parameters: (viewModel),
-            escapingParameters: (viewModel),
-            superclassCall:
-                
-                super.displaySearchForGameResults(viewModel: viewModel)
-                ,
-            defaultCall: __defaultImplStub!.displaySearchForGameResults(viewModel: viewModel))
+            defaultCall: __defaultImplStub!.setupBindings())
         
     }
     
@@ -284,13 +205,18 @@ import UIKit
 	    }
 	    
 	    
-	    var interactor: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewController, SearchGameBusinessLogic> {
-	        return .init(manager: cuckoo_manager, name: "interactor")
+	    var viewModel: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewController, SearchGameViewModel> {
+	        return .init(manager: cuckoo_manager, name: "viewModel")
 	    }
 	    
 	    
-	    var searchResults: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewController, [SearchGame.SearchForGame.ViewModel.DisplayedGame]> {
-	        return .init(manager: cuckoo_manager, name: "searchResults")
+	    var router: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewController, SearchGameRoutingLogic> {
+	        return .init(manager: cuckoo_manager, name: "router")
+	    }
+	    
+	    
+	    var tableView: Cuckoo.ClassToBeStubbedOptionalProperty<MockSearchGameViewController, UITableView> {
+	        return .init(manager: cuckoo_manager, name: "tableView")
 	    }
 	    
 	    
@@ -314,14 +240,9 @@ import UIKit
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "setupSearch()", parameterMatchers: matchers))
 	    }
 	    
-	    func searchForGame<M1: Cuckoo.Matchable>(_ name: M1) -> Cuckoo.ClassStubNoReturnFunction<(String)> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: name) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "searchForGame(_: String)", parameterMatchers: matchers))
-	    }
-	    
-	    func displaySearchForGameResults<M1: Cuckoo.Matchable>(viewModel: M1) -> Cuckoo.ClassStubNoReturnFunction<(SearchGame.SearchForGame.ViewModel)> where M1.MatchedType == SearchGame.SearchForGame.ViewModel {
-	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.ViewModel)>] = [wrap(matchable: viewModel) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)", parameterMatchers: matchers))
+	    func setupBindings() -> Cuckoo.ClassStubNoReturnFunction<()> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "setupBindings()", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -339,13 +260,18 @@ import UIKit
 	
 	    
 	    
-	    var interactor: Cuckoo.VerifyProperty<SearchGameBusinessLogic> {
-	        return .init(manager: cuckoo_manager, name: "interactor", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    var viewModel: Cuckoo.VerifyProperty<SearchGameViewModel> {
+	        return .init(manager: cuckoo_manager, name: "viewModel", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
 	    
-	    var searchResults: Cuckoo.VerifyProperty<[SearchGame.SearchForGame.ViewModel.DisplayedGame]> {
-	        return .init(manager: cuckoo_manager, name: "searchResults", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    var router: Cuckoo.VerifyProperty<SearchGameRoutingLogic> {
+	        return .init(manager: cuckoo_manager, name: "router", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
+	    
+	    var tableView: Cuckoo.VerifyOptionalProperty<UITableView> {
+	        return .init(manager: cuckoo_manager, name: "tableView", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
 	    
@@ -374,15 +300,9 @@ import UIKit
 	    }
 	    
 	    @discardableResult
-	    func searchForGame<M1: Cuckoo.Matchable>(_ name: M1) -> Cuckoo.__DoNotUse<(String), Void> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: name) { $0 }]
-	        return cuckoo_manager.verify("searchForGame(_: String)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
-	    func displaySearchForGameResults<M1: Cuckoo.Matchable>(viewModel: M1) -> Cuckoo.__DoNotUse<(SearchGame.SearchForGame.ViewModel), Void> where M1.MatchedType == SearchGame.SearchForGame.ViewModel {
-	        let matchers: [Cuckoo.ParameterMatcher<(SearchGame.SearchForGame.ViewModel)>] = [wrap(matchable: viewModel) { $0 }]
-	        return cuckoo_manager.verify("displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func setupBindings() -> Cuckoo.__DoNotUse<(), Void> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("setupBindings()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -391,9 +311,9 @@ import UIKit
  class SearchGameViewControllerStub: SearchGameViewController {
     
     
-     override var interactor: SearchGameBusinessLogic {
+     override var viewModel: SearchGameViewModel {
         get {
-            return DefaultValueRegistry.defaultValue(for: (SearchGameBusinessLogic).self)
+            return DefaultValueRegistry.defaultValue(for: (SearchGameViewModel).self)
         }
         
         set { }
@@ -401,9 +321,19 @@ import UIKit
     }
     
     
-     override var searchResults: [SearchGame.SearchForGame.ViewModel.DisplayedGame] {
+     override var router: SearchGameRoutingLogic {
         get {
-            return DefaultValueRegistry.defaultValue(for: ([SearchGame.SearchForGame.ViewModel.DisplayedGame]).self)
+            return DefaultValueRegistry.defaultValue(for: (SearchGameRoutingLogic).self)
+        }
+        
+        set { }
+        
+    }
+    
+    
+     override var tableView: UITableView! {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UITableView?).self)
         }
         
         set { }
@@ -436,11 +366,7 @@ import UIKit
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-     override func searchForGame(_ name: String)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-     override func displaySearchForGameResults(viewModel: SearchGame.SearchForGame.ViewModel)   {
+     override func setupBindings()   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     

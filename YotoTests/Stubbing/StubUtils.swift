@@ -1,8 +1,8 @@
 //
-//  TestUtils.swift
+//  StubUtils.swift
 //  YotoTests
 //
-//  Created by Gerald Eersteling on 04/08/2020.
+//  Created by Gerald Eersteling on 13/08/2020.
 //  Copyright © 2020 Rockstars. All rights reserved.
 //
 

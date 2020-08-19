@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Services/Games/GamesRepository.swift at 2020-08-11 14:49:27 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Services/Games/GamesRepository.swift at 2020-08-19 13:10:15 +0000
 
 //
 //  GamesRepository.swift
@@ -11,7 +11,6 @@
 import Cuckoo
 @testable import Yoto
 
-import Cleanse
 import Foundation
 import RxSwift
 
@@ -41,31 +40,31 @@ import RxSwift
     
     
     
-     func searchGames(_ query: String, completion: @escaping ([Game]) -> Void)  {
+     func searchGames(_ query: String) -> Single<[Game]> {
         
-    return cuckoo_manager.call("searchGames(_: String, completion: @escaping ([Game]) -> Void)",
-            parameters: (query, completion),
-            escapingParameters: (query, completion),
+    return cuckoo_manager.call("searchGames(_: String) -> Single<[Game]>",
+            parameters: (query),
+            escapingParameters: (query),
             superclassCall:
                 
                 Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
-            defaultCall: __defaultImplStub!.searchGames(query, completion: completion))
+            defaultCall: __defaultImplStub!.searchGames(query))
         
     }
     
     
     
-     func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)  {
+     func fetchGameDetails(gameID: Int) -> Single<Game> {
         
-    return cuckoo_manager.call("fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)",
-            parameters: (gameID, completion),
-            escapingParameters: (gameID, completion),
+    return cuckoo_manager.call("fetchGameDetails(gameID: Int) -> Single<Game>",
+            parameters: (gameID),
+            escapingParameters: (gameID),
             superclassCall:
                 
                 Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
-            defaultCall: __defaultImplStub!.fetchGameDetails(gameID: gameID, completion: completion))
+            defaultCall: __defaultImplStub!.fetchGameDetails(gameID: gameID))
         
     }
     
@@ -78,14 +77,14 @@ import RxSwift
 	    }
 	    
 	    
-	    func searchGames<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ query: M1, completion: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(String, ([Game]) -> Void)> where M1.MatchedType == String, M2.MatchedType == ([Game]) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, ([Game]) -> Void)>] = [wrap(matchable: query) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockGamesRepository.self, method: "searchGames(_: String, completion: @escaping ([Game]) -> Void)", parameterMatchers: matchers))
+	    func searchGames<M1: Cuckoo.Matchable>(_ query: M1) -> Cuckoo.ProtocolStubFunction<(String), Single<[Game]>> where M1.MatchedType == String {
+	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: query) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockGamesRepository.self, method: "searchGames(_: String) -> Single<[Game]>", parameterMatchers: matchers))
 	    }
 	    
-	    func fetchGameDetails<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(gameID: M1, completion: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(Int, (Game) -> Void)> where M1.MatchedType == Int, M2.MatchedType == (Game) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(Int, (Game) -> Void)>] = [wrap(matchable: gameID) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockGamesRepository.self, method: "fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)", parameterMatchers: matchers))
+	    func fetchGameDetails<M1: Cuckoo.Matchable>(gameID: M1) -> Cuckoo.ProtocolStubFunction<(Int), Single<Game>> where M1.MatchedType == Int {
+	        let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: gameID) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockGamesRepository.self, method: "fetchGameDetails(gameID: Int) -> Single<Game>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -105,15 +104,15 @@ import RxSwift
 	
 	    
 	    @discardableResult
-	    func searchGames<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ query: M1, completion: M2) -> Cuckoo.__DoNotUse<(String, ([Game]) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == ([Game]) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, ([Game]) -> Void)>] = [wrap(matchable: query) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return cuckoo_manager.verify("searchGames(_: String, completion: @escaping ([Game]) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func searchGames<M1: Cuckoo.Matchable>(_ query: M1) -> Cuckoo.__DoNotUse<(String), Single<[Game]>> where M1.MatchedType == String {
+	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: query) { $0 }]
+	        return cuckoo_manager.verify("searchGames(_: String) -> Single<[Game]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func fetchGameDetails<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(gameID: M1, completion: M2) -> Cuckoo.__DoNotUse<(Int, (Game) -> Void), Void> where M1.MatchedType == Int, M2.MatchedType == (Game) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(Int, (Game) -> Void)>] = [wrap(matchable: gameID) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return cuckoo_manager.verify("fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func fetchGameDetails<M1: Cuckoo.Matchable>(gameID: M1) -> Cuckoo.__DoNotUse<(Int), Single<Game>> where M1.MatchedType == Int {
+	        let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: gameID) { $0 }]
+	        return cuckoo_manager.verify("fetchGameDetails(gameID: Int) -> Single<Game>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -125,12 +124,12 @@ import RxSwift
     
 
     
-     func searchGames(_ query: String, completion: @escaping ([Game]) -> Void)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
+     func searchGames(_ query: String) -> Single<[Game]>  {
+        return DefaultValueRegistry.defaultValue(for: (Single<[Game]>).self)
     }
     
-     func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
+     func fetchGameDetails(gameID: Int) -> Single<Game>  {
+        return DefaultValueRegistry.defaultValue(for: (Single<Game>).self)
     }
     
 }
