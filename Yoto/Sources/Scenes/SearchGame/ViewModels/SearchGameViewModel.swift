@@ -9,19 +9,22 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import RxSwiftUtilities
 
 class SearchGameViewModel {
     private let disposeBag = DisposeBag()
     var repository: GamesRepository
+
+    var searchQuery = PublishRelay<String>()
 
     private let searchResultsRelay = BehaviorRelay<[SearchGameTableSection]>(value: [])
     var searchResults: Driver<[SearchGameTableSection]> {
         searchResultsRelay.asDriver()
     }
 
-    private let isSearchingRelay = BehaviorRelay<Bool>(value: false)
+    private let searchingIndicator = ActivityIndicator()
     var isSearching: Driver<Bool> {
-        isSearchingRelay.asDriver()
+        searchingIndicator.asObservable().asDriver(onErrorJustReturn: false)
     }
 
     var numberOfSections: Int {
@@ -36,40 +39,34 @@ class SearchGameViewModel {
 
     init(repository: GamesRepository) {
         self.repository = repository
-    }
 
-    // MARK: - Searching -
-
-    func installSearchDriver(_ driver: Driver<String>) {
-        driver
-            .debounce(.milliseconds(300))
+        searchQuery
+            .debounce(.milliseconds(500), scheduler: ConcurrentDispatchQueueScheduler(qos: .userInitiated))
             .distinctUntilChanged()
-            .filter({ !$0.isEmpty })
-            .drive(onNext: { [weak self] query in
-                self?.search(query: query)
-            })
-            .disposed(by: disposeBag)
-    }
-
-    func search(query: String) {
-        isSearchingRelay.accept(true)
-        repository.searchGames(query)
+            .filter { !$0.isEmpty }
+            .flatMapLatest {
+                repository
+                    .searchGames($0)
+                    .trackActivity(self.searchingIndicator)
+            }
+            .map {
+                $0.compactMap { SearchGameTableItem(gameUri: $0.uri, name: $0.name) }
+            }
             .subscribe(
-                onSuccess: { [weak self] in
-                    let items = $0.compactMap {
-                        SearchGameTableItem(gameUri: $0.uri, name: $0.name)
-                    }
-                    self?.searchResultsRelay.accept([SearchGameTableSection(header: "Search Results", items: items)]) // TODO: l10n
-                    self?.isSearchingRelay.accept(false)
+                onNext: { [weak self] in
+                    self?.searchResultsRelay.accept([SearchGameTableSection(header: "Search Results", items: $0)]) // TODO: l10n
                 },
-                onError: { print("//TODO: UNHANDLED ERROR: \($0)") })
+                onError: { print("//TODO: UNHANDLED ERROR: \($0)") }
+            )
             .disposed(by: disposeBag)
     }
 
     // MARK: - Providing methods -
 
     func item(at index: Int) -> SearchGameTableItem? {
-        guard !searchResultsRelay.value[0].items.isEmpty
+        guard
+            let empty = searchResultsRelay.value.first?.items.isEmpty,
+            !empty
         else { return nil }
         return searchResultsRelay.value[0].items[index]
     }

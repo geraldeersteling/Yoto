@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.2.1)
+  - Alamofire (5.2.2)
   - Cuckoo (1.4.1):
     - Cuckoo/Swift (= 1.4.1)
   - Cuckoo/Swift (1.4.1)
@@ -57,10 +57,13 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxSwiftUtilities (2.2.0):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - SwiftGen (6.1.0)
-  - SwiftLint (0.39.2)
+  - SwiftGen (6.3.0)
+  - SwiftLint (0.40.0)
 
 DEPENDENCIES:
   - Cuckoo
@@ -77,6 +80,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxNimble
   - RxSwift
+  - RxSwiftUtilities
   - RxTest
   - SwiftGen
   - SwiftLint
@@ -101,12 +105,13 @@ SPEC REPOS:
     - RxNimble
     - RxRelay
     - RxSwift
+    - RxSwiftUtilities
     - RxTest
     - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Cuckoo: 4625f7f54d9bb880123270e8969898d6c1d036b5
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -124,10 +129,11 @@ SPEC CHECKSUMS:
   RxNimble: dca9840cfa96ce73847813432ddc6e84e1fcdd61
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftUtilities: 59e2d82daf74b9962f732b09e6da85a26281cfc0
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
+  SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: f55acc8f6dd23fdda8acbf78c2aab08e89655eaf
+PODFILE CHECKSUM: 2e9d50a9cb174fc8996e66494b9765d0d7a7f0d5
 
 COCOAPODS: 1.8.4

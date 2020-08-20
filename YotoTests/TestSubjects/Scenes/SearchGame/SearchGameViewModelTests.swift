@@ -21,6 +21,7 @@ class SearchGameViewModelTests: QuickSpec {
 
     var sut: SearchGameViewModel!
     var scheduler: TestScheduler!
+    var concurrentScheduler: ConcurrentDispatchQueueScheduler!
     var bag: DisposeBag!
 
     func setupDependencyInjection() {
@@ -38,6 +39,22 @@ class SearchGameViewModelTests: QuickSpec {
         }
     }
 
+    // MARK: Helper functions
+
+    @discardableResult
+    func scheduleASearch(_ query: String) -> TestableObservable<String> {
+        // Schedule a search
+        let search = self.scheduler.createHotObservable([
+            .next(0, query),
+            // .completed(10)
+        ])
+        search
+            .bind(to: self.sut.searchQuery)
+            .disposed(by: self.bag)
+
+        return search
+    }
+
     // MARK: Tests
 
     override func spec() {
@@ -46,6 +63,7 @@ class SearchGameViewModelTests: QuickSpec {
 
             beforeEach {
                 self.scheduler = TestScheduler(initialClock: 0)
+                self.concurrentScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
                 self.bag = DisposeBag()
                 self.setupDependencyInjection()
                 self.sut = Resolver.optional()
@@ -55,10 +73,12 @@ class SearchGameViewModelTests: QuickSpec {
 
             afterEach {
                 self.scheduler = nil
+                self.concurrentScheduler = nil
                 self.bag = nil
+                self.sut = nil
             }
 
-            context("after installing the search driver") {
+            context("when searching for games") {
                 var items: TestableObserver<[SearchGameTableSection]>!
 
                 beforeEach {
@@ -67,67 +87,42 @@ class SearchGameViewModelTests: QuickSpec {
                         .drive(items)
                         .disposed(by: self.bag)
                 }
-
                 afterEach {
                     items = nil
                 }
 
-                it("should drive the search when a string is emitted") {
-                    self.sut.installSearchDriver(Driver.just("some search"))
-
-                    let result = items.events
-                        .dropFirst() // We drop the first result since it contains an empty array (because this is a Driver-- TODO: make it a Signal)
-                        .compactMap { $0.value.element?.first }
-                    expect { result.first?.items }
-                        .to(contain(SearchGameSeeds.firstSearchGameTableItem))
-                }
-
-                it("should not drive the search when an empty string is emitted") {
-                    self.sut.installSearchDriver(Driver.just(""))
-
-                    let result = items.events
-                        .dropFirst()
-                        .compactMap { $0.value.element?.first }
-                    expect { result.first?.items }
-                        .to(beNil())
-                }
-            }
-
-            context("when searching for games") {
                 // Then
-                it("should query the repository for the games") {
-                    // Create an observer and let the search results drive it
-                    let items = self.scheduler.createObserver([SearchGameTableSection].self)
+                it("should search for games when a query is emitted") {
+                    // Schedule a search
+                    self.scheduleASearch("some search")
+                    self.scheduler.start()
+
                     self.sut.searchResults
-                        .drive(items)
+                        .asObservable()
+                        .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
+                        .subscribe(onNext: { sections in
+                            // We only want one section for the search results and it should contain all results
+                            expect { sections }.to(haveCount(1))
+                            expect { sections.first?.items }
+                                .to(contain(SearchGameSeeds.firstSearchGameTableItem))
+                        })
                         .disposed(by: self.bag)
-
-                    // Perform a search and fetch the results
-                    self.sut.search(query: "some search")
-                    let result = items.events.compactMap {
-                        $0.value.element?.first
-                    }
-
-                    // We only want one section for the search results and it should contain all results
-                    expect { result }.to(haveCount(1))
-                    expect { result.first?.items }
-                        .to(contain(SearchGameSeeds.firstSearchGameTableItem))
                 }
 
-                it("should signal that it is searching") {
-                    // Create an observer and let isSearching drive it
-                    let isSearching = self.scheduler.createObserver(Bool.self)
-                    self.sut.isSearching
-                        .drive(isSearching)
+                it("should not search when the emitted query is empty") {
+                    // Schedule a search
+                    self.scheduleASearch("")
+                    self.scheduler.start()
+
+                    self.sut.searchResults
+                        .asObservable()
+                        .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
+                        .subscribe(onNext: { sections in
+                            // We only want one section for the search results and it should contain no results
+                            expect { sections }.to(haveCount(1))
+                            expect { sections.first?.items }.to(haveCount(0))
+                        })
                         .disposed(by: self.bag)
-
-                    // Perform a search and fetch the things we're interested in
-                    self.sut.search(query: "some search")
-                    let result = isSearching.events.compactMap { $0.value.element }
-
-                    // We test if the initial state is 'not-searching', followed by 'searching' and ends with
-                    // 'not-searching' again when the search concludes.
-                    expect { result }.to(equal([false, true, false]))
                 }
             }
 
@@ -144,18 +139,30 @@ class SearchGameViewModelTests: QuickSpec {
 
                 // Then
                 it("it should give the requested item") {
-                    self.sut.search(query: "some search")
+                    self.scheduleASearch("some search")
+                    self.scheduler.start()
 
-                    expect { self.sut.item(at: 0) }
-                        .to(equal(SearchGameSeeds.firstSearchGameTableItem))
+                    self.sut.searchResults.asObservable()
+                        .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
+                        .subscribe(onNext: { _ in
+                            expect { self.sut.item(at: 0) }
+                                .to(equal(SearchGameSeeds.firstSearchGameTableItem))
+                        })
+                        .disposed(by: self.bag)
                 }
 
                 // Then
                 it("it should not give an item with no search results") {
-                    self.sut.search(query: "empty")
+                    self.scheduleASearch("empty")
+                    self.scheduler.start()
 
-                    expect { self.sut.item(at: 0) }
-                        .to(beNil())
+                    self.sut.searchResults.asObservable()
+                        .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
+                        .subscribe(onNext: { _ in
+                            expect { self.sut.item(at: 0) }
+                                .to(beNil())
+                        })
+                        .disposed(by: self.bag)
                 }
             }
         }

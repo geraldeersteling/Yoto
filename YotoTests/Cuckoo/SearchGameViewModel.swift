@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/ViewModels/SearchGameViewModel.swift at 2020-08-19 13:10:15 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/ViewModels/SearchGameViewModel.swift at 2020-08-20 10:19:38 +0000
 
 //
 //  SearchGameViewModel.swift
@@ -14,6 +14,7 @@ import Cuckoo
 import Foundation
 import RxCocoa
 import RxSwift
+import RxSwiftUtilities
 
 
  class MockSearchGameViewModel: SearchGameViewModel, Cuckoo.ClassMock {
@@ -55,6 +56,30 @@ import RxSwift
                     super.repository = newValue
                     ,
                 defaultCall: __defaultImplStub!.repository = newValue)
+        }
+        
+    }
+    
+    
+    
+     override var searchQuery: PublishRelay<String> {
+        get {
+            return cuckoo_manager.getter("searchQuery",
+                superclassCall:
+                    
+                    super.searchQuery
+                    ,
+                defaultCall: __defaultImplStub!.searchQuery)
+        }
+        
+        set {
+            cuckoo_manager.setter("searchQuery",
+                value: newValue,
+                superclassCall:
+                    
+                    super.searchQuery = newValue
+                    ,
+                defaultCall: __defaultImplStub!.searchQuery = newValue)
         }
         
     }
@@ -121,36 +146,6 @@ import RxSwift
     
     
     
-     override func installSearchDriver(_ driver: Driver<String>)  {
-        
-    return cuckoo_manager.call("installSearchDriver(_: Driver<String>)",
-            parameters: (driver),
-            escapingParameters: (driver),
-            superclassCall:
-                
-                super.installSearchDriver(driver)
-                ,
-            defaultCall: __defaultImplStub!.installSearchDriver(driver))
-        
-    }
-    
-    
-    
-     override func search(query: String)  {
-        
-    return cuckoo_manager.call("search(query: String)",
-            parameters: (query),
-            escapingParameters: (query),
-            superclassCall:
-                
-                super.search(query: query)
-                ,
-            defaultCall: __defaultImplStub!.search(query: query))
-        
-    }
-    
-    
-    
      override func item(at index: Int) -> SearchGameTableItem? {
         
     return cuckoo_manager.call("item(at: Int) -> SearchGameTableItem?",
@@ -193,6 +188,11 @@ import RxSwift
 	    }
 	    
 	    
+	    var searchQuery: Cuckoo.ClassToBeStubbedProperty<MockSearchGameViewModel, PublishRelay<String>> {
+	        return .init(manager: cuckoo_manager, name: "searchQuery")
+	    }
+	    
+	    
 	    var searchResults: Cuckoo.ClassToBeStubbedReadOnlyProperty<MockSearchGameViewModel, Driver<[SearchGameTableSection]>> {
 	        return .init(manager: cuckoo_manager, name: "searchResults")
 	    }
@@ -212,16 +212,6 @@ import RxSwift
 	        return .init(manager: cuckoo_manager, name: "numberOfSearchResults")
 	    }
 	    
-	    
-	    func installSearchDriver<M1: Cuckoo.Matchable>(_ driver: M1) -> Cuckoo.ClassStubNoReturnFunction<(Driver<String>)> where M1.MatchedType == Driver<String> {
-	        let matchers: [Cuckoo.ParameterMatcher<(Driver<String>)>] = [wrap(matchable: driver) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewModel.self, method: "installSearchDriver(_: Driver<String>)", parameterMatchers: matchers))
-	    }
-	    
-	    func search<M1: Cuckoo.Matchable>(query: M1) -> Cuckoo.ClassStubNoReturnFunction<(String)> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: query) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewModel.self, method: "search(query: String)", parameterMatchers: matchers))
-	    }
 	    
 	    func item<M1: Cuckoo.Matchable>(at index: M1) -> Cuckoo.ClassStubFunction<(Int), SearchGameTableItem?> where M1.MatchedType == Int {
 	        let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: index) { $0 }]
@@ -253,6 +243,11 @@ import RxSwift
 	    }
 	    
 	    
+	    var searchQuery: Cuckoo.VerifyProperty<PublishRelay<String>> {
+	        return .init(manager: cuckoo_manager, name: "searchQuery", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
+	    
 	    var searchResults: Cuckoo.VerifyReadOnlyProperty<Driver<[SearchGameTableSection]>> {
 	        return .init(manager: cuckoo_manager, name: "searchResults", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
@@ -275,18 +270,6 @@ import RxSwift
 	
 	    
 	    @discardableResult
-	    func installSearchDriver<M1: Cuckoo.Matchable>(_ driver: M1) -> Cuckoo.__DoNotUse<(Driver<String>), Void> where M1.MatchedType == Driver<String> {
-	        let matchers: [Cuckoo.ParameterMatcher<(Driver<String>)>] = [wrap(matchable: driver) { $0 }]
-	        return cuckoo_manager.verify("installSearchDriver(_: Driver<String>)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
-	    func search<M1: Cuckoo.Matchable>(query: M1) -> Cuckoo.__DoNotUse<(String), Void> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: query) { $0 }]
-	        return cuckoo_manager.verify("search(query: String)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
 	    func item<M1: Cuckoo.Matchable>(at index: M1) -> Cuckoo.__DoNotUse<(Int), SearchGameTableItem?> where M1.MatchedType == Int {
 	        let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: index) { $0 }]
 	        return cuckoo_manager.verify("item(at: Int) -> SearchGameTableItem?", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
@@ -307,6 +290,16 @@ import RxSwift
      override var repository: GamesRepository {
         get {
             return DefaultValueRegistry.defaultValue(for: (GamesRepository).self)
+        }
+        
+        set { }
+        
+    }
+    
+    
+     override var searchQuery: PublishRelay<String> {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (PublishRelay<String>).self)
         }
         
         set { }
@@ -348,14 +341,6 @@ import RxSwift
 
     
 
-    
-     override func installSearchDriver(_ driver: Driver<String>)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-     override func search(query: String)   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
     
      override func item(at index: Int) -> SearchGameTableItem?  {
         return DefaultValueRegistry.defaultValue(for: (SearchGameTableItem?).self)

@@ -59,12 +59,14 @@ class SearchGameViewController: UIViewController {
             .drive(onNext: { [weak self] in
                 self?.navigationItem.searchController?.searchBar.resignFirstResponder()
             }).disposed(by: disposeBag)
-        viewModel.installSearchDriver(
-            searchBar.rx.text.orEmpty.asDriver()
-        )
     }
 
     func setupBindings() {
+        let searchBar = navigationItem.searchController?.searchBar
+        searchBar?.rx.text.orEmpty
+            .bind(to: viewModel.searchQuery)
+            .disposed(by: disposeBag)
+
         viewModel.searchResults
             .drive(tableView.rx.items(dataSource: SearchGameTableDataSource.datasource()))
             .disposed(by: disposeBag)

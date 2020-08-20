@@ -32,6 +32,7 @@ target 'Yoto' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod "RxSwiftUtilities"
 
   ## Dependency Injection
   pod 'Resolver'
