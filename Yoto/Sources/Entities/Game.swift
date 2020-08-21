@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct GameUri {
+struct GameUri: Equatable {
     var id: Int
 }
 

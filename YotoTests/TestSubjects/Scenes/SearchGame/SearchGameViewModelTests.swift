@@ -79,17 +79,6 @@ class SearchGameViewModelTests: QuickSpec {
             }
 
             context("when searching for games") {
-                var items: TestableObserver<[SearchGameTableSection]>!
-
-                beforeEach {
-                    items = self.scheduler.createObserver([SearchGameTableSection].self)
-                    self.sut.searchResults
-                        .drive(items)
-                        .disposed(by: self.bag)
-                }
-                afterEach {
-                    items = nil
-                }
 
                 // Then
                 it("should search for games when a query is emitted") {
@@ -124,45 +113,67 @@ class SearchGameViewModelTests: QuickSpec {
                         })
                         .disposed(by: self.bag)
                 }
+
+                it("should give back the correct number of results and sections") {
+                    let obs = self.sut.searchResults
+                        .asObservable()
+                        .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
+                        .subscribeOn(self.concurrentScheduler)
+
+                    self.sut.searchQuery.accept("some search")
+                    _ = try obs.toBlocking().first()
+
+                    expect { self.sut.numberOfSearchResults }.to(be(1))
+                    expect { self.sut.numberOfSections }.to(be(1))
+                }
             }
 
             context("when asked for an item") {
-                var items: TestableObserver<[SearchGameTableSection]>!
-
-                // Given
-                beforeEach {
-                    items = self.scheduler.createObserver([SearchGameTableSection].self)
-                    self.sut.searchResults
-                        .drive(items)
-                        .disposed(by: self.bag)
-                }
 
                 // Then
                 it("it should give the requested item") {
-                    self.scheduleASearch("some search")
-                    self.scheduler.start()
-
-                    self.sut.searchResults.asObservable()
+                    let obs = self.sut.searchResults
+                        .asObservable()
                         .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
-                        .subscribe(onNext: { _ in
-                            expect { self.sut.item(at: 0) }
-                                .to(equal(SearchGameSeeds.firstSearchGameTableItem))
-                        })
-                        .disposed(by: self.bag)
+                        .subscribeOn(self.concurrentScheduler)
+
+                    self.sut.searchQuery.accept("some search")
+
+                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                    //          with just toArray it keeps on blocking (because of no completed event?)
+
+                    expect { self.sut.item(at: 0) }
+                        .to(equal(SearchGameSeeds.firstSearchGameTableItem))
                 }
 
                 // Then
                 it("it should not give an item with no search results") {
-                    self.scheduleASearch("empty")
-                    self.scheduler.start()
+                    let obs = self.sut.searchResults
+                        .asObservable()
+                        .skip(1)
+                        .subscribeOn(self.concurrentScheduler)
 
-                    self.sut.searchResults.asObservable()
+                    self.sut.searchQuery.accept("empty")
+                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                                                     //          with just toArray it keeps on blocking (because of no completed event?)
+                    expect { self.sut.item(at: 0) }
+                        .to(beNil())
+                }
+
+                //Then
+                it("should give back the correct GameUri") {
+                    let obs = self.sut.searchResults
+                        .asObservable()
                         .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
-                        .subscribe(onNext: { _ in
-                            expect { self.sut.item(at: 0) }
-                                .to(beNil())
-                        })
-                        .disposed(by: self.bag)
+                        .subscribeOn(self.concurrentScheduler)
+
+                    self.sut.searchQuery.accept("some search")
+
+                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                    //          with just toArray it keeps on blocking (because of no completed event?)
+
+                    expect { self.sut.uriForGame(at: 0) }
+                        .to(equal(SearchGameSeeds.firstSearchGameTableItem.gameUri))
                 }
             }
         }

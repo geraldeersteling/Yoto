@@ -32,7 +32,7 @@ class SearchGameViewModel {
     }
 
     var numberOfSearchResults: Int {
-        searchResultsRelay.value[0].items.count
+        searchResultsRelay.value.first?.items.count ?? 0
     }
 
     // MARK: - Initializing -
