@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-20 10:19:38 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/SearchGameViewController.swift at 2020-08-21 13:00:24 +0000
 
 //
 //  SearchGameViewController.swift
@@ -151,51 +151,6 @@ import UIKit
         
     }
     
-    
-    
-     override func customizeAppearance()  {
-        
-    return cuckoo_manager.call("customizeAppearance()",
-            parameters: (),
-            escapingParameters: (),
-            superclassCall:
-                
-                super.customizeAppearance()
-                ,
-            defaultCall: __defaultImplStub!.customizeAppearance())
-        
-    }
-    
-    
-    
-     override func setupSearch()  {
-        
-    return cuckoo_manager.call("setupSearch()",
-            parameters: (),
-            escapingParameters: (),
-            superclassCall:
-                
-                super.setupSearch()
-                ,
-            defaultCall: __defaultImplStub!.setupSearch())
-        
-    }
-    
-    
-    
-     override func setupBindings()  {
-        
-    return cuckoo_manager.call("setupBindings()",
-            parameters: (),
-            escapingParameters: (),
-            superclassCall:
-                
-                super.setupBindings()
-                ,
-            defaultCall: __defaultImplStub!.setupBindings())
-        
-    }
-    
 
 	 struct __StubbingProxy_SearchGameViewController: Cuckoo.StubbingProxy {
 	    private let cuckoo_manager: Cuckoo.MockManager
@@ -228,21 +183,6 @@ import UIKit
 	    func viewDidLoad() -> Cuckoo.ClassStubNoReturnFunction<()> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
 	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "viewDidLoad()", parameterMatchers: matchers))
-	    }
-	    
-	    func customizeAppearance() -> Cuckoo.ClassStubNoReturnFunction<()> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "customizeAppearance()", parameterMatchers: matchers))
-	    }
-	    
-	    func setupSearch() -> Cuckoo.ClassStubNoReturnFunction<()> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "setupSearch()", parameterMatchers: matchers))
-	    }
-	    
-	    func setupBindings() -> Cuckoo.ClassStubNoReturnFunction<()> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockSearchGameViewController.self, method: "setupBindings()", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -285,24 +225,6 @@ import UIKit
 	    func viewDidLoad() -> Cuckoo.__DoNotUse<(), Void> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
 	        return cuckoo_manager.verify("viewDidLoad()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
-	    func customizeAppearance() -> Cuckoo.__DoNotUse<(), Void> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("customizeAppearance()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
-	    func setupSearch() -> Cuckoo.__DoNotUse<(), Void> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("setupSearch()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	    @discardableResult
-	    func setupBindings() -> Cuckoo.__DoNotUse<(), Void> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("setupBindings()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -355,18 +277,6 @@ import UIKit
 
     
      override func viewDidLoad()   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-     override func customizeAppearance()   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-     override func setupSearch()   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
-    }
-    
-     override func setupBindings()   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     

@@ -10,6 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 import RxSwiftUtilities
+import RxSwiftExt
 
 class SearchGameViewModel {
     private let disposeBag = DisposeBag()
@@ -49,12 +50,10 @@ class SearchGameViewModel {
                     .searchGames($0)
                     .trackActivity(self.searchingIndicator)
             }
-            .map {
-                $0.compactMap { SearchGameTableItem(gameUri: $0.uri, name: $0.name) }
-            }
+            .mapMany { SearchGameTableItem(gameUri: $0.uri, name: $0.name) }
             .subscribe(
                 onNext: { [weak self] in
-                    self?.searchResultsRelay.accept([SearchGameTableSection(header: "Search Results", items: $0)]) // TODO: l10n
+                    self?.searchResultsRelay.accept([SearchGameTableSection(header: "\($0.count) result(s)", items: $0)]) // TODO: l10n
                 },
                 onError: { print("//TODO: UNHANDLED ERROR: \($0)") }
             )

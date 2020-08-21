@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/ViewModels/SearchGameViewModel.swift at 2020-08-20 10:19:38 +0000
+// MARK: - Mocks generated from file: Yoto/Sources/Scenes/SearchGame/ViewModels/SearchGameViewModel.swift at 2020-08-21 13:00:24 +0000
 
 //
 //  SearchGameViewModel.swift
@@ -14,6 +14,7 @@ import Cuckoo
 import Foundation
 import RxCocoa
 import RxSwift
+import RxSwiftExt
 import RxSwiftUtilities
 
 

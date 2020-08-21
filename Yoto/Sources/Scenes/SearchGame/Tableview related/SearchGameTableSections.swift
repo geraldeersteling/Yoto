@@ -42,12 +42,18 @@ extension SearchGameTableSection: AnimatableSectionModelType {
 
 struct SearchGameTableDataSource {
     static func datasource() -> RxTableViewSectionedAnimatedDataSource<SearchGameTableSection> {
-        return .init(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+        let source = RxTableViewSectionedAnimatedDataSource<SearchGameTableSection>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchGameTableViewCell", for: indexPath) as? SearchGameTableViewCell
             else { fatalError("Couldn't dequeue the correct table cell") }
 
             cell.updateWithItem(item)
             return cell
         })
+
+        source.titleForHeaderInSection = { datasource, index in
+            datasource.sectionModels[index].header
+        }
+
+        return source
     }
 }

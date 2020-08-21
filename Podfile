@@ -8,7 +8,7 @@ inhibit_all_warnings!
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
-  pod 'RxNimble'
+  pod 'RxNimble', subspecs: ['RxBlocking', 'RxTest']
   pod 'RxTest'
   pod 'RxBlocking'
   pod 'OHHTTPStubs/Swift'
@@ -31,6 +31,7 @@ target 'Yoto' do
   ## Rx related
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxSwiftExt'
   pod 'RxDataSources'
   pod "RxSwiftUtilities"
 

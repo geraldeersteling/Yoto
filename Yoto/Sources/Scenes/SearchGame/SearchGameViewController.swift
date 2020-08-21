@@ -29,13 +29,21 @@ class SearchGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeAppearance()
-        setupSearch()
+        configureUI()
         setupBindings()
-        setupTableview()
+    }
+}
+
+// MARK: - Configure UI
+
+extension SearchGameViewController {
+    func configureUI() {
+        configureAppeareance()
+        configureSearch()
+        configureTableview()
     }
 
-    func customizeAppearance() {
+    func configureAppeareance() {
         navigationController?.navigationBar.prefersLargeTitles = true
         spinner.hidesWhenStopped = true
         spinner.stopAnimating()
@@ -44,49 +52,51 @@ class SearchGameViewController: UIViewController {
         view.bringSubviewToFront(spinner)
     }
 
-    func setupSearch() {
+    func configureSearch() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search for a game..." // TODO: l10n
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
-
-        let searchBar = searchController.searchBar
-
-        searchBar.rx.searchButtonClicked
-            .asDriver()
-            .drive(onNext: { [weak self] in
-                self?.navigationItem.searchController?.searchBar.resignFirstResponder()
-            }).disposed(by: disposeBag)
     }
 
+    func configureTableview() {
+        tableView.register(UINib(nibName: "SearchGameTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "SearchGameTableViewCell")
+    }
+}
+
+// MARK: - Bindings -
+
+extension SearchGameViewController {
     func setupBindings() {
+
+        // Search bindings
         let searchBar = navigationItem.searchController?.searchBar
         searchBar?.rx.text.orEmpty
             .bind(to: viewModel.searchQuery)
             .disposed(by: disposeBag)
+        searchBar?.rx.searchButtonClicked
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.navigationItem.searchController?.searchBar.resignFirstResponder()
+            }).disposed(by: disposeBag)
 
+        // Viewmodel bindings
         viewModel.searchResults
             .drive(tableView.rx.items(dataSource: SearchGameTableDataSource.datasource()))
             .disposed(by: disposeBag)
         viewModel.isSearching
             .drive(spinner.rx.isAnimating)
             .disposed(by: disposeBag)
-    }
-}
 
-// MARK: - TableView
-
-extension SearchGameViewController {
-    func setupTableview() {
-        tableView.register(UINib(nibName: "SearchGameTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "SearchGameTableViewCell")
-
+        // Tableview bindings
         tableView.rx.itemSelected
             .bind { [weak self] in
                 if let uri = self?.viewModel.item(at: $0.row)?.gameUri {
                     self?.router.routeToGameSearchDetails(uri, from: self)
+                    self?.tableView.deselectRow(at: $0, animated: false)
                 }
             }
             .disposed(by: disposeBag)

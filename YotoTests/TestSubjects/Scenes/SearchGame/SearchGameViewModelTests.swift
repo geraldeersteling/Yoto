@@ -11,6 +11,7 @@ import Quick
 import Resolver
 import RxBlocking
 import RxCocoa
+import RxNimble
 import RxSwift
 import RxTest
 import XCTest
@@ -46,7 +47,7 @@ class SearchGameViewModelTests: QuickSpec {
         // Schedule a search
         let search = self.scheduler.createHotObservable([
             .next(0, query),
-            // .completed(10)
+            .completed(10)
         ])
         search
             .bind(to: self.sut.searchQuery)
@@ -79,23 +80,20 @@ class SearchGameViewModelTests: QuickSpec {
             }
 
             context("when searching for games") {
-
                 // Then
                 it("should search for games when a query is emitted") {
-                    // Schedule a search
-                    self.scheduleASearch("some search")
-                    self.scheduler.start()
-
-                    self.sut.searchResults
+                    let obs = self.sut.searchResults
                         .asObservable()
                         .skip(1) // We drop the first result since it contains an empty array (because this is a Driver) //QUESTION: make it a Signal?
-                        .subscribe(onNext: { sections in
-                            // We only want one section for the search results and it should contain all results
-                            expect { sections }.to(haveCount(1))
-                            expect { sections.first?.items }
-                                .to(contain(SearchGameSeeds.firstSearchGameTableItem))
-                        })
-                        .disposed(by: self.bag)
+                        .subscribeOn(self.concurrentScheduler)
+
+                    self.sut.searchQuery.accept("some search")
+
+                    let results = try obs.toBlocking().first()?.first
+                    expect { results?.items }
+                        .to(haveCount(1))
+                    expect { results?.items }
+                        .to(contain(SearchGameSeeds.firstSearchGameTableItem))
                 }
 
                 it("should not search when the emitted query is empty") {
@@ -129,7 +127,6 @@ class SearchGameViewModelTests: QuickSpec {
             }
 
             context("when asked for an item") {
-
                 // Then
                 it("it should give the requested item") {
                     let obs = self.sut.searchResults
@@ -139,7 +136,7 @@ class SearchGameViewModelTests: QuickSpec {
 
                     self.sut.searchQuery.accept("some search")
 
-                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                    _ = try obs.toBlocking().first() // QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
                     //          with just toArray it keeps on blocking (because of no completed event?)
 
                     expect { self.sut.item(at: 0) }
@@ -154,13 +151,13 @@ class SearchGameViewModelTests: QuickSpec {
                         .subscribeOn(self.concurrentScheduler)
 
                     self.sut.searchQuery.accept("empty")
-                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
-                                                     //          with just toArray it keeps on blocking (because of no completed event?)
+                    _ = try obs.toBlocking().first() // QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                    //          with just toArray it keeps on blocking (because of no completed event?)
                     expect { self.sut.item(at: 0) }
                         .to(beNil())
                 }
 
-                //Then
+                // Then
                 it("should give back the correct GameUri") {
                     let obs = self.sut.searchResults
                         .asObservable()
@@ -169,7 +166,7 @@ class SearchGameViewModelTests: QuickSpec {
 
                     self.sut.searchQuery.accept("some search")
 
-                    _ = try obs.toBlocking().first() //QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
+                    _ = try obs.toBlocking().first() // QUESTION: why do we need to explicitly call; toBlocking AND first before it get properly run?
                     //          with just toArray it keeps on blocking (because of no completed event?)
 
                     expect { self.sut.uriForGame(at: 0) }
