@@ -9,8 +9,8 @@
 import Foundation
 import RxCocoa
 import RxSwift
-import RxSwiftUtilities
 import RxSwiftExt
+import RxSwiftUtilities
 
 class SearchGameViewModel {
     private let disposeBag = DisposeBag()

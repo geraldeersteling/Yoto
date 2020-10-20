@@ -34,6 +34,7 @@ target 'Yoto' do
   pod 'RxSwiftExt'
   pod 'RxDataSources'
   pod "RxSwiftUtilities"
+  pod 'NSObject+Rx'
 
   ## Dependency Injection
   pod 'Resolver'

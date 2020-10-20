@@ -20,6 +20,8 @@ PODS:
     - Moya/Core
     - RxSwift (~> 5.0)
   - Nimble (8.1.1)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
   - ObjectMapper (4.2.0)
   - OHHTTPStubs/Core (9.0.0)
   - OHHTTPStubs/Default (9.0.0):
@@ -80,6 +82,7 @@ DEPENDENCIES:
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
   - Nimble
+  - "NSObject+Rx"
   - OHHTTPStubs/Swift
   - Quick
   - Resolver
@@ -105,6 +108,7 @@ SPEC REPOS:
     - Moya
     - Moya-ObjectMapper
     - Nimble
+    - "NSObject+Rx"
     - ObjectMapper
     - OHHTTPStubs
     - Quick
@@ -130,6 +134,7 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
@@ -147,6 +152,6 @@ SPEC CHECKSUMS:
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 32d395c825b3e5084d83752ba59bb7f824ddde56
+PODFILE CHECKSUM: 2b615567a9f0cae2c55183f255c86a171dbfc512
 
 COCOAPODS: 1.8.4
