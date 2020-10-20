@@ -11,7 +11,7 @@ unstripped = false
 codePaths = ["Yoto/Sources"]
 localizablePaths = ["."]
 transformer = "swiftgenStructured"
-supportedLanguageEnumPath = "Yoto/Supporting Files/"
+supportedLanguageEnumPath = "Yoto/Supporting Files/BartyCrouch.swift"
 typeName = "BartyCrouch"
 translateMethodName = "translate"
 
