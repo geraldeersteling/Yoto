@@ -11,5 +11,5 @@ import RxSwift
 
 protocol GamesRepository {
     func searchGames(_ query: String) -> Single<[Game]>
-    func fetchGameDetails(gameID: Int) -> Single<Game>
+    func fetchGameDetails(uri: GameUri) -> Single<Game>
 }

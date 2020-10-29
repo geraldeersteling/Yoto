@@ -13,9 +13,13 @@ enum SearchGameTarget {
     case search(query: String)
 }
 
-extension SearchGameTarget: TargetType {
+extension SearchGameTarget: TargetType, AccessTokenAuthorizable {
     var baseURL: URL {
         IGDB.baseURL
+    }
+
+    var authorizationType: AuthorizationType? {
+        return .bearer
     }
 
     var path: String {
@@ -51,6 +55,6 @@ extension SearchGameTarget: TargetType {
     }
 
     var headers: [String: String]? {
-        IGDB.authHeader
+        return nil
     }
 }

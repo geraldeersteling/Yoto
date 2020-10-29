@@ -10,11 +10,20 @@ import Foundation
 import Moya
 import Moya_ObjectMapper
 import RxSwift
+import Resolver
 
 class GamesRemoteRepository: GamesRepository {
-    let disposeBag = DisposeBag()
+    @Injected private var api: IGDB
+    private let disposeBag = DisposeBag()
+    private var provider = MoyaProvider<GamesTarget>()
 
-    let provider = MoyaProvider<GamesTarget>()
+    init() {
+        provider = MoyaProvider<GamesTarget>(plugins: [
+            AccessTokenPlugin(tokenClosure: { _ in
+                self.api.accessToken
+            })
+        ])
+    }
 
     func searchGames(_ query: String) -> Single<[Game]> {
         provider.rx
@@ -23,9 +32,9 @@ class GamesRemoteRepository: GamesRepository {
             .mapArray(Game.self)
     }
 
-    func fetchGameDetails(gameID: Int) -> Single<Game> {
+    func fetchGameDetails(uri: GameUri) -> Single<Game> {
         provider.rx
-            .request(.detailsForGame(id: gameID))
+            .request(.detailsForGame(uri: uri))
             .filterSuccessfulStatusCodes()
             .mapArray(Game.self)
             .map { $0[0] }

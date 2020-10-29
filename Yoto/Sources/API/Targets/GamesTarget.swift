@@ -11,7 +11,7 @@ import Moya
 
 enum GamesTarget {
     case searchForGame(query: String)
-    case detailsForGame(id: Int)
+    case detailsForGame(uri: GameUri)
 }
 
 extension GamesTarget: TargetType {
@@ -63,14 +63,12 @@ extension GamesTarget: TargetType {
         switch self {
             case .searchForGame(let query):
                 return .requestData("search \"\(query)\"; fields *; exclude tags;".data(using: .utf8)!)
-            case .detailsForGame(let id):
-                return .requestData("fields *; where id = \(id); exclude tags;".data(using: .utf8)!)
+            case .detailsForGame(let uri):
+                return .requestData("fields *; where id = \(uri.id); exclude tags;".data(using: .utf8)!)
         }
     }
 
-    var headers: [String : String]? {
-        IGDB.authHeader
+    var headers: [String: String]? {
+        return nil
     }
-
-
 }

@@ -14,5 +14,6 @@ extension Resolver: ResolverRegistering {
         registerCoreAppGraph()
         registerSearchGameGraph()
         registerRepositoriesGraph()
+        registerAPIgraph()
     }
 }
