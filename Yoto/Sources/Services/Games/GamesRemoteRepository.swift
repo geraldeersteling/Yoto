@@ -10,30 +10,33 @@ import Foundation
 import Moya
 import Moya_ObjectMapper
 import RxSwift
+import Resolver
 
 class GamesRemoteRepository: GamesRepository {
-    let disposeBag = DisposeBag()
+    @Injected private var api: IGDB
+    private let disposeBag = DisposeBag()
+    private var provider = MoyaProvider<GamesTarget>()
 
-    func searchGames(_ query: String, completion: @escaping ([Game]) -> Void) {
-        let provider = MoyaProvider<GamesTarget>()
-        provider.rx
-            .request(.searchForGame(query: query))
-            .mapArray(Game.self)
-            .subscribe(
-                onSuccess: { completion($0) },
-                onError: { print("//TODO: UNHANDLED ERROR: \($0)") })
-            .disposed(by: disposeBag)
+    init() {
+        provider = MoyaProvider<GamesTarget>(plugins: [
+            AccessTokenPlugin(tokenClosure: { _ in
+                self.api.accessToken
+            })
+        ])
     }
 
-    func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void) {
-        let provider = MoyaProvider<GamesTarget>()
+    func searchGames(_ query: String) -> Single<[Game]> {
         provider.rx
-            .request(.detailsForGame(id: gameID))
+            .request(.searchForGame(query: query))
+            .filterSuccessfulStatusCodes()
             .mapArray(Game.self)
-            .subscribe(
-                // TODO: Handle the possibility of the array being empty (instead of using the index)
-                onSuccess: { completion($0[0]) },
-                onError: { print("//TODO: UNHANDLED ERROR: \($0)") })
-            .disposed(by: disposeBag)
+    }
+
+    func fetchGameDetails(uri: GameUri) -> Single<Game> {
+        provider.rx
+            .request(.detailsForGame(uri: uri))
+            .filterSuccessfulStatusCodes()
+            .mapArray(Game.self)
+            .map { $0[0] }
     }
 }

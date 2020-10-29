@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol GamesRepository {
-    func searchGames(_ query: String, completion: @escaping ([Game]) -> Void)
-    func fetchGameDetails(gameID: Int, completion: @escaping (Game) -> Void)
+    func searchGames(_ query: String) -> Single<[Game]>
+    func fetchGameDetails(uri: GameUri) -> Single<Game>
 }

@@ -1,8 +1,10 @@
 PODS:
-  - Alamofire (5.2.1)
+  - Alamofire (5.3.0)
   - Cuckoo (1.4.1):
     - Cuckoo/Swift (= 1.4.1)
   - Cuckoo/Swift (1.4.1)
+  - Differentiator (4.0.1)
+  - IQKeyboardManagerSwift (6.5.6)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya-ObjectMapper/Core (2.9):
@@ -17,7 +19,9 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - Nimble (8.1.1)
+  - Nimble (9.0.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
   - ObjectMapper (4.2.0)
   - OHHTTPStubs/Core (9.0.0)
   - OHHTTPStubs/Default (9.0.0):
@@ -33,30 +37,65 @@ PODS:
   - OHHTTPStubs/Swift (9.0.0):
     - OHHTTPStubs/Default
   - Quick (3.0.0)
+  - Resolver (1.1.4)
   - Reveal-SDK (26)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
-  - RxNimble (4.7.1):
-    - RxNimble/RxBlocking (= 4.7.1)
-  - RxNimble/Core (4.7.1):
-    - Nimble (~> 8.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxNimble/RxBlocking (4.7.1):
+  - RxNimble/Core (5.0.0):
+    - Nimble (~> 9.0)
+    - RxSwift (~> 5.0)
+  - RxNimble/RxBlocking (5.0.0):
     - RxBlocking
     - RxNimble/Core
+  - RxNimble/RxTest (5.0.0):
+    - RxNimble/Core
+    - RxTest
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SwiftGen (6.1.0)
-  - SwiftLint (0.39.2)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxSwiftUtilities (2.2.0):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
+  - SwiftGen (6.4.0)
+  - SwiftLint (0.40.3)
 
 DEPENDENCIES:
   - Cuckoo
+  - IQKeyboardManagerSwift
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
   - Nimble
+  - "NSObject+Rx"
   - OHHTTPStubs/Swift
   - Quick
+  - Resolver
   - Reveal-SDK
-  - RxNimble
+  - RxBlocking
+  - RxCocoa
+  - RxDataSources
+  - RxNimble/RxBlocking
+  - RxNimble/RxTest
+  - RxSwift
+  - RxSwiftExt
+  - RxSwiftUtilities
+  - RxTest
   - SwiftGen
   - SwiftLint
 
@@ -64,35 +103,55 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Cuckoo
+    - Differentiator
+    - IQKeyboardManagerSwift
     - Moya
     - Moya-ObjectMapper
     - Nimble
+    - "NSObject+Rx"
     - ObjectMapper
     - OHHTTPStubs
     - Quick
+    - Resolver
     - Reveal-SDK
     - RxBlocking
+    - RxCocoa
+    - RxDataSources
     - RxNimble
+    - RxRelay
     - RxSwift
+    - RxSwiftExt
+    - RxSwiftUtilities
+    - RxTest
     - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
   Cuckoo: 4625f7f54d9bb880123270e8969898d6c1d036b5
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
-  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  Resolver: 1f4c046255cbadfa97094692e16e940d4329779f
   Reveal-SDK: 5f94f14aff3d5f2a49f246edcd266fa4472679e9
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
-  RxNimble: dca9840cfa96ce73847813432ddc6e84e1fcdd61
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxNimble: 3b757b0f8fb4dc487c3f9a383bc61a6f5bd72d28
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxSwiftUtilities: 59e2d82daf74b9962f732b09e6da85a26281cfc0
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
 
-PODFILE CHECKSUM: f1a7b2c7bce7157b7baf47c1b17d808b13643895
+PODFILE CHECKSUM: 2b615567a9f0cae2c55183f255c86a171dbfc512
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

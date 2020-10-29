@@ -9,23 +9,27 @@
 import Foundation
 import ObjectMapper
 
-class Game: ImmutableMappable {
+struct GameUri: Equatable {
     var id: Int
+}
+
+class Game: ImmutableMappable {
+    var uri: GameUri
     var name: String
 
     required init(map: Map) throws {
-        id = try map.value("id")
+        self.uri = GameUri(id: try map.value("id"))
         name = try map.value("name")
     }
 
     func mapping(map: Map) {
-        id <- map["id"]
+        uri.id <- map["id"]
         name <- map["name"]
     }
 }
 
 extension Game: Equatable {
     static func == (lhs: Game, rhs: Game) -> Bool {
-        lhs.id == rhs.id
+        lhs.uri.id == rhs.uri.id
     }
 }

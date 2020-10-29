@@ -7,8 +7,11 @@
 
 import Cuckoo
 import Nimble
+import OHHTTPStubs
 import Quick
-import XCTest
+import RxSwift
+import RxCocoa
+import Resolver
 @testable import Yoto
 
 class SearchGameViewControllerTests: QuickSpec {
@@ -17,23 +20,12 @@ class SearchGameViewControllerTests: QuickSpec {
     var sut: SearchGameViewController!
     var window: UIWindow!
 
-    // MARK: Test lifecycle
+    // MARK: Test Setup
 
-    override func setUp() {
-        super.setUp()
-        window = UIWindow()
-        setupSearchGameViewController()
-    }
-
-    override func tearDown() {
-        window = nil
-        super.tearDown()
-    }
-
-    // MARK: Test setup
-
-    func setupSearchGameViewController() {
-        sut = SearchGameViewController(nibName: nil, bundle: Bundle.main)
+    func mockDependencyInjection() {
+        Resolver.register { MockSearchGameRouter() as SearchGameRoutingLogic }
+        Resolver.register { MockGamesRemoteRepository() as GamesRepository }
+        Resolver.register { MockSearchGameViewModel(repository: Resolver.resolve()) as SearchGameViewModel }
     }
 
     func loadView() {
@@ -43,95 +35,76 @@ class SearchGameViewControllerTests: QuickSpec {
 
     // MARK: Test doubles
 
-    func stubBusinessLogic(_ logic: MockSearchGameBusinessLogic) {
-        stub(logic) { mock in
-            when(mock).searchForGame(request: any()).thenDoNothing()
+    func stubViewModel(_ model: MockSearchGameViewModel) {
+        stub(model) { mock in
+            when(mock).isSearching.get.thenReturn(Driver<Bool>.just(false))
+            //when(mock).installSearchDriver(any()).thenDoNothing()
+            when(mock).searchResults.get.thenReturn(Driver<[SearchGameTableSection]>.just([]))
+            when(mock).searchQuery.get.thenReturn(PublishRelay<String>())
+            //when(mock).search(query: any()).thenDoNothing()
+            when(mock).item(at: any()).then { _ in
+                let seed = GameSeeds.firstSeed
+                return SearchGameTableItem(gameUri: seed.uri, name: seed.name)
+            }
         }
     }
 
     func stubRouter(_ router: MockSearchGameRouter) {
         stub(router) { mock in
-            when(mock).routeToGameSearchDetails().thenDoNothing()
-        }
-    }
-
-    class TableViewSpy: UITableView {
-        var reloadDataCalled = false
-
-        override func reloadData() {
-            reloadDataCalled = true
+            when(mock).routeToGameSearchDetails(any(), from: any()).thenDoNothing()
         }
     }
 
     // MARK: Tests
 
     override func spec() {
+        beforeEach {
+            self.mockDependencyInjection()
+            self.sut = Resolver.optional()
+        }
+
         describe("The viewcontroller") {
-            let logic = MockSearchGameBusinessLogic()
-            let router = MockSearchGameRouter()
+            var viewModel: MockSearchGameViewModel!
+            var router: MockSearchGameRouter!
 
             beforeEach {
                 self.window = UIWindow()
-                self.stubBusinessLogic(logic)
+                viewModel = self.sut.viewModel as? MockSearchGameViewModel
+                router = self.sut.router as? MockSearchGameRouter
+                self.stubViewModel(viewModel)
                 self.stubRouter(router)
-                self.setupSearchGameViewController()
-                self.sut.interactor = logic
-                self.sut.router = router
+                self.loadView()
             }
             afterEach {
                 self.window = nil
-                reset(logic, router)
+                reset(viewModel, router)
             }
 
-            context("when a search query is entered") {
-                // Given
-                beforeEach {
-                    self.loadView()
-                    let controller = self.sut.navigationItem.searchController
-                    controller?.searchBar.text = "Some game"
-                    controller?.searchResultsUpdater?.updateSearchResults(for: controller!)
-                }
-
-                // Then
-                it("should ask the interactor to search for a game") {
-                    verify(logic, atLeastOnce()).searchForGame(request: any())
+            context("after it is loaded") {
+                it("should install the searchbar's driver on the viewmodel") {
+                    //verify(viewModel).installSearchDriver(any())
                 }
             }
 
             context("when asked to display the results") {
-                var spy: TableViewSpy!
-                var viewModel: SearchGame.SearchForGame.ViewModel!
-
                 // Given
                 beforeEach {
-                    spy = TableViewSpy()
-                    viewModel = GameSeeds.ViewModels.searchGameSearchForGame
-
-                    self.sut.tableView = spy
-                    self.loadView()
-                    self.sut.displaySearchForGameResults(viewModel: viewModel)
+                    
                 }
 
                 // Then
-                it("should refresh the list with the results") {
-                    expect { spy.reloadDataCalled }
-                        .to(beTrue())
-                }
+                it("should refresh the list with the results") {}
             }
 
             context("when selecting a game from the list") {
-                var viewModel: SearchGame.SearchForGame.ViewModel!
-
                 beforeEach {
-                    viewModel = GameSeeds.ViewModels.searchGameSearchForGame
-                    self.loadView()
-                    self.sut.displaySearchForGameResults(viewModel: viewModel)
+                    self.sut.navigationItem.searchController?.searchBar.text = "any search"
                 }
 
                 it("should navigate to the game's details") {
                     let tableView = self.sut.tableView!
                     tableView.delegate?.tableView?(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-                    verify(router).routeToGameSearchDetails()
+                    verify(router).routeToGameSearchDetails(any(), from: any())
                 }
             }
         }

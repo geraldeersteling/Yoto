@@ -6,40 +6,18 @@
 //  Copyright (c) 2020 Rockstars. All rights reserved.
 //
 
+import Resolver
 import UIKit
 
-@objc protocol SearchGameRoutingLogic {
-    func routeToGameSearchDetails()
+protocol SearchGameRoutingLogic {
+    func routeToGameSearchDetails(_ uri: GameUri, from viewController: UIViewController?)
 }
 
-protocol SearchGameDataPassing {
-    var dataStore: SearchGameDataStore? { get }
-}
-
-class SearchGameRouter: NSObject, SearchGameRoutingLogic, SearchGameDataPassing {
-    weak var viewController: SearchGameViewController?
-    var dataStore: SearchGameDataStore?
-
+class SearchGameRouter: SearchGameRoutingLogic {
     // MARK: Routing
 
-    func routeToGameSearchDetails() {
-        let destinationVC = SearchGameDetailsViewController(nibName: nil, bundle: nil)
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-        navigateToGameDetails(source: viewController, destination: destinationVC)
-    }
-
-    // MARK: Navigation
-
-    func navigateToGameDetails(source: SearchGameViewController?, destination: SearchGameDetailsViewController) {
-        source?.show(destination, sender: nil)
-    }
-
-    // MARK: Passing data
-
-    func passDataToSomewhere(source: SearchGameDataStore, destination: inout SearchGameDetailsDataStore) {
-        guard let selectedRow = viewController?.tableView.indexPathForSelectedRow?.row
-        else { return }
-        destination.game = source.searchResults[selectedRow]
+    func routeToGameSearchDetails(_ uri: GameUri, from viewController: UIViewController?) {
+        let destinationVC = Resolver.resolve(SearchGameDetailsViewController.self, args: uri)
+        viewController?.show(destinationVC, sender: nil)
     }
 }

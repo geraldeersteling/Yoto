@@ -13,7 +13,7 @@ enum SearchGameDetails {
 
     enum FetchGameForResult {
         struct Request {
-            var result: GameSearchResult
+            var result: Game
         }
 
         struct Response {

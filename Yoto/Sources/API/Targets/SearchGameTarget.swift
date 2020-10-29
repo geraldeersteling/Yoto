@@ -51,6 +51,12 @@ extension SearchGameTarget: TargetType {
     }
 
     var headers: [String: String]? {
-        IGDB.authHeader
+        return Twitch.clientIDHeader
+    }
+}
+
+extension SearchGameTarget: AccessTokenAuthorizable {
+    var authorizationType: AuthorizationType? {
+        .bearer
     }
 }
