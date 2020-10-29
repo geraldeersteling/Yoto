@@ -42,6 +42,7 @@ class IGDBTests: QuickSpec {
             }
 
             afterEach {
+                try? Keychain.deleteItem(withAttributes: IGDBKeychainAttributes.OAuth())
                 Resolver.cached.reset()
                 HTTPStubs.removeAllStubs()
                 HTTPStubs.onStubActivation(nil)

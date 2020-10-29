@@ -20,6 +20,7 @@ struct Twitch {
 
     /// Passed to authorization endpoints to identify this application
     static let clientID = "4roijh4s3pl3wsqwpykowomq2a05zo"
+    static let clientIDHeader = ["Client-ID": clientID]
 
     /// Passed to the token exchange endpoints to obtain a token. You must keep this confidential.
     /// - Important: The client secret **should never be revealed or comitted**, but should rather be generated

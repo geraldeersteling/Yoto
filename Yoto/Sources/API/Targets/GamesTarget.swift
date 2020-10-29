@@ -15,6 +15,8 @@ enum GamesTarget {
 }
 
 extension GamesTarget: TargetType {
+
+
     var baseURL: URL {
         IGDB.baseURL
     }
@@ -69,6 +71,12 @@ extension GamesTarget: TargetType {
     }
 
     var headers: [String: String]? {
-        return nil
+        return Twitch.clientIDHeader
+    }
+}
+
+extension GamesTarget: AccessTokenAuthorizable {
+    var authorizationType: AuthorizationType? {
+        .bearer
     }
 }

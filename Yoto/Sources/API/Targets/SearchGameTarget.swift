@@ -13,13 +13,9 @@ enum SearchGameTarget {
     case search(query: String)
 }
 
-extension SearchGameTarget: TargetType, AccessTokenAuthorizable {
+extension SearchGameTarget: TargetType {
     var baseURL: URL {
         IGDB.baseURL
-    }
-
-    var authorizationType: AuthorizationType? {
-        return .bearer
     }
 
     var path: String {
@@ -55,6 +51,12 @@ extension SearchGameTarget: TargetType, AccessTokenAuthorizable {
     }
 
     var headers: [String: String]? {
-        return nil
+        return Twitch.clientIDHeader
+    }
+}
+
+extension SearchGameTarget: AccessTokenAuthorizable {
+    var authorizationType: AuthorizationType? {
+        .bearer
     }
 }
