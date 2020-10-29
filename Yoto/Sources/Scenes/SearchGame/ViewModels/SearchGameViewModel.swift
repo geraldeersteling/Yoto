@@ -41,6 +41,8 @@ class SearchGameViewModel {
     init(repository: GamesRepository) {
         self.repository = repository
 
+        // QUESTION -- if this subscription propegates an error, the stream completes and we can't search anymore.
+        //             What would be the best way to then re-subscribe or not dispose of the sequence?
         searchQuery
             .debounce(.milliseconds(500), scheduler: ConcurrentDispatchQueueScheduler(qos: .userInitiated))
             .distinctUntilChanged()
@@ -48,6 +50,9 @@ class SearchGameViewModel {
             .flatMapLatest {
                 repository
                     .searchGames($0)
+                    // TODO: Properly handle errors (such as a 401). An option could be to return a `Result`
+                    //       from repositories instead of a `Single`
+                    .catchErrorJustReturn([])
                     .trackActivity(self.searchingIndicator)
             }
             .mapMany { SearchGameTableItem(gameUri: $0.uri, name: $0.name) }

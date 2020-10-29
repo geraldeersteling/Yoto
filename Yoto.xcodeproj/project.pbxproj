@@ -50,6 +50,8 @@
 		9B634C2C24BB0E6200EBAF9F /* GameDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B634C2824BB0E6200EBAF9F /* GameDetailsInteractorTests.swift */; };
 		9B634C2D24BB0E6200EBAF9F /* GameDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B634C2924BB0E6200EBAF9F /* GameDetailsWorkerTests.swift */; };
 		9B634C2E24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B634C2A24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift */; };
+		9B6E53F92541758D00D89697 /* IGDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E53F82541758D00D89697 /* IGDBTests.swift */; };
+		9B6E540325417E0000D89697 /* TwitchTargetStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E540225417E0000D89697 /* TwitchTargetStub.swift */; };
 		9B7D607124E430100072AD34 /* SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7D607024E430100072AD34 /* SearchGameViewModel.swift */; };
 		9B7D609824E455CD0072AD34 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7D609724E455CD0072AD34 /* GameViewModel.swift */; };
 		9B89F9DF24B9EBD70072AF12 /* GameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89F9D824B9EBD70072AF12 /* GameDetailsPresenter.swift */; };
@@ -59,8 +61,21 @@
 		9B89F9E324B9EBD70072AF12 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89F9DC24B9EBD70072AF12 /* GameDetailsViewController.swift */; };
 		9B89F9E424B9EBD70072AF12 /* GameDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89F9DD24B9EBD70072AF12 /* GameDetailsInteractor.swift */; };
 		9B8AC82C24ED5AA4005DCBAD /* SearchGameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */; };
+		9BA21927254087C000C306BC /* IGDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA21926254087C000C306BC /* IGDBError.swift */; };
 		9BA415BF24B9EF2E005D7ED7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA415BE24B9EF2E005D7ED7 /* Game.swift */; };
-		9BB1259D24EE6AF6005192B4 /* GamesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1258124EE6AF4005192B4 /* GamesRemoteRepository.swift */; };
+		9BAA207125404BD1008A2B51 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA207025404BD1008A2B51 /* Keychain.swift */; };
+		9BAA207625404CD9008A2B51 /* KeychainAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA207525404CD9008A2B51 /* KeychainAttributes.swift */; };
+		9BAA207B25404EC3008A2B51 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA207A25404EC3008A2B51 /* KeychainError.swift */; };
+		9BAA20882540625D008A2B51 /* KeychainAttributes+IGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA20872540625D008A2B51 /* KeychainAttributes+IGDB.swift */; };
+		9BAA20CB25407F6C008A2B51 /* TwitchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA20CA25407F6C008A2B51 /* TwitchTarget.swift */; };
+		9BAA20D92540834B008A2B51 /* TwitchCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA20D82540834B008A2B51 /* TwitchCredentials.swift */; };
+		9BB062B12548485300B9E2ED /* Twitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB062B02548485300B9E2ED /* Twitch.swift */; };
+		9BB063102548499700B9E2ED /* KeychainSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */; };
+		9BB0631625484AA300B9E2ED /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631525484AA300B9E2ED /* KeychainTests.swift */; };
+		9BB0631E25486B1000B9E2ED /* TwitchSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */; };
+		9BB0632A2548ABD300B9E2ED /* GamesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB063282548ABD300B9E2ED /* GamesRemoteRepository.swift */; };
+		9BB0632B2548ABD300B9E2ED /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB063292548ABD300B9E2ED /* GamesRepository.swift */; };
+		9BB0633A2549CE0100B9E2ED /* API+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB063392549CE0100B9E2ED /* API+Injection.swift */; };
 		9BB1259E24EE6AF6005192B4 /* GameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1258224EE6AF5005192B4 /* GameDetailsPresenter.swift */; };
 		9BB1259F24EE6AF6005192B4 /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1258324EE6AF5005192B4 /* GameListTableViewCell.swift */; };
 		9BB125A024EE6AF6005192B4 /* GameDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1258424EE6AF5005192B4 /* GameDetailsWorker.swift */; };
@@ -81,7 +96,6 @@
 		9BB125AF24EE6AF6005192B4 /* SearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259324EE6AF6005192B4 /* SearchGameViewController.swift */; };
 		9BB125B024EE6AF6005192B4 /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259424EE6AF6005192B4 /* GameListPresenter.swift */; };
 		9BB125B124EE6AF6005192B4 /* GameListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259524EE6AF6005192B4 /* GameListRouter.swift */; };
-		9BB125B224EE6AF6005192B4 /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259624EE6AF6005192B4 /* GamesRepository.swift */; };
 		9BB125B324EE6AF6005192B4 /* SearchGameTableSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259724EE6AF6005192B4 /* SearchGameTableSections.swift */; };
 		9BB125B424EE6AF6005192B4 /* SearchGameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259824EE6AF6005192B4 /* SearchGameDetailsPresenter.swift */; };
 		9BB125B524EE6AF6005192B4 /* GameDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1259924EE6AF6005192B4 /* GameDetailsInteractor.swift */; };
@@ -184,6 +198,8 @@
 		9B634C2824BB0E6200EBAF9F /* GameDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		9B634C2924BB0E6200EBAF9F /* GameDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsWorkerTests.swift; sourceTree = "<group>"; };
 		9B634C2A24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		9B6E53F82541758D00D89697 /* IGDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBTests.swift; sourceTree = "<group>"; };
+		9B6E540225417E0000D89697 /* TwitchTargetStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchTargetStub.swift; sourceTree = "<group>"; };
 		9B7D607024E430100072AD34 /* SearchGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewModel.swift; sourceTree = "<group>"; };
 		9B7D609724E455CD0072AD34 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		9B89F9D824B9EBD70072AF12 /* GameDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -193,8 +209,21 @@
 		9B89F9DC24B9EBD70072AF12 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		9B89F9DD24B9EBD70072AF12 /* GameDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractor.swift; sourceTree = "<group>"; };
 		9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameSeeds.swift; sourceTree = "<group>"; };
+		9BA21926254087C000C306BC /* IGDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBError.swift; sourceTree = "<group>"; };
 		9BA415BE24B9EF2E005D7ED7 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		9BB1258124EE6AF4005192B4 /* GamesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRemoteRepository.swift; sourceTree = "<group>"; };
+		9BAA207025404BD1008A2B51 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		9BAA207525404CD9008A2B51 /* KeychainAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAttributes.swift; sourceTree = "<group>"; };
+		9BAA207A25404EC3008A2B51 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		9BAA20872540625D008A2B51 /* KeychainAttributes+IGDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainAttributes+IGDB.swift"; sourceTree = "<group>"; };
+		9BAA20CA25407F6C008A2B51 /* TwitchTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchTarget.swift; sourceTree = "<group>"; };
+		9BAA20D82540834B008A2B51 /* TwitchCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchCredentials.swift; sourceTree = "<group>"; };
+		9BB062B02548485300B9E2ED /* Twitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitch.swift; sourceTree = "<group>"; };
+		9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSeeds.swift; sourceTree = "<group>"; };
+		9BB0631525484AA300B9E2ED /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
+		9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchSeeds.swift; sourceTree = "<group>"; };
+		9BB063282548ABD300B9E2ED /* GamesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRemoteRepository.swift; sourceTree = "<group>"; };
+		9BB063292548ABD300B9E2ED /* GamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
+		9BB063392549CE0100B9E2ED /* API+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Injection.swift"; sourceTree = "<group>"; };
 		9BB1258224EE6AF5005192B4 /* GameDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenter.swift; sourceTree = "<group>"; };
 		9BB1258324EE6AF5005192B4 /* GameListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
 		9BB1258424EE6AF5005192B4 /* GameDetailsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsWorker.swift; sourceTree = "<group>"; };
@@ -215,7 +244,6 @@
 		9BB1259324EE6AF6005192B4 /* SearchGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameViewController.swift; sourceTree = "<group>"; };
 		9BB1259424EE6AF6005192B4 /* GameListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		9BB1259524EE6AF6005192B4 /* GameListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListRouter.swift; sourceTree = "<group>"; };
-		9BB1259624EE6AF6005192B4 /* GamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
 		9BB1259724EE6AF6005192B4 /* SearchGameTableSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableSections.swift; sourceTree = "<group>"; };
 		9BB1259824EE6AF6005192B4 /* SearchGameDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameDetailsPresenter.swift; sourceTree = "<group>"; };
 		9BB1259924EE6AF6005192B4 /* GameDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractor.swift; sourceTree = "<group>"; };
@@ -411,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				9B076EC624E5BF400087C90C /* GamesTargetStub.swift */,
+				9B6E540225417E0000D89697 /* TwitchTargetStub.swift */,
 				9B076EC824E5C0DF0087C90C /* StubUtils.swift */,
 			);
 			path = Stubbing;
@@ -421,6 +450,8 @@
 			children = (
 				9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */,
 				9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */,
+				9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */,
+				9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */,
 			);
 			path = Seeds;
 			sourceTree = "<group>";
@@ -428,6 +459,8 @@
 		9B45928F24DAB1610076E014 /* Cuckoo */ = {
 			isa = PBXGroup;
 			children = (
+				9BB063282548ABD300B9E2ED /* GamesRemoteRepository.swift */,
+				9BB063292548ABD300B9E2ED /* GamesRepository.swift */,
 				9BB1259924EE6AF6005192B4 /* GameDetailsInteractor.swift */,
 				9BB1258524EE6AF5005192B4 /* GameDetailsModels.swift */,
 				9BB1258224EE6AF5005192B4 /* GameDetailsPresenter.swift */,
@@ -442,8 +475,6 @@
 				9BB1258324EE6AF5005192B4 /* GameListTableViewCell.swift */,
 				9BB1259224EE6AF6005192B4 /* GameListViewController.swift */,
 				9BB1259A24EE6AF6005192B4 /* GameListWorker.swift */,
-				9BB1258124EE6AF4005192B4 /* GamesRemoteRepository.swift */,
-				9BB1259624EE6AF6005192B4 /* GamesRepository.swift */,
 				9BB1258A24EE6AF5005192B4 /* GameViewModel.swift */,
 				9BB1259024EE6AF6005192B4 /* SearchGameDetailsInteractor.swift */,
 				9BB1258824EE6AF5005192B4 /* SearchGameDetailsModels.swift */,
@@ -600,10 +631,20 @@
 		9B9F3BCB24DA92AD00BD4D03 /* TestSubjects */ = {
 			isa = PBXGroup;
 			children = (
+				9BB0631425484A9600B9E2ED /* Keychain */,
+				9BA2192E2541674500C306BC /* API */,
 				9BDCA7C224D86712000C4FE3 /* Services */,
 				9B601F9324BB071B009FC671 /* Scenes */,
 			);
 			path = TestSubjects;
+			sourceTree = "<group>";
+		};
+		9BA2192E2541674500C306BC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9B6E53F82541758D00D89697 /* IGDBTests.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		9BA415BD24B9EEFC005D7ED7 /* Entities */ = {
@@ -623,6 +664,43 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		9BAA20612540364F008A2B51 /* Keychain Handling */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA207025404BD1008A2B51 /* Keychain.swift */,
+				9BAA207525404CD9008A2B51 /* KeychainAttributes.swift */,
+				9BAA20872540625D008A2B51 /* KeychainAttributes+IGDB.swift */,
+				9BAA207A25404EC3008A2B51 /* KeychainError.swift */,
+			);
+			path = "Keychain Handling";
+			sourceTree = "<group>";
+		};
+		9BAA20CF2540825B008A2B51 /* IGDB */ = {
+			isa = PBXGroup;
+			children = (
+				9BF80FAC24D7FFB100266738 /* IGDB.swift */,
+				9BA21926254087C000C306BC /* IGDBError.swift */,
+			);
+			path = IGDB;
+			sourceTree = "<group>";
+		};
+		9BB062AF2548484800B9E2ED /* Twitch */ = {
+			isa = PBXGroup;
+			children = (
+				9BB062B02548485300B9E2ED /* Twitch.swift */,
+				9BAA20D82540834B008A2B51 /* TwitchCredentials.swift */,
+			);
+			path = Twitch;
+			sourceTree = "<group>";
+		};
+		9BB0631425484A9600B9E2ED /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				9BB0631525484AA300B9E2ED /* KeychainTests.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		9BBBC7C824E2C316004CD0D6 /* Resolver */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +708,7 @@
 				9B334E1C24E2D6E8008523E4 /* CoreApp+Injection.swift */,
 				9B334E1424E2C5F7008523E4 /* SearchGame+Injection.swift */,
 				9B334E1624E2D0A1008523E4 /* Repositories+Injection.swift */,
+				9BB063392549CE0100B9E2ED /* API+Injection.swift */,
 			);
 			path = Resolver;
 			sourceTree = "<group>";
@@ -667,8 +746,9 @@
 		9BDCA7C624D9711C000C4FE3 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9BB062AF2548484800B9E2ED /* Twitch */,
+				9BAA20CF2540825B008A2B51 /* IGDB */,
 				9BDCA7C724D97122000C4FE3 /* Targets */,
-				9BF80FAC24D7FFB100266738 /* IGDB.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -678,6 +758,7 @@
 			children = (
 				9BF80FA924D7F97300266738 /* SearchGameTarget.swift */,
 				9BDCA7C824D9713C000C4FE3 /* GamesTarget.swift */,
+				9BAA20CA25407F6C008A2B51 /* TwitchTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -695,6 +776,7 @@
 		9BF80FAB24D7FF9900266738 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				9BAA20612540364F008A2B51 /* Keychain Handling */,
 				9B076E8424E53A510087C90C /* Extensions */,
 				9BD53FFA24E17CEC0040823E /* Dependency Injection */,
 			);
@@ -1076,6 +1158,7 @@
 				9BDCA7C924D9713C000C4FE3 /* GamesTarget.swift in Sources */,
 				9B89F9DF24B9EBD70072AF12 /* GameDetailsPresenter.swift in Sources */,
 				9B334E1724E2D0A1008523E4 /* Repositories+Injection.swift in Sources */,
+				9BAA207625404CD9008A2B51 /* KeychainAttributes.swift in Sources */,
 				9B89F9E124B9EBD70072AF12 /* GameDetailsRouter.swift in Sources */,
 				9B4A823024BF071A00EA430C /* GameListMemRepository.swift in Sources */,
 				9B89F9E324B9EBD70072AF12 /* GameDetailsViewController.swift in Sources */,
@@ -1083,7 +1166,11 @@
 				9B012FAF24B85560009100A8 /* MainTabbarController.swift in Sources */,
 				9B4A821E24BEDED900EA430C /* GameListWorker.swift in Sources */,
 				9B4A822124BEDED900EA430C /* GameListViewController.swift in Sources */,
+				9BB062B12548485300B9E2ED /* Twitch.swift in Sources */,
+				9BAA207B25404EC3008A2B51 /* KeychainError.swift in Sources */,
+				9BB0633A2549CE0100B9E2ED /* API+Injection.swift in Sources */,
 				9BDCA7BB24D85E9C000C4FE3 /* SearchGameDetailsPresenter.swift in Sources */,
+				9BAA20D92540834B008A2B51 /* TwitchCredentials.swift in Sources */,
 				9BDCA7BC24D85E9C000C4FE3 /* SearchGameDetailsWorker.swift in Sources */,
 				9B012F7C24B854F0009100A8 /* AppDelegate.swift in Sources */,
 				9B89F9E024B9EBD70072AF12 /* GameDetailsWorker.swift in Sources */,
@@ -1098,13 +1185,17 @@
 				9BE9543C24B863A700527B17 /* SearchGameTableViewCell.swift in Sources */,
 				9BFD2CC224D9B3CC0000B958 /* GamesRemoteRepository.swift in Sources */,
 				9B4A821F24BEDED900EA430C /* GameListRouter.swift in Sources */,
+				9BA21927254087C000C306BC /* IGDBError.swift in Sources */,
 				9B076E8824E5450C0087C90C /* SearchGameTableSections.swift in Sources */,
 				9B334E1524E2C5F7008523E4 /* SearchGame+Injection.swift in Sources */,
 				9BF80FAA24D7F97300266738 /* SearchGameTarget.swift in Sources */,
 				9BDCA7BF24D85E9C000C4FE3 /* SearchGameDetailsViewController.swift in Sources */,
+				9BAA20882540625D008A2B51 /* KeychainAttributes+IGDB.swift in Sources */,
+				9BAA20CB25407F6C008A2B51 /* TwitchTarget.swift in Sources */,
 				9BF80FAD24D7FFB100266738 /* IGDB.swift in Sources */,
 				9BDCA7BD24D85E9C000C4FE3 /* SearchGameDetailsRouter.swift in Sources */,
 				9B7D607124E430100072AD34 /* SearchGameViewModel.swift in Sources */,
+				9BAA207125404BD1008A2B51 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,9 +1203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB125B224EE6AF6005192B4 /* GamesRepository.swift in Sources */,
 				9B634C2D24BB0E6200EBAF9F /* GameDetailsWorkerTests.swift in Sources */,
 				9BB125B724EE6AF6005192B4 /* SearchGameViewModel.swift in Sources */,
+				9B6E53F92541758D00D89697 /* IGDBTests.swift in Sources */,
 				9BB125A824EE6AF6005192B4 /* GameDetailsViewController.swift in Sources */,
 				9BB125AA24EE6AF6005192B4 /* SearchGameTableViewCell.swift in Sources */,
 				9BB125A424EE6AF6005192B4 /* SearchGameDetailsModels.swift in Sources */,
@@ -1122,9 +1213,12 @@
 				9BB125AB24EE6AF6005192B4 /* SearchGameDetailsWorker.swift in Sources */,
 				9BB125A224EE6AF6005192B4 /* GameDetailsRouter.swift in Sources */,
 				9BB125A624EE6AF6005192B4 /* GameViewModel.swift in Sources */,
+				9BB0631625484AA300B9E2ED /* KeychainTests.swift in Sources */,
 				9B4A822C24BEDEF400EA430C /* GameListPresenterTests.swift in Sources */,
 				9BB125B324EE6AF6005192B4 /* SearchGameTableSections.swift in Sources */,
+				9BB0632B2548ABD300B9E2ED /* GamesRepository.swift in Sources */,
 				9BB125B624EE6AF6005192B4 /* GameListWorker.swift in Sources */,
+				9B6E540325417E0000D89697 /* TwitchTargetStub.swift in Sources */,
 				9B4A821124BC9BBD00EA430C /* SearchGameViewControllerTests.swift in Sources */,
 				9BB125AD24EE6AF6005192B4 /* GameListModels.swift in Sources */,
 				9BB1259F24EE6AF6005192B4 /* GameListTableViewCell.swift in Sources */,
@@ -1132,6 +1226,7 @@
 				9B4A822A24BEDEF400EA430C /* GameListInteractorTests.swift in Sources */,
 				9BB125B024EE6AF6005192B4 /* GameListPresenter.swift in Sources */,
 				9B076EC924E5C0DF0087C90C /* StubUtils.swift in Sources */,
+				9BB063102548499700B9E2ED /* KeychainSeeds.swift in Sources */,
 				9B634C2C24BB0E6200EBAF9F /* GameDetailsInteractorTests.swift in Sources */,
 				9B8AC82C24ED5AA4005DCBAD /* SearchGameSeeds.swift in Sources */,
 				9BB125A724EE6AF6005192B4 /* SearchGameDetailsRouter.swift in Sources */,
@@ -1143,18 +1238,19 @@
 				9B19445B24CDD74A001D6FC1 /* GameSeeds.swift in Sources */,
 				9B076EC724E5BF400087C90C /* GamesTargetStub.swift in Sources */,
 				9BB125A324EE6AF6005192B4 /* GameListMemRepository.swift in Sources */,
+				9BB0631E25486B1000B9E2ED /* TwitchSeeds.swift in Sources */,
 				9B4A822924BEDEF400EA430C /* GameListViewControllerTests.swift in Sources */,
 				9B634C2B24BB0E6200EBAF9F /* GameDetailsViewControllerTests.swift in Sources */,
 				9BB125A124EE6AF6005192B4 /* GameDetailsModels.swift in Sources */,
 				9BB125A524EE6AF6005192B4 /* SearchGameRouter.swift in Sources */,
 				9BB125B524EE6AF6005192B4 /* GameDetailsInteractor.swift in Sources */,
 				9B4A822B24BEDEF400EA430C /* GameListWorkerTests.swift in Sources */,
+				9BB0632A2548ABD300B9E2ED /* GamesRemoteRepository.swift in Sources */,
 				9BDCA7C424D86739000C4FE3 /* GameRemoteRepositoryTests.swift in Sources */,
 				9BB125A924EE6AF6005192B4 /* GameListInteractor.swift in Sources */,
 				9B634C2E24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift in Sources */,
 				9BB125A024EE6AF6005192B4 /* GameDetailsWorker.swift in Sources */,
 				9BB125B824EE6AF6005192B4 /* SearchGameDetailsViewController.swift in Sources */,
-				9BB1259D24EE6AF6005192B4 /* GamesRemoteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

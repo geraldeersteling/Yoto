@@ -26,7 +26,7 @@ struct GamesTargetStub {
     }
 
     static func stubDetailsForGame() {
-        let gamesPath = stubTargetPath(GamesTarget.detailsForGame(id: 1))
+        let gamesPath = stubTargetPath(GamesTarget.detailsForGame(uri: GameUri(id: 1)))
         stub(condition: stubHost && isPath(gamesPath)) { _ in
             HTTPStubsResponse(jsonObject: [GameSeeds.firstSeed.toJSON()],
                               statusCode: 200,
