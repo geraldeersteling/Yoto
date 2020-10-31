@@ -1,5 +1,5 @@
 # Custom ignores
-YotoTests/Cuckoo
+**/Cuckoo/
 
 # Xcode
 #
