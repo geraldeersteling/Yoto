@@ -21,7 +21,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -50,6 +50,46 @@
                BlueprintIdentifier = "9B012F8F24B854F2009100A8"
                BuildableName = "YotoTests.xctest"
                BlueprintName = "YotoTests"
+               ReferencedContainer = "container:Yoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9BB0634D254AFA0C00B9E2ED"
+               BuildableName = "YotoKitTests.xctest"
+               BlueprintName = "YotoKitTests"
+               ReferencedContainer = "container:Yoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9B012F9A24B854F2009100A8"
+               BuildableName = "YotoUITests.xctest"
+               BlueprintName = "YotoUITests"
+               ReferencedContainer = "container:Yoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9BB063A9254B081B00B9E2ED"
+               BuildableName = "YotoiOSTests.xctest"
+               BlueprintName = "YotoiOSTests"
+               ReferencedContainer = "container:Yoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9BB063EA254B0D0200B9E2ED"
+               BuildableName = "YotoUIKitTests.xctest"
+               BlueprintName = "YotoUIKitTests"
                ReferencedContainer = "container:Yoto.xcodeproj">
             </BuildableReference>
          </TestableReference>
