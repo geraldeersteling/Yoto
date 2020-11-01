@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import Yoto
+@testable import YotoKit
 
 struct SearchGameSeeds {
 

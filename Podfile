@@ -96,6 +96,7 @@ target 'YotoiOS' do
   # Pods for YotoKit
   shared_pods
   rx_pods
+  networking_pods
 
   target 'YotoiOSTests' do
     inherit! :search_paths

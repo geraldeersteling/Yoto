@@ -22,15 +22,7 @@
 		9B012FA024B854F2009100A8 /* YotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B012F9F24B854F2009100A8 /* YotoUITests.swift */; };
 		9B076EC724E5BF400087C90C /* GamesTargetStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B076EC624E5BF400087C90C /* GamesTargetStub.swift */; };
 		9B076EC924E5C0DF0087C90C /* StubUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B076EC824E5C0DF0087C90C /* StubUtils.swift */; };
-		9B19445B24CDD74A001D6FC1 /* GameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */; };
-		9B334E1724E2D0A1008523E4 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B334E1624E2D0A1008523E4 /* Repositories+Injection.swift */; };
 		9B334E1D24E2D6E8008523E4 /* CoreApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B334E1C24E2D6E8008523E4 /* CoreApp+Injection.swift */; };
-		9B34EDEE24E69661009E9C94 /* SearchGameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */; };
-		9B4A821124BC9BBD00EA430C /* SearchGameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A820D24BC9BBD00EA430C /* SearchGameViewControllerTests.swift */; };
-		9B4A822924BEDEF400EA430C /* GameListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */; };
-		9B4A822A24BEDEF400EA430C /* GameListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A822624BEDEF400EA430C /* GameListInteractorTests.swift */; };
-		9B4A822B24BEDEF400EA430C /* GameListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A822724BEDEF400EA430C /* GameListWorkerTests.swift */; };
-		9B4A822C24BEDEF400EA430C /* GameListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A822824BEDEF400EA430C /* GameListPresenterTests.swift */; };
 		9B4A823824BF1EEB00EA430C /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A823724BF1EEA00EA430C /* BartyCrouch.swift */; };
 		9B4A823D24BF1F6F00EA430C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A823C24BF1F6F00EA430C /* Images.xcassets */; };
 		9B4A823F24BF1F7B00EA430C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A823E24BF1F7B00EA430C /* Colors.xcassets */; };
@@ -41,11 +33,7 @@
 		9B634C2E24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B634C2A24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift */; };
 		9B6E53F92541758D00D89697 /* IGDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E53F82541758D00D89697 /* IGDBTests.swift */; };
 		9B6E540325417E0000D89697 /* TwitchTargetStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E540225417E0000D89697 /* TwitchTargetStub.swift */; };
-		9B8AC82C24ED5AA4005DCBAD /* SearchGameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */; };
-		9BB063102548499700B9E2ED /* KeychainSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */; };
 		9BB0631625484AA300B9E2ED /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631525484AA300B9E2ED /* KeychainTests.swift */; };
-		9BB0631E25486B1000B9E2ED /* TwitchSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */; };
-		9BB0633A2549CE0100B9E2ED /* API+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB063392549CE0100B9E2ED /* API+Injection.swift */; };
 		9BB0634F254AFA0C00B9E2ED /* YotoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB06346254AFA0C00B9E2ED /* YotoKit.framework */; };
 		9BB06356254AFA0C00B9E2ED /* YotoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB06355254AFA0C00B9E2ED /* YotoKitTests.swift */; };
 		9BB06358254AFA0C00B9E2ED /* YotoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB06348254AFA0C00B9E2ED /* YotoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,7 +49,6 @@
 		9BB063F5254B0D0200B9E2ED /* YotoUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB063E5254B0D0100B9E2ED /* YotoUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BB063F8254B0D0200B9E2ED /* YotoUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB063E3254B0D0100B9E2ED /* YotoUIKit.framework */; };
 		9BB063F9254B0D0200B9E2ED /* YotoUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB063E3254B0D0100B9E2ED /* YotoUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9BB064D2254B10B100B9E2ED /* SearchGame+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B334E1424E2C5F7008523E4 /* SearchGame+Injection.swift */; };
 		9BB064EB254B115B00B9E2ED /* YotoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB06346254AFA0C00B9E2ED /* YotoKit.framework */; };
 		9BB064EC254B115B00B9E2ED /* YotoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB06346254AFA0C00B9E2ED /* YotoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BB06518254B11DD00B9E2ED /* SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0636C254AFCC700B9E2ED /* SearchGameViewModel.swift */; };
@@ -95,12 +82,44 @@
 		9BB06706254D9C9300B9E2ED /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89F9DC24B9EBD70072AF12 /* GameDetailsViewController.swift */; };
 		9BB06713254D9CA000B9E2ED /* GameDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A825E24BF457A00EA430C /* GameDetailsViewController.xib */; };
 		9BB0671B254D9CF200B9E2ED /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0671A254D9CF200B9E2ED /* GameDetailsViewModel.swift */; };
-		9BB0673D254DA37E00B9E2ED /* GameList+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0673C254DA37E00B9E2ED /* GameList+Injection.swift */; };
 		9BB06771254DA65F00B9E2ED /* MainTabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B012FAE24B85560009100A8 /* MainTabbarController.xib */; };
 		9BB06772254DA65F00B9E2ED /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B012FAD24B85560009100A8 /* MainTabbarController.swift */; };
 		9BBA3C2C254DAAD6005021F0 /* SearchGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9543A24B863A700527B17 /* SearchGameTableViewCell.swift */; };
 		9BBA3C2D254DAAD6005021F0 /* SearchGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9543B24B863A700527B17 /* SearchGameTableViewCell.xib */; };
 		9BBA3C3B254DAB26005021F0 /* SearchGameTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C3A254DAB26005021F0 /* SearchGameTableDataSource.swift */; };
+		9BBA3C4E254DAF13005021F0 /* SearchGameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */; };
+		9BBA3C81254DAFB2005021F0 /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C79254DAFB2005021F0 /* GamesRepository.swift */; };
+		9BBA3C82254DAFB2005021F0 /* SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7A254DAFB2005021F0 /* SearchGameViewModel.swift */; };
+		9BBA3C83254DAFB2005021F0 /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7B254DAFB2005021F0 /* GameDetailsViewModel.swift */; };
+		9BBA3C84254DAFB2005021F0 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7C254DAFB2005021F0 /* GameListViewModel.swift */; };
+		9BBA3C85254DAFB2005021F0 /* SearchGamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7D254DAFB2005021F0 /* SearchGamesRepository.swift */; };
+		9BBA3C86254DAFB2005021F0 /* SearchGamesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7E254DAFB2005021F0 /* SearchGamesRemoteRepository.swift */; };
+		9BBA3C87254DAFB2005021F0 /* GamesInMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7F254DAFB2005021F0 /* GamesInMemoryRepository.swift */; };
+		9BBA3C88254DAFB2005021F0 /* SearchGameTableSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C80254DAFB2005021F0 /* SearchGameTableSections.swift */; };
+		9BBA3C9C254DAFE2005021F0 /* TwitchSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */; };
+		9BBA3C9D254DAFE2005021F0 /* GameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */; };
+		9BBA3C9E254DAFE2005021F0 /* SearchGameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */; };
+		9BBA3CAC254DB0C6005021F0 /* KeychainSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */; };
+		9BBA3CDC254DB79C005021F0 /* YotoKit+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CDB254DB79C005021F0 /* YotoKit+Injection.swift */; };
+		9BBA3CE6254DBAAB005021F0 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CE5254DBAAB005021F0 /* Repositories+Injection.swift */; };
+		9BBA3CEE254DBB13005021F0 /* API+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CED254DBB13005021F0 /* API+Injection.swift */; };
+		9BBA3CF6254DBB33005021F0 /* GameList+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CF5254DBB33005021F0 /* GameList+Injection.swift */; };
+		9BBA3CFE254DBC52005021F0 /* SearchGame+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CFD254DBC52005021F0 /* SearchGame+Injection.swift */; };
+		9BBA3D14254DBDC6005021F0 /* YotoiOS+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D13254DBDC6005021F0 /* YotoiOS+Injection.swift */; };
+		9BBA3D22254DBDE5005021F0 /* GameList+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D21254DBDE5005021F0 /* GameList+Injection.swift */; };
+		9BBA3D2A254DBE1E005021F0 /* SearchGame+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D29254DBE1E005021F0 /* SearchGame+Injection.swift */; };
+		9BBA3D50254DBFA0005021F0 /* GameListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */; };
+		9BBA3D60254DC13D005021F0 /* SearchGameTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D59254DC13D005021F0 /* SearchGameTableDataSource.swift */; };
+		9BBA3D61254DC13D005021F0 /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5A254DC13D005021F0 /* GameListTableViewCell.swift */; };
+		9BBA3D62254DC13D005021F0 /* SearchGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5B254DC13D005021F0 /* SearchGameTableViewCell.swift */; };
+		9BBA3D63254DC13D005021F0 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5C254DC13D005021F0 /* GameListViewController.swift */; };
+		9BBA3D64254DC13D005021F0 /* SearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5D254DC13D005021F0 /* SearchGameViewController.swift */; };
+		9BBA3D65254DC13D005021F0 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5E254DC13D005021F0 /* GameDetailsViewController.swift */; };
+		9BBA3D66254DC13D005021F0 /* SearchGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3D5F254DC13D005021F0 /* SearchGameRouter.swift */; };
+		9BBA3D85254DC276005021F0 /* SearchGameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A820D24BC9BBD00EA430C /* SearchGameViewControllerTests.swift */; };
+		9BBA3D92254DC593005021F0 /* SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7A254DAFB2005021F0 /* SearchGameViewModel.swift */; };
+		9BBA3D99254DC5F8005021F0 /* GameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */; };
+		9BBA3E0F254DC874005021F0 /* SearchGamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3C7D254DAFB2005021F0 /* SearchGamesRepository.swift */; };
 		9BBBC7CB24E2C4D7004CD0D6 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBBC7CA24E2C4D7004CD0D6 /* AppDelegate+Injection.swift */; };
 		9BDCA7C424D86739000C4FE3 /* GameRemoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCA7C324D86739000C4FE3 /* GameRemoteRepositoryTests.swift */; };
 		B02CA626F6AD6464F53E6A1B /* Pods_Yoto_YotoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37B16F8CAC5DB9DAE68D695 /* Pods_Yoto_YotoUITests.framework */; };
@@ -279,15 +298,10 @@
 		9B076EC824E5C0DF0087C90C /* StubUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUtils.swift; sourceTree = "<group>"; };
 		9B076ECA24E5D3EA0087C90C /* SearchGameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameRouter.swift; sourceTree = "<group>"; };
 		9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSeeds.swift; sourceTree = "<group>"; };
-		9B334E1424E2C5F7008523E4 /* SearchGame+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGame+Injection.swift"; sourceTree = "<group>"; };
-		9B334E1624E2D0A1008523E4 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
 		9B334E1C24E2D6E8008523E4 /* CoreApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreApp+Injection.swift"; sourceTree = "<group>"; };
 		9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewModelTests.swift; sourceTree = "<group>"; };
 		9B4A820D24BC9BBD00EA430C /* SearchGameViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewControllerTests.swift; sourceTree = "<group>"; };
 		9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewControllerTests.swift; sourceTree = "<group>"; };
-		9B4A822624BEDEF400EA430C /* GameListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListInteractorTests.swift; sourceTree = "<group>"; };
-		9B4A822724BEDEF400EA430C /* GameListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListWorkerTests.swift; sourceTree = "<group>"; };
-		9B4A822824BEDEF400EA430C /* GameListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenterTests.swift; sourceTree = "<group>"; };
 		9B4A823224BF127F00EA430C /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
 		9B4A823324BF127F00EA430C /* GameListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListTableViewCell.xib; sourceTree = "<group>"; };
 		9B4A823724BF1EEA00EA430C /* BartyCrouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
@@ -320,7 +334,6 @@
 		9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSeeds.swift; sourceTree = "<group>"; };
 		9BB0631525484AA300B9E2ED /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchSeeds.swift; sourceTree = "<group>"; };
-		9BB063392549CE0100B9E2ED /* API+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Injection.swift"; sourceTree = "<group>"; };
 		9BB06346254AFA0C00B9E2ED /* YotoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YotoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB06348254AFA0C00B9E2ED /* YotoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YotoKit.h; sourceTree = "<group>"; };
 		9BB06349254AFA0C00B9E2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,8 +359,30 @@
 		9BB066C9254D945500B9E2ED /* GamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
 		9BB066D1254D964E00B9E2ED /* GamesInMemoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInMemoryRepository.swift; sourceTree = "<group>"; };
 		9BB0671A254D9CF200B9E2ED /* GameDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewModel.swift; sourceTree = "<group>"; };
-		9BB0673C254DA37E00B9E2ED /* GameList+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameList+Injection.swift"; sourceTree = "<group>"; };
 		9BBA3C3A254DAB26005021F0 /* SearchGameTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameTableDataSource.swift; sourceTree = "<group>"; };
+		9BBA3C79254DAFB2005021F0 /* GamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
+		9BBA3C7A254DAFB2005021F0 /* SearchGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameViewModel.swift; sourceTree = "<group>"; };
+		9BBA3C7B254DAFB2005021F0 /* GameDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewModel.swift; sourceTree = "<group>"; };
+		9BBA3C7C254DAFB2005021F0 /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		9BBA3C7D254DAFB2005021F0 /* SearchGamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGamesRepository.swift; sourceTree = "<group>"; };
+		9BBA3C7E254DAFB2005021F0 /* SearchGamesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGamesRemoteRepository.swift; sourceTree = "<group>"; };
+		9BBA3C7F254DAFB2005021F0 /* GamesInMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInMemoryRepository.swift; sourceTree = "<group>"; };
+		9BBA3C80254DAFB2005021F0 /* SearchGameTableSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableSections.swift; sourceTree = "<group>"; };
+		9BBA3CDB254DB79C005021F0 /* YotoKit+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YotoKit+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3CE5254DBAAB005021F0 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3CED254DBB13005021F0 /* API+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3CF5254DBB33005021F0 /* GameList+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameList+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3CFD254DBC52005021F0 /* SearchGame+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGame+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3D13254DBDC6005021F0 /* YotoiOS+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YotoiOS+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3D21254DBDE5005021F0 /* GameList+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameList+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3D29254DBE1E005021F0 /* SearchGame+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGame+Injection.swift"; sourceTree = "<group>"; };
+		9BBA3D59254DC13D005021F0 /* SearchGameTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableDataSource.swift; sourceTree = "<group>"; };
+		9BBA3D5A254DC13D005021F0 /* GameListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
+		9BBA3D5B254DC13D005021F0 /* SearchGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableViewCell.swift; sourceTree = "<group>"; };
+		9BBA3D5C254DC13D005021F0 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		9BBA3D5D254DC13D005021F0 /* SearchGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameViewController.swift; sourceTree = "<group>"; };
+		9BBA3D5E254DC13D005021F0 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
+		9BBA3D5F254DC13D005021F0 /* SearchGameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameRouter.swift; sourceTree = "<group>"; };
 		9BBBC7CA24E2C4D7004CD0D6 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		9BDCA7C324D86739000C4FE3 /* GameRemoteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRemoteRepositoryTests.swift; sourceTree = "<group>"; };
 		9BDCA7C824D9713C000C4FE3 /* GamesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTarget.swift; sourceTree = "<group>"; };
@@ -612,10 +647,6 @@
 		9B4A822424BEDEE600EA430C /* GameList */ = {
 			isa = PBXGroup;
 			children = (
-				9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */,
-				9B4A822624BEDEF400EA430C /* GameListInteractorTests.swift */,
-				9B4A822824BEDEF400EA430C /* GameListPresenterTests.swift */,
-				9B4A822724BEDEF400EA430C /* GameListWorkerTests.swift */,
 			);
 			path = GameList;
 			sourceTree = "<group>";
@@ -771,6 +802,7 @@
 		9BB06347254AFA0C00B9E2ED /* YotoKit */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3CDA254DB77F005021F0 /* Dependency Injection */,
 				9BB06368254AFCB600B9E2ED /* Sources */,
 				9BB06348254AFA0C00B9E2ED /* YotoKit.h */,
 				9BB06349254AFA0C00B9E2ED /* Info.plist */,
@@ -826,6 +858,7 @@
 		9BB063A3254B081B00B9E2ED /* YotoiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3D11254DBDAD005021F0 /* Dependency Injection */,
 				9BB063C5254B0B0400B9E2ED /* Sources */,
 				9BB063A4254B081B00B9E2ED /* YotoiOS.h */,
 				9BB063A5254B081B00B9E2ED /* Info.plist */,
@@ -836,6 +869,7 @@
 		9BB063B0254B081B00B9E2ED /* YotoiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3D58254DC13D005021F0 /* Cuckoo */,
 				9BB063CD254B0BB700B9E2ED /* TestSubjects */,
 				9BB063B1254B081B00B9E2ED /* YotoiOSTests.swift */,
 				9BB063B3254B081B00B9E2ED /* Info.plist */,
@@ -912,6 +946,7 @@
 		9BB063CE254B0BBC00B9E2ED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3D43254DBF1A005021F0 /* GameList */,
 				9BB063CF254B0BBF00B9E2ED /* SearchGame */,
 			);
 			path = Scenes;
@@ -939,7 +974,6 @@
 			children = (
 				9B19445A24CDD74A001D6FC1 /* GameSeeds.swift */,
 				9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */,
-				9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */,
 				9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */,
 			);
 			path = Seeds;
@@ -958,6 +992,7 @@
 		9BB063F1254B0D0200B9E2ED /* YotoUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3CA5254DB0BB005021F0 /* Seeds */,
 				9BB063F2254B0D0200B9E2ED /* YotoUIKitTests.swift */,
 				9BB063F4254B0D0200B9E2ED /* Info.plist */,
 			);
@@ -1000,6 +1035,14 @@
 		9BB066F2254D9B8100B9E2ED /* Cuckoo */ = {
 			isa = PBXGroup;
 			children = (
+				9BBA3C7B254DAFB2005021F0 /* GameDetailsViewModel.swift */,
+				9BBA3C7C254DAFB2005021F0 /* GameListViewModel.swift */,
+				9BBA3C7F254DAFB2005021F0 /* GamesInMemoryRepository.swift */,
+				9BBA3C79254DAFB2005021F0 /* GamesRepository.swift */,
+				9BBA3C7E254DAFB2005021F0 /* SearchGamesRemoteRepository.swift */,
+				9BBA3C7D254DAFB2005021F0 /* SearchGamesRepository.swift */,
+				9BBA3C80254DAFB2005021F0 /* SearchGameTableSections.swift */,
+				9BBA3C7A254DAFB2005021F0 /* SearchGameViewModel.swift */,
 			);
 			path = Cuckoo;
 			sourceTree = "<group>";
@@ -1023,23 +1066,63 @@
 			path = "Tableview related";
 			sourceTree = "<group>";
 		};
-		9BBBC7C824E2C316004CD0D6 /* Resolver */ = {
+		9BBA3CA5254DB0BB005021F0 /* Seeds */ = {
 			isa = PBXGroup;
 			children = (
-				9BBBC7CA24E2C4D7004CD0D6 /* AppDelegate+Injection.swift */,
-				9B334E1C24E2D6E8008523E4 /* CoreApp+Injection.swift */,
-				9BB0673C254DA37E00B9E2ED /* GameList+Injection.swift */,
-				9B334E1424E2C5F7008523E4 /* SearchGame+Injection.swift */,
-				9B334E1624E2D0A1008523E4 /* Repositories+Injection.swift */,
-				9BB063392549CE0100B9E2ED /* API+Injection.swift */,
+				9BB0630F2548499700B9E2ED /* KeychainSeeds.swift */,
 			);
-			path = Resolver;
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		9BBA3CDA254DB77F005021F0 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				9BBA3CDB254DB79C005021F0 /* YotoKit+Injection.swift */,
+				9BBA3CFD254DBC52005021F0 /* SearchGame+Injection.swift */,
+				9BBA3CF5254DBB33005021F0 /* GameList+Injection.swift */,
+				9BBA3CE5254DBAAB005021F0 /* Repositories+Injection.swift */,
+				9BBA3CED254DBB13005021F0 /* API+Injection.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		9BBA3D11254DBDAD005021F0 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				9BBA3D13254DBDC6005021F0 /* YotoiOS+Injection.swift */,
+				9BBA3D21254DBDE5005021F0 /* GameList+Injection.swift */,
+				9BBA3D29254DBE1E005021F0 /* SearchGame+Injection.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		9BBA3D43254DBF1A005021F0 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		9BBA3D58254DC13D005021F0 /* Cuckoo */ = {
+			isa = PBXGroup;
+			children = (
+				9BBA3D59254DC13D005021F0 /* SearchGameTableDataSource.swift */,
+				9BBA3D5A254DC13D005021F0 /* GameListTableViewCell.swift */,
+				9BBA3D5B254DC13D005021F0 /* SearchGameTableViewCell.swift */,
+				9BBA3D5C254DC13D005021F0 /* GameListViewController.swift */,
+				9BBA3D5D254DC13D005021F0 /* SearchGameViewController.swift */,
+				9BBA3D5E254DC13D005021F0 /* GameDetailsViewController.swift */,
+				9BBA3D5F254DC13D005021F0 /* SearchGameRouter.swift */,
+			);
+			path = Cuckoo;
 			sourceTree = "<group>";
 		};
 		9BD53FFA24E17CEC0040823E /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
-				9BBBC7C824E2C316004CD0D6 /* Resolver */,
+				9BBBC7CA24E2C4D7004CD0D6 /* AppDelegate+Injection.swift */,
+				9B334E1C24E2D6E8008523E4 /* CoreApp+Injection.swift */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -1916,13 +1999,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB064D2254B10B100B9E2ED /* SearchGame+Injection.swift in Sources */,
 				9B334E1D24E2D6E8008523E4 /* CoreApp+Injection.swift in Sources */,
-				9B334E1724E2D0A1008523E4 /* Repositories+Injection.swift in Sources */,
 				9B4A823824BF1EEB00EA430C /* BartyCrouch.swift in Sources */,
-				9BB0633A2549CE0100B9E2ED /* API+Injection.swift in Sources */,
 				9B012F7C24B854F0009100A8 /* AppDelegate.swift in Sources */,
-				9BB0673D254DA37E00B9E2ED /* GameList+Injection.swift in Sources */,
 				9B012F7E24B854F0009100A8 /* SceneDelegate.swift in Sources */,
 				9BBBC7CB24E2C4D7004CD0D6 /* AppDelegate+Injection.swift in Sources */,
 			);
@@ -1935,21 +2014,11 @@
 				9B634C2D24BB0E6200EBAF9F /* GameDetailsWorkerTests.swift in Sources */,
 				9B6E53F92541758D00D89697 /* IGDBTests.swift in Sources */,
 				9BB0631625484AA300B9E2ED /* KeychainTests.swift in Sources */,
-				9B4A822C24BEDEF400EA430C /* GameListPresenterTests.swift in Sources */,
 				9B6E540325417E0000D89697 /* TwitchTargetStub.swift in Sources */,
-				9B4A821124BC9BBD00EA430C /* SearchGameViewControllerTests.swift in Sources */,
-				9B4A822A24BEDEF400EA430C /* GameListInteractorTests.swift in Sources */,
 				9B076EC924E5C0DF0087C90C /* StubUtils.swift in Sources */,
-				9BB063102548499700B9E2ED /* KeychainSeeds.swift in Sources */,
 				9B634C2C24BB0E6200EBAF9F /* GameDetailsInteractorTests.swift in Sources */,
-				9B8AC82C24ED5AA4005DCBAD /* SearchGameSeeds.swift in Sources */,
-				9B34EDEE24E69661009E9C94 /* SearchGameViewModelTests.swift in Sources */,
-				9B19445B24CDD74A001D6FC1 /* GameSeeds.swift in Sources */,
 				9B076EC724E5BF400087C90C /* GamesTargetStub.swift in Sources */,
-				9BB0631E25486B1000B9E2ED /* TwitchSeeds.swift in Sources */,
-				9B4A822924BEDEF400EA430C /* GameListViewControllerTests.swift in Sources */,
 				9B634C2B24BB0E6200EBAF9F /* GameDetailsViewControllerTests.swift in Sources */,
-				9B4A822B24BEDEF400EA430C /* GameListWorkerTests.swift in Sources */,
 				9BDCA7C424D86739000C4FE3 /* GameRemoteRepositoryTests.swift in Sources */,
 				9B634C2E24BB0E6200EBAF9F /* GameDetailsPresenterTests.swift in Sources */,
 			);
@@ -1968,8 +2037,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB066CA254D945500B9E2ED /* GamesRepository.swift in Sources */,
+				9BBA3CDC254DB79C005021F0 /* YotoKit+Injection.swift in Sources */,
 				9BB0671B254D9CF200B9E2ED /* GameDetailsViewModel.swift in Sources */,
 				9BB06528254B11EE00B9E2ED /* SearchGameTarget.swift in Sources */,
+				9BBA3CE6254DBAAB005021F0 /* Repositories+Injection.swift in Sources */,
 				9BB06527254B11EE00B9E2ED /* Twitch.swift in Sources */,
 				9BB066D2254D964E00B9E2ED /* GamesInMemoryRepository.swift in Sources */,
 				9BB0652D254B11EE00B9E2ED /* IGDBError.swift in Sources */,
@@ -1977,9 +2048,12 @@
 				9BB06540254B11FC00B9E2ED /* SearchGamesRemoteRepository.swift in Sources */,
 				9BB0652C254B11EE00B9E2ED /* GamesTarget.swift in Sources */,
 				9BB0653E254B11FC00B9E2ED /* Game.swift in Sources */,
+				9BBA3CF6254DBB33005021F0 /* GameList+Injection.swift in Sources */,
 				9BB0652A254B11EE00B9E2ED /* TwitchCredentials.swift in Sources */,
 				9BB06529254B11EE00B9E2ED /* TwitchTarget.swift in Sources */,
+				9BBA3CEE254DBB13005021F0 /* API+Injection.swift in Sources */,
 				9BB066A0254D693100B9E2ED /* GameListViewModel.swift in Sources */,
+				9BBA3CFE254DBC52005021F0 /* SearchGame+Injection.swift in Sources */,
 				9BB065F8254B156400B9E2ED /* KeychainAttributes+IGDB.swift in Sources */,
 				9BB065AF254B14D600B9E2ED /* SearchGameTableSections.swift in Sources */,
 				9BB0652B254B11EE00B9E2ED /* IGDB.swift in Sources */,
@@ -1991,7 +2065,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBA3C82254DAFB2005021F0 /* SearchGameViewModel.swift in Sources */,
+				9BBA3C86254DAFB2005021F0 /* SearchGamesRemoteRepository.swift in Sources */,
+				9BBA3C85254DAFB2005021F0 /* SearchGamesRepository.swift in Sources */,
+				9BBA3C83254DAFB2005021F0 /* GameDetailsViewModel.swift in Sources */,
+				9BBA3C84254DAFB2005021F0 /* GameListViewModel.swift in Sources */,
+				9BBA3C4E254DAF13005021F0 /* SearchGameViewModelTests.swift in Sources */,
+				9BBA3C88254DAFB2005021F0 /* SearchGameTableSections.swift in Sources */,
+				9BBA3C81254DAFB2005021F0 /* GamesRepository.swift in Sources */,
 				9BB06356254AFA0C00B9E2ED /* YotoKitTests.swift in Sources */,
+				9BBA3C87254DAFB2005021F0 /* GamesInMemoryRepository.swift in Sources */,
+				9BBA3C9D254DAFE2005021F0 /* GameSeeds.swift in Sources */,
+				9BBA3C9E254DAFE2005021F0 /* SearchGameSeeds.swift in Sources */,
+				9BBA3C9C254DAFE2005021F0 /* TwitchSeeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1999,12 +2085,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBA3D14254DBDC6005021F0 /* YotoiOS+Injection.swift in Sources */,
 				9BB066B5254D699700B9E2ED /* GameListViewController.swift in Sources */,
 				9BB06676254D678B00B9E2ED /* GameListTableViewCell.swift in Sources */,
 				9BBA3C2C254DAAD6005021F0 /* SearchGameTableViewCell.swift in Sources */,
 				9BB06772254DA65F00B9E2ED /* MainTabbarController.swift in Sources */,
 				9BB06706254D9C9300B9E2ED /* GameDetailsViewController.swift in Sources */,
+				9BBA3D2A254DBE1E005021F0 /* SearchGame+Injection.swift in Sources */,
 				9BBA3C3B254DAB26005021F0 /* SearchGameTableDataSource.swift in Sources */,
+				9BBA3D22254DBDE5005021F0 /* GameList+Injection.swift in Sources */,
 				9BB065D2254B151D00B9E2ED /* SearchGameViewController.swift in Sources */,
 				9BB065D1254B151D00B9E2ED /* SearchGameRouter.swift in Sources */,
 			);
@@ -2014,7 +2103,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBA3D99254DC5F8005021F0 /* GameSeeds.swift in Sources */,
+				9BBA3D64254DC13D005021F0 /* SearchGameViewController.swift in Sources */,
+				9BBA3D65254DC13D005021F0 /* GameDetailsViewController.swift in Sources */,
+				9BBA3D50254DBFA0005021F0 /* GameListViewControllerTests.swift in Sources */,
+				9BBA3D60254DC13D005021F0 /* SearchGameTableDataSource.swift in Sources */,
+				9BBA3D92254DC593005021F0 /* SearchGameViewModel.swift in Sources */,
+				9BBA3E0F254DC874005021F0 /* SearchGamesRepository.swift in Sources */,
 				9BB063B2254B081B00B9E2ED /* YotoiOSTests.swift in Sources */,
+				9BBA3D61254DC13D005021F0 /* GameListTableViewCell.swift in Sources */,
+				9BBA3D66254DC13D005021F0 /* SearchGameRouter.swift in Sources */,
+				9BBA3D63254DC13D005021F0 /* GameListViewController.swift in Sources */,
+				9BBA3D85254DC276005021F0 /* SearchGameViewControllerTests.swift in Sources */,
+				9BBA3D62254DC13D005021F0 /* SearchGameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,6 +2133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBA3CAC254DB0C6005021F0 /* KeychainSeeds.swift in Sources */,
 				9BB063F3254B0D0200B9E2ED /* YotoUIKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2407,7 +2509,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2436,7 +2537,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2450,7 +2550,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2459,7 +2558,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Debug;
@@ -2472,7 +2570,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2481,7 +2578,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Release;
@@ -2508,7 +2604,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2536,7 +2631,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2550,7 +2644,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoiOSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2559,7 +2652,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Debug;
@@ -2572,7 +2664,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoiOSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2581,7 +2672,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Release;
@@ -2608,7 +2698,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2636,7 +2725,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2650,7 +2738,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoUIKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2659,7 +2746,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoUIKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Debug;
@@ -2672,7 +2758,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2U6W2CF496;
 				INFOPLIST_FILE = YotoUIKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2681,7 +2766,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.rockstars.YotoUIKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoto.app/Yoto";
 			};
 			name = Release;

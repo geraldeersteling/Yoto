@@ -8,21 +8,12 @@
 
 import Foundation
 import Resolver
+import YotoKit
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         registerCoreAppGraph()
-        registerScenes()
-        registerRepositories()
-        registerAPIgraph()
-    }
-
-    static func registerScenes() {
-        registerGameListGraph()
-        registerSearchGameGraph()
-    }
-
-    static func registerRepositories() {
-        registerRepositoriesGraph()
+        registerYotoKitGraph()
+        registerYotoiOSGraph()
     }
 }

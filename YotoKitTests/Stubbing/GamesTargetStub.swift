@@ -9,7 +9,7 @@
 import Foundation
 import Nimble
 import OHHTTPStubs
-@testable import Yoto
+@testable import YotoKit
 
 struct GamesTargetStub {
 

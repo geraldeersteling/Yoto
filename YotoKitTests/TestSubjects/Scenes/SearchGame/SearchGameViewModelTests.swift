@@ -15,7 +15,7 @@ import RxNimble
 import RxSwift
 import RxTest
 import XCTest
-@testable import Yoto
+@testable import YotoKit
 
 class SearchGameViewModelTests: QuickSpec {
     // MARK: Subject under test
@@ -26,12 +26,12 @@ class SearchGameViewModelTests: QuickSpec {
     var bag: DisposeBag!
 
     func setupDependencyInjection() {
-        Resolver.register(name: Resolver.RepositoryNames.Games.remote.rawValue) { MockGamesRepository() as GamesRepository }
+        Resolver.register(name: Resolver.RepositoryNames.SearchGames.remote.rawValue) { MockSearchGamesRepository() as SearchGamesRepository }
     }
 
     // MARK: Test doubles
 
-    func stubRepository(_ repository: MockGamesRepository) {
+    func stubRepository(_ repository: MockSearchGamesRepository) {
         stub(repository) { mock in
             when(mock).searchGames(any())
                 .thenReturn(Single<[Game]>.just([GameSeeds.firstSeed]))
@@ -60,7 +60,7 @@ class SearchGameViewModelTests: QuickSpec {
 
     override func spec() {
         describe("The ViewModel") {
-            var repository: MockGamesRepository!
+            var repository: MockSearchGamesRepository!
 
             beforeEach {
                 self.scheduler = TestScheduler(initialClock: 0)
@@ -68,7 +68,7 @@ class SearchGameViewModelTests: QuickSpec {
                 self.bag = DisposeBag()
                 self.setupDependencyInjection()
                 self.sut = Resolver.optional()
-                repository = self.sut.repository as? MockGamesRepository
+                repository = self.sut.repository as? MockSearchGamesRepository
                 self.stubRepository(repository)
             }
 

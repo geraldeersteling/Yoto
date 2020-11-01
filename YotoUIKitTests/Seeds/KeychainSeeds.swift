@@ -8,7 +8,7 @@
 
 import Foundation
 import Security
-@testable import Yoto
+@testable import YotoUIKit
 
 struct KeychainSeeds {
     struct Atrributes: KeychainAttributes {

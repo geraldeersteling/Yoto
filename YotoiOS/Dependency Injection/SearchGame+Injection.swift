@@ -8,26 +8,20 @@
 
 import Foundation
 import Resolver
-import YotoKit
-import YotoiOS
 
 extension Resolver {
-    static func registerSearchGameGraph() {
-        registerSearchGameScene()
-        registerSearchGameDetailsScene()
+    static func registerSearchGameGraph(in container: Resolver) {
+        registerSearchGameScene(in: container)
+        registerSearchGameDetailsScene(in: container)
     }
 
-    fileprivate static func registerSearchGameScene() {
+    fileprivate static func registerSearchGameScene(in container: Resolver) {
         register { SearchGameViewController(nibName: "SearchGameViewController",
                                             bundle: Bundle(for: SearchGameViewController.self)) }
-        register { (_, arg) -> SearchGameViewModel in
-            let repositoryType = (arg as? String) ?? RepositoryNames.SearchGames.remote.rawValue
-            return SearchGameViewModel(repository: resolve(name: repositoryType))
-        }
         register { SearchGameRouter() as SearchGameRoutingLogic }
     }
 
-    fileprivate static func registerSearchGameDetailsScene() {
+    fileprivate static func registerSearchGameDetailsScene(in container: Resolver) {
 //        register { (_, arg) -> SearchGameDetailsViewController in
 //            let gameUri = arg as? GameUri
 //            return SearchGameDetailsViewController(nibName: nil, bundle: nil)

@@ -8,16 +8,13 @@
 
 import Foundation
 import Resolver
-import YotoKit
-import YotoiOS
 
 extension Resolver {
-    static func registerGameListGraph() {
-        registerGameListScene()
+    static func registerGameListGraph(in container: Resolver) {
+        registerGameListScene(in: container)
     }
 
-    static func registerGameListScene() {
-        register { GameListViewModel() }
+    static func registerGameListScene(in container: Resolver) {
         register { GameListViewController(nibName: "GameListViewController",
                                           bundle: Bundle(for: GameListViewController.self)) }
     }

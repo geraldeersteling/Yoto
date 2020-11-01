@@ -8,15 +8,14 @@
 
 import Foundation
 import Resolver
-import YotoKit
 
 extension Resolver {
-    static func registerAPIgraph() {
-        registerIGDB()
+    static func registerAPIgraph(in container: Resolver) {
+        registerIGDB(in: container)
     }
 
-    fileprivate static func registerIGDB() {
-        register { IGDB() }
+    static func registerIGDB(in container: Resolver) {
+        container.register { IGDB() }
             .scope(application)
     }
 }
