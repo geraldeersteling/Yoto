@@ -1,8 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+platform :ios, '13.5'
 
 # Don't show pod warnings
 inhibit_all_warnings!
+
+####################################
+# Different pod categories
+####################################
 
 # All pods used in testing or generating screenshots
 def testing_pods
@@ -15,12 +19,8 @@ def testing_pods
   pod "Cuckoo"
 end
 
-target 'Yoto' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Yoto
-
+# All shared pods used in all targets
+def shared_pods
   ## Debugging and linting
   pod 'Reveal-SDK', :configurations => ['Debug']
   pod 'SwiftLint'
@@ -28,6 +28,15 @@ target 'Yoto' do
   ## Resource generation
   pod 'SwiftGen'
 
+  ## Dependency Injection
+  pod 'Resolver'
+
+  ## Others
+  pod 'IQKeyboardManagerSwift'
+end
+
+# Install these pods when Rx is needed in the target
+def rx_pods
   ## Rx related
   pod 'RxSwift'
   pod 'RxCocoa'
@@ -35,16 +44,25 @@ target 'Yoto' do
   pod 'RxDataSources'
   pod "RxSwiftUtilities"
   pod 'NSObject+Rx'
+end
 
-  ## Dependency Injection
-  pod 'Resolver'
-
+# Install these pods if the target need networking capabilities
+def networking_pods
   ## Networking
   pod 'Moya/RxSwift'
   pod 'Moya-ObjectMapper/RxSwift'
 
-  ## Others
-  pod 'IQKeyboardManagerSwift'
+end
+
+####################################
+# Targets
+####################################
+
+target 'Yoto' do
+  use_frameworks!
+
+  # Pods for Yoto
+  shared_pods
 
   target 'YotoTests' do
     inherit! :search_paths
@@ -54,5 +72,58 @@ target 'Yoto' do
   target 'YotoUITests' do
     testing_pods
   end
+
+end
+
+target 'YotoKit' do
+  use_frameworks!
+
+  # Pods for YotoKit
+  shared_pods
+  rx_pods
+  networking_pods
+
+  target 'YotoKitTests' do
+    inherit! :search_paths
+    testing_pods
+  end
+
+end
+
+target 'YotoiOS' do
+  use_frameworks!
+
+  # Pods for YotoKit
+  shared_pods
+  rx_pods
+  networking_pods
+
+  target 'YotoiOSTests' do
+    inherit! :search_paths
+    testing_pods
+  end
+
+end
+
+target 'YotoUIKit' do
+  use_frameworks!
+
+  # Pods for YotoKit
+  shared_pods
+
+  target 'YotoUIKitTests' do
+    inherit! :search_paths
+    testing_pods
+  end
+
+end
+
+target 'YotoTestSupport' do
+  use_frameworks!
+
+  pod 'Cuckoo'
+  testing_pods
+  rx_pods
+  networking_pods
 
 end

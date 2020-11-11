@@ -10,13 +10,13 @@
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "NO"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B012F8F24B854F2009100A8"
-               BuildableName = "YotoTests.xctest"
-               BlueprintName = "YotoTests"
+               BlueprintIdentifier = "9BB06345254AFA0C00B9E2ED"
+               BuildableName = "YotoKit.framework"
+               BlueprintName = "YotoKit"
                ReferencedContainer = "container:Yoto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,24 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B012F8F24B854F2009100A8"
-               BuildableName = "YotoTests.xctest"
-               BlueprintName = "YotoTests"
-               ReferencedContainer = "container:Yoto.xcodeproj">
-            </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "KeychainTests">
-               </Test>
-            </SkippedTests>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -66,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B012F8F24B854F2009100A8"
-            BuildableName = "YotoTests.xctest"
-            BlueprintName = "YotoTests"
+            BlueprintIdentifier = "9BB06345254AFA0C00B9E2ED"
+            BuildableName = "YotoKit.framework"
+            BlueprintName = "YotoKit"
             ReferencedContainer = "container:Yoto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

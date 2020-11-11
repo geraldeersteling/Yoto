@@ -8,6 +8,7 @@
 
 import Resolver
 import UIKit
+import YotoiOS
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
