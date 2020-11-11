@@ -12,7 +12,9 @@ import Resolver
 import RxSwift
 import RxTest
 import XCTest
-@testable import Yoto
+@testable import YotoKit
+@testable import YotoUIKit
+@testable import YotoTestSupport
 
 class IGDBTests: QuickSpec {
     // MARK: Subject under test

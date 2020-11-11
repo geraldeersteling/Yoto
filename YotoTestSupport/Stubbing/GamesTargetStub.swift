@@ -17,7 +17,7 @@ struct GamesTargetStub {
 
     static func stubSearchForGame(withSeeds seeds: [Game] = [GameSeeds.firstSeed]) {
         let jsonSeeds = seeds.compactMap { $0.toJSON() }
-        let searchPath = stubTargetPath(GamesTarget.searchForGame(query: ""))
+        let searchPath = stubIGDBTargetPath(GamesTarget.searchForGame(query: ""))
         stub(condition: stubHost && isPath(searchPath)) { _ in
             HTTPStubsResponse(jsonObject: jsonSeeds,
                               statusCode: 200,
@@ -26,7 +26,7 @@ struct GamesTargetStub {
     }
 
     static func stubDetailsForGame() {
-        let gamesPath = stubTargetPath(GamesTarget.detailsForGame(uri: GameUri(id: 1)))
+        let gamesPath = stubIGDBTargetPath(GamesTarget.detailsForGame(uri: GameUri(id: 1)))
         stub(condition: stubHost && isPath(gamesPath)) { _ in
             HTTPStubsResponse(jsonObject: [GameSeeds.firstSeed.toJSON()],
                               statusCode: 200,

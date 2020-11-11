@@ -16,6 +16,7 @@ import RxSwift
 import RxTest
 import XCTest
 @testable import YotoKit
+@testable import YotoTestSupport
 
 class SearchGameViewModelTests: QuickSpec {
     // MARK: Subject under test

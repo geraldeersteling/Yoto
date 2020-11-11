@@ -14,6 +14,7 @@ import RxCocoa
 import RxSwift
 @testable import YotoiOS
 @testable import YotoKit
+@testable import YotoTestSupport
 
 class SearchGameViewControllerTests: QuickSpec {
     // MARK: Subject under test
@@ -26,7 +27,11 @@ class SearchGameViewControllerTests: QuickSpec {
     func mockDependencyInjection() {
         Resolver.register { MockSearchGameRouter() as SearchGameRoutingLogic }
         Resolver.register(name: Resolver.RepositoryNames.SearchGames.remote.rawValue) { MockSearchGamesRepository() as SearchGamesRepository }
-        Resolver.register { MockSearchGameViewModel(repository: Resolver.resolve()) as SearchGameViewModel }
+        Resolver.register {
+            MockSearchGameViewModel(
+                repository: Resolver.optional(name: Resolver.RepositoryNames.SearchGames.remote.rawValue)!
+            ) as SearchGameViewModel
+        }
     }
 
     func loadView() {

@@ -9,7 +9,7 @@
 import Foundation
 import Nimble
 import OHHTTPStubs
-@testable import Yoto
+@testable import YotoKit
 
 struct TwitchTargetStub {
     static let stubHost = isHost(Twitch.baseURL.host!)

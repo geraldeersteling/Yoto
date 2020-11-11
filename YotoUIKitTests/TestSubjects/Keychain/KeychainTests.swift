@@ -8,7 +8,8 @@
 import Nimble
 import Quick
 import XCTest
-@testable import Yoto
+@testable import YotoUIKit
+@testable import YotoTestSupport
 
 class KeychainTests: QuickSpec {
     // MARK: Subject under test

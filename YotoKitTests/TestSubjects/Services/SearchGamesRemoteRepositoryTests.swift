@@ -12,12 +12,13 @@ import OHHTTPStubs
 import Quick
 import Resolver
 import RxSwift
-@testable import Yoto
+@testable import YotoKit
+@testable import YotoTestSupport
 
-class GameRemoteRepositoryTests: QuickSpec {
+class SearchGamesRemoteRepositoryTests: QuickSpec {
     // MARK: Subject under test
 
-    var sut: GamesRemoteRepository!
+    var sut: SearchGamesRemoteRepository!
 
     var concurrentScheduler: ConcurrentDispatchQueueScheduler!
     var bag: DisposeBag!
@@ -29,12 +30,11 @@ class GameRemoteRepositoryTests: QuickSpec {
     // MARK: Tests
 
     override func spec() {
-        describe("A remote repository") {
+        describe("A remote search repository") {
             beforeEach {
                 HTTPStubs.onStubMissing { fail("Stub missing for request: \($0) -- \(IGDB.baseURL.host!)") }
 
-                self.sut = Resolver.optional(GamesRepository.self,
-                                             name: Resolver.RepositoryNames.Games.remote.rawValue) as? GamesRemoteRepository
+                self.sut = Resolver.optional()
                 self.concurrentScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
                 self.bag = DisposeBag()
             }

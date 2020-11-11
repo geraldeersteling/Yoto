@@ -18,7 +18,8 @@ import YotoUIKit
             this token.
  */
 public class IGDB {
-    static let baseURL = URL(string: "https://api.igdb.com/v4")!
+    static let apiVersion = "v4"
+    static let baseURL = URL(string: "https://api.igdb.com/\(apiVersion)")!
 
     private let disposeBag = DisposeBag()
     private let twitchProvider = MoyaProvider<TwitchTarget>(plugins: [NetworkLoggerPlugin()])

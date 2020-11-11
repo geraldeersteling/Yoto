@@ -52,6 +52,11 @@
                BlueprintName = "YotoTests"
                ReferencedContainer = "container:Yoto.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "KeychainTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">

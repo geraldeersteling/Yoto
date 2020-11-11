@@ -29,11 +29,13 @@ extension Resolver {
         container.register(name: RepositoryNames.Games.inMemory.rawValue) {
             GamesInMemoryRepository() as GamesRepository
         }
+        container.register { GamesInMemoryRepository() }
     }
 
     static func registerSearchGamesRepositories(in container: Resolver) {
         container.register(name: RepositoryNames.SearchGames.remote.rawValue) {
             SearchGamesRemoteRepository() as SearchGamesRepository
         }
+        container.register { SearchGamesRemoteRepository() }
     }
 }

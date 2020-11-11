@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+platform :ios, '13.5'
 
 # Don't show pod warnings
 inhibit_all_warnings!
@@ -115,5 +115,15 @@ target 'YotoUIKit' do
     inherit! :search_paths
     testing_pods
   end
+
+end
+
+target 'YotoTestSupport' do
+  use_frameworks!
+
+  pod 'Cuckoo'
+  testing_pods
+  rx_pods
+  networking_pods
 
 end
