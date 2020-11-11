@@ -9,10 +9,12 @@ import Cuckoo
 import Nimble
 import OHHTTPStubs
 import Quick
-import RxSwift
-import RxCocoa
 import Resolver
-@testable import Yoto
+import RxCocoa
+import RxSwift
+@testable import YotoiOS
+@testable import YotoKit
+@testable import YotoTestSupport
 
 class SearchGameViewControllerTests: QuickSpec {
     // MARK: Subject under test
@@ -24,8 +26,12 @@ class SearchGameViewControllerTests: QuickSpec {
 
     func mockDependencyInjection() {
         Resolver.register { MockSearchGameRouter() as SearchGameRoutingLogic }
-        Resolver.register { MockGamesRemoteRepository() as GamesRepository }
-        Resolver.register { MockSearchGameViewModel(repository: Resolver.resolve()) as SearchGameViewModel }
+        Resolver.register(name: Resolver.RepositoryNames.SearchGames.remote.rawValue) { MockSearchGamesRepository() as SearchGamesRepository }
+        Resolver.register {
+            MockSearchGameViewModel(
+                repository: Resolver.optional(name: Resolver.RepositoryNames.SearchGames.remote.rawValue)!
+            ) as SearchGameViewModel
+        }
     }
 
     func loadView() {
@@ -38,10 +44,8 @@ class SearchGameViewControllerTests: QuickSpec {
     func stubViewModel(_ model: MockSearchGameViewModel) {
         stub(model) { mock in
             when(mock).isSearching.get.thenReturn(Driver<Bool>.just(false))
-            //when(mock).installSearchDriver(any()).thenDoNothing()
             when(mock).searchResults.get.thenReturn(Driver<[SearchGameTableSection]>.just([]))
             when(mock).searchQuery.get.thenReturn(PublishRelay<String>())
-            //when(mock).search(query: any()).thenDoNothing()
             when(mock).item(at: any()).then { _ in
                 let seed = GameSeeds.firstSeed
                 return SearchGameTableItem(gameUri: seed.uri, name: seed.name)
@@ -80,17 +84,9 @@ class SearchGameViewControllerTests: QuickSpec {
                 reset(viewModel, router)
             }
 
-            context("after it is loaded") {
-                it("should install the searchbar's driver on the viewmodel") {
-                    //verify(viewModel).installSearchDriver(any())
-                }
-            }
-
             context("when asked to display the results") {
                 // Given
-                beforeEach {
-                    
-                }
+                beforeEach {}
 
                 // Then
                 it("should refresh the list with the results") {}

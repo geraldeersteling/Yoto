@@ -14,7 +14,7 @@ import RxSwiftUtilities
 
 public class SearchGameViewModel {
     private let disposeBag = DisposeBag()
-    private var repository: SearchGamesRepository
+    var repository: SearchGamesRepository
 
     public var searchQuery = PublishRelay<String>()
 
