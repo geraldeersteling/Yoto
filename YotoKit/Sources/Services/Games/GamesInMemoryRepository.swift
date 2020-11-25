@@ -6,18 +6,33 @@
 //  Copyright © 2020 Rockstars. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import YotoUIKit
 
 public class GamesInMemoryRepository: GamesRepository {
     // MARK: - Stub data -
 
-    let games = [
-        try! Game(JSON: ["id": 1, "name": "The Game"])
-    ]
+    let games: [Game] = {
+        var games = [Game]()
+        for i in 1...10 {
+            games.append(
+                try! Game(JSON: ["id": i, "name": "The Game \(i)"])
+            )
+        }
+        return games
+    }()
 
     public init() {}
 
-    public func allGames() -> [Game] {
-        return games
+    public func allGames() -> Single<[Game]> {
+        return Single<[Game]>.create { [weak self] single in
+            if let strongSelf = self {
+                single(.success(strongSelf.games))
+            } else {
+                single(.error(GenericError.generic))
+            }
+
+            return Disposables.create()
+        }
     }
 }

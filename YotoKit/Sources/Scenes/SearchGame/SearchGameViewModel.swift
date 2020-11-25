@@ -18,8 +18,8 @@ public class SearchGameViewModel {
 
     public var searchQuery = PublishRelay<String>()
 
-    private let searchResultsRelay = BehaviorRelay<[SearchGameTableSection]>(value: [])
-    public var searchResults: Driver<[SearchGameTableSection]> {
+    private let searchResultsRelay = BehaviorRelay<[TableSectionModel]>(value: [])
+    public var searchResults: Driver<[TableSectionModel]> {
         searchResultsRelay.asDriver()
     }
 
@@ -56,10 +56,12 @@ public class SearchGameViewModel {
                     .catchErrorJustReturn([])
                     .trackActivity(self.searchingIndicator)
             }
-            .mapMany { SearchGameTableItem(gameUri: $0.uri, name: $0.name) }
+            .mapMany { SectionItemModel.RegularGameSectionItem(uri: $0.uri, name: $0.name) }
             .subscribe(
                 onNext: { [weak self] in
-                    self?.searchResultsRelay.accept([SearchGameTableSection(header: "\($0.count) result(s)", items: $0)]) // TODO: l10n
+                    let sections = [TableSectionModel.RegularGameSection(title: "\($0.count) result(s)", // TODO: l10n
+                                                                         items: $0)]
+                    self?.searchResultsRelay.accept(sections)
                 },
                 onError: { print("//TODO: UNHANDLED ERROR: \($0)") }
             )
@@ -68,7 +70,7 @@ public class SearchGameViewModel {
 
     // MARK: - Providing methods -
 
-    public func item(at index: Int) -> SearchGameTableItem? {
+    public func item(at index: Int) -> SectionItemModel? {
         guard
             let empty = searchResultsRelay.value.first?.items.isEmpty,
             !empty
@@ -76,9 +78,9 @@ public class SearchGameViewModel {
         return searchResultsRelay.value[0].items[index]
     }
 
-    func uriForGame(at index: Int) -> GameUri? {
+    public func uriForGame(at index: Int) -> GameUri? {
         guard let item = item(at: index)
         else { return nil }
-        return item.gameUri
+        return item.identity as? GameUri
     }
 }

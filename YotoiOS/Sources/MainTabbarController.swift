@@ -6,18 +6,19 @@
 //  Copyright © 2020 Rockstars. All rights reserved.
 //
 
-import UIKit
 import Resolver
+import UIKit
 
 public class MainTabbarController: UITabBarController {
+    @Injected var gameListViewController: GameListViewController
+    @Injected var searchGameViewController: SearchGameViewController
 
     override public func viewDidLoad() {
         super.viewDidLoad()
 
         viewControllers = [
-            UINavigationController(rootViewController: Resolver.resolve(GameListViewController.self)),
-            UINavigationController(rootViewController: Resolver.resolve(SearchGameViewController.self))
+            UINavigationController(rootViewController: gameListViewController),
+            UINavigationController(rootViewController: searchGameViewController)
         ]
     }
-
 }

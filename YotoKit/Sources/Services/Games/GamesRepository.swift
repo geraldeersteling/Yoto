@@ -6,8 +6,8 @@
 //  Copyright © 2020 Rockstars. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 public protocol GamesRepository {
-    func allGames() -> [Game]
+    func allGames() -> Single<[Game]>
 }

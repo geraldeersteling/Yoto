@@ -63,9 +63,7 @@ extension SearchGameViewController {
     }
 
     func configureTableview() {
-        tableView.register(UINib(nibName: "SearchGameTableViewCell",
-                                 bundle: Bundle(for: SearchGameTableViewCell.self)),
-                           forCellReuseIdentifier: "SearchGameTableViewCell")
+        SearchGameTableViewCell.registerNib(forTableView: tableView)
     }
 }
 
@@ -96,7 +94,7 @@ extension SearchGameViewController {
         // Tableview bindings
         tableView.rx.itemSelected
             .bind { [weak self] in
-                if let uri = self?.viewModel.item(at: $0.row)?.gameUri {
+                if let uri = self?.viewModel.uriForGame(at: $0.row) {
                     self?.router.routeToGameSearchDetails(uri, from: self)
                     self?.tableView.deselectRow(at: $0, animated: false)
                 }

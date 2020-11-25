@@ -1,17 +1,15 @@
 //
-//  CoreApp+Injection.swift
-//  Yoto
+//  Launch+Injection.swift
+//  YotoiOS
 //
-//  Created by Gerald Eersteling on 11/08/2020.
+//  Created by Gerald Eersteling on 25/11/2020.
 //  Copyright © 2020 Rockstars. All rights reserved.
 //
 
-import Foundation
 import Resolver
-import YotoiOS
 
 extension Resolver {
-    static func registerCoreAppGraph() {
+    static func registerLaunchGraph() {
         register { MainTabbarController(nibName: nil, bundle: nil) }
     }
 }

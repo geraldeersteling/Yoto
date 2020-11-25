@@ -8,18 +8,25 @@
 
 import UIKit
 import YotoKit
+import YotoUIKit
 
 class SearchGameTableViewCell: UITableViewCell {
+    struct Updater {
+        var name: String
+    }
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
 
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = nil
     }
 
-    func updateWithItem(_ item: SearchGameTableItem) {
-        nameLabel.text = item.name
+    func update(_ updater: Updater) {
+        nameLabel.text = updater.name
     }
+}
 
+extension SearchGameTableViewCell: TableViewRegisterable {
+    public static var reIdentifier: String = "SearchGameTableViewCell"
 }

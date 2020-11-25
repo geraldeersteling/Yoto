@@ -12,7 +12,6 @@ import YotoKit
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
-        registerCoreAppGraph()
         registerYotoKitGraph()
         registerYotoiOSGraph()
     }

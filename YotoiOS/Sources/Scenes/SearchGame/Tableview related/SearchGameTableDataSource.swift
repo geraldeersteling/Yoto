@@ -11,17 +11,21 @@ import RxDataSources
 import YotoKit
 
 public struct SearchGameTableDataSource {
-    public static func datasource() -> RxTableViewSectionedAnimatedDataSource<SearchGameTableSection> {
-        let source = RxTableViewSectionedAnimatedDataSource<SearchGameTableSection>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+    public static func datasource() -> RxTableViewSectionedAnimatedDataSource<TableSectionModel> {
+        let source = RxTableViewSectionedAnimatedDataSource<TableSectionModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchGameTableViewCell", for: indexPath) as? SearchGameTableViewCell
             else { fatalError("Couldn't dequeue the correct table cell") }
 
-            cell.updateWithItem(item)
+            switch item {
+                case .RegularGameSectionItem(uri: _, let name):
+                    cell.update(SearchGameTableViewCell.Updater(name: name))
+            }
+
             return cell
         })
 
         source.titleForHeaderInSection = { datasource, index in
-            datasource.sectionModels[index].header
+            datasource.sectionModels[index].title
         }
 
         return source

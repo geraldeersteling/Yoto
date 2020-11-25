@@ -9,8 +9,8 @@
 import Foundation
 import ObjectMapper
 
-public struct GameUri: Equatable {
-    var id: Int
+public struct GameUri: Equatable, Hashable {
+    public var id: Int
 }
 
 public class Game: ImmutableMappable {
