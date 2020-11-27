@@ -83,6 +83,8 @@ target 'YotoKit' do
   rx_pods
   networking_pods
 
+  pod "Apollo"
+
   target 'YotoKitTests' do
     inherit! :search_paths
     testing_pods

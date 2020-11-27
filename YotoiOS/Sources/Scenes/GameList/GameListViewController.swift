@@ -27,7 +27,6 @@ public class GameListViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-
         configureUI()
         setupBindings()
 
