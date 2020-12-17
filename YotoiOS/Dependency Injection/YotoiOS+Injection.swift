@@ -9,10 +9,12 @@
 import Foundation
 import Resolver
 
-extension Resolver {
-    public static func registerYotoiOSGraph(in container: Resolver = Resolver.main) {
-        registerLaunchGraph()
-        registerGameListGraph(in: container)
-        registerSearchGameGraph(in: container)
+public extension Resolver {
+    static func registerYotoiOSGraph() {
+        registerAppLaunchGraph()
+        registerStartupGraph()
+        registerHomeGraph()
+        registerGameListGraph()
+        registerSearchGameGraph()
     }
 }

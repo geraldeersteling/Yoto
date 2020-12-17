@@ -11,10 +11,10 @@ import Resolver
 
 extension Resolver {
 
-    public static func registerYotoKitGraph(in container: Resolver = Resolver.main) {
-        registerAPIgraph(in: container)
-        registerRepositoriesGraph(in: container)
-        registerSearchGameGraph(in: container)
-        registerGameListGraph(in: container)
+    public static func registerYotoKitGraph() {
+        registerAPIgraph()
+        registerRepositoriesGraph()
+        registerSearchGameGraph()
+        registerGameListGraph()
     }
 }

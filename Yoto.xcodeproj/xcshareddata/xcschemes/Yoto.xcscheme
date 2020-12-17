@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1210"
+   LastUpgradeVersion = "1220"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -47,7 +47,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B012F8F24B854F2009100A8"
+               BlueprintIdentifier = "9B4BFEF125778D5000BDCD7A"
                BuildableName = "YotoTests.xctest"
                BlueprintName = "YotoTests"
                ReferencedContainer = "container:Yoto.xcodeproj">

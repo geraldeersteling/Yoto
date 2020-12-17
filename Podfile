@@ -10,13 +10,13 @@ inhibit_all_warnings!
 
 # All pods used in testing or generating screenshots
 def testing_pods
-  pod 'Quick'
-  pod 'Nimble'
-  pod 'RxNimble', subspecs: ['RxBlocking', 'RxTest']
-  pod 'RxTest'
-  pod 'RxBlocking'
-  pod 'OHHTTPStubs/Swift'
-  pod "Cuckoo"
+  pod 'Quick', '3.0.0'
+  pod 'Nimble', '9.0.0'
+  pod 'RxNimble', '5.0.0', subspecs: ['RxBlocking', 'RxTest']
+  pod 'RxTest', '5.1.1'
+  pod 'RxBlocking', '5.1.1'
+  pod 'OHHTTPStubs/Swift', '9.1.0'
+  pod "Cuckoo", '1.4.1'
 end
 
 # All shared pods used in all targets
@@ -29,28 +29,28 @@ def shared_pods
   pod 'SwiftGen'
 
   ## Dependency Injection
-  pod 'Resolver'
+  pod 'Resolver', '1.1.4'
 
   ## Others
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '6.5.6'
 end
 
 # Install these pods when Rx is needed in the target
 def rx_pods
   ## Rx related
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxSwiftExt'
-  pod 'RxDataSources'
-  pod "RxSwiftUtilities"
-  pod 'NSObject+Rx'
+  pod 'RxSwift', '5.1.1'
+  pod 'RxCocoa', '5.1.1'
+  pod 'RxSwiftExt', '5.2.0'
+  pod 'RxDataSources', '4.0.1'
+  pod "RxSwiftUtilities", '2.2.0'
+  pod 'NSObject+Rx', '5.1.0'
 end
 
 # Install these pods if the target need networking capabilities
 def networking_pods
   ## Networking
-  pod 'Moya/RxSwift'
-  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'Moya/RxSwift', '14.0.0'
+  pod 'Moya-ObjectMapper/RxSwift', '2.9'
 
 end
 
@@ -97,6 +97,7 @@ target 'YotoiOS' do
   shared_pods
   rx_pods
   networking_pods
+  pod 'PureLayout'
 
   target 'YotoiOSTests' do
     inherit! :search_paths
@@ -109,6 +110,7 @@ target 'YotoUIKit' do
   use_frameworks!
 
   # Pods for YotoKit
+  rx_pods
   shared_pods
 
   target 'YotoUIKitTests' do
@@ -121,7 +123,6 @@ end
 target 'YotoTestSupport' do
   use_frameworks!
 
-  pod 'Cuckoo'
   testing_pods
   rx_pods
   networking_pods

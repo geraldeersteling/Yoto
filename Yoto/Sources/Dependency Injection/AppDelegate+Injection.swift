@@ -15,4 +15,8 @@ extension Resolver: ResolverRegistering {
         registerYotoKitGraph()
         registerYotoiOSGraph()
     }
+
+    static func registerCoreAppDependencies() {
+        register { UserDefaults.standard }
+    }
 }
