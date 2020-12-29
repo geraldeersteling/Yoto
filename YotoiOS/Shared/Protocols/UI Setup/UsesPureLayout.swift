@@ -8,13 +8,11 @@
 
 protocol UsesPureLayout {
     func setupPureLayout()
-    func setupPureHierarchy()
     func setupPureViews()
 }
 
 extension UsesPureLayout {
     func setupPureLayout() {
-        setupPureHierarchy()
         setupPureViews()
     }
 }

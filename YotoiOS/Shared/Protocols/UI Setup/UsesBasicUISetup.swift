@@ -7,19 +7,25 @@
 //
 
 protocol UsesBasicUISetup {
-    func setupUIComponents()
+    func setupUI()
+    func setupViewHierarchy()
     func setupUIContent()
     func setupUIStyling()
     func setupUIActions()
 }
 
 extension UsesBasicUISetup {
-    func setupUIComponents() {
+    func setupUI() {
+        setupViewHierarchy()
         setupUIContent()
         setupUIStyling()
         setupUIActions()
     }
-    
+
+    func setupViewHierarchy() {
+        // Default implementation does nothing
+    }
+
     func setupUIActions() {
         // Default implementation does nothing
     }

@@ -28,7 +28,9 @@
 		9B27F34A258B6EDC00250160 /* UsesPureLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27F349258B6EDC00250160 /* UsesPureLayout.swift */; };
 		9B27F367258B878700250160 /* UIControl+Tappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27F366258B878700250160 /* UIControl+Tappable.swift */; };
 		9B27F371258B8C0F00250160 /* UsesBasicUISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27F370258B8C0F00250160 /* UsesBasicUISetup.swift */; };
-		9B27F37A258B8CF000250160 /* UsesBasicUIPureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27F379258B8CF000250160 /* UsesBasicUIPureSetup.swift */; };
+		9B2A97242591ED7500343016 /* BasicOnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A97222591ED7500343016 /* BasicOnboardingStepViewController.swift */; };
+		9B2A977B25922DC100343016 /* NestedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A977A25922DC100343016 /* NestedStackView.swift */; };
+		9B2A9795259B26F300343016 /* OnboardingStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A9794259B26F300343016 /* OnboardingStepModel.swift */; };
 		9B4A823824BF1EEB00EA430C /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A823724BF1EEA00EA430C /* BartyCrouch.swift */; };
 		9B4A824724BF219E00EA430C /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A824924BF219E00EA430C /* localization.strings */; };
 		9B4BFEF525778D5000BDCD7A /* YotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BFEF425778D5000BDCD7A /* YotoTests.swift */; };
@@ -157,12 +159,6 @@
 		9BCE2F86258BA84F007A24C9 /* YotoResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCE2F55258BA7EF007A24C9 /* YotoResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BCE2F89258BA857007A24C9 /* YotoResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCE2F55258BA7EF007A24C9 /* YotoResources.framework */; };
 		9BCE2F8A258BA857007A24C9 /* YotoResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCE2F55258BA7EF007A24C9 /* YotoResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9BD8FC282580E0AF006351A5 /* WelcomeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FC262580E0AE006351A5 /* WelcomeStepViewController.swift */; };
-		9BD8FC292580E0AF006351A5 /* WelcomeStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD8FC272580E0AF006351A5 /* WelcomeStepViewController.xib */; };
-		9BD8FC332580E0CB006351A5 /* ListFeatureStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FC312580E0CB006351A5 /* ListFeatureStepViewController.swift */; };
-		9BD8FC342580E0CB006351A5 /* ListFeatureStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD8FC322580E0CB006351A5 /* ListFeatureStepViewController.xib */; };
-		9BD8FC3E2580E0E2006351A5 /* SearchFeatureStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FC3C2580E0E2006351A5 /* SearchFeatureStepViewController.swift */; };
-		9BD8FC3F2580E0E2006351A5 /* SearchFeatureStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD8FC3D2580E0E2006351A5 /* SearchFeatureStepViewController.xib */; };
 		9BD8FC6D25878C59006351A5 /* OnboardingStepContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FC6C25878C59006351A5 /* OnboardingStepContainer.swift */; };
 		9BD8FD0125879B1D006351A5 /* YotoiOSInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FD0025879B1D006351A5 /* YotoiOSInfo.swift */; };
 		9BD8FD122587A0C5006351A5 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8FD112587A0C5006351A5 /* Slide.swift */; };
@@ -433,7 +429,9 @@
 		9B27F349258B6EDC00250160 /* UsesPureLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesPureLayout.swift; sourceTree = "<group>"; };
 		9B27F366258B878700250160 /* UIControl+Tappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Tappable.swift"; sourceTree = "<group>"; };
 		9B27F370258B8C0F00250160 /* UsesBasicUISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesBasicUISetup.swift; sourceTree = "<group>"; };
-		9B27F379258B8CF000250160 /* UsesBasicUIPureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesBasicUIPureSetup.swift; sourceTree = "<group>"; };
+		9B2A97222591ED7500343016 /* BasicOnboardingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicOnboardingStepViewController.swift; sourceTree = "<group>"; };
+		9B2A977A25922DC100343016 /* NestedStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedStackView.swift; sourceTree = "<group>"; };
+		9B2A9794259B26F300343016 /* OnboardingStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepModel.swift; sourceTree = "<group>"; };
 		9B2F99CA255D537900510532 /* TableSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
 		9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewModelTests.swift; sourceTree = "<group>"; };
 		9B4A820D24BC9BBD00EA430C /* SearchGameViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewControllerTests.swift; sourceTree = "<group>"; };
@@ -554,12 +552,6 @@
 		9BCE2F55258BA7EF007A24C9 /* YotoResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YotoResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCE2F57258BA7EF007A24C9 /* YotoResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YotoResources.h; sourceTree = "<group>"; };
 		9BCE2F58258BA7EF007A24C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BD8FC262580E0AE006351A5 /* WelcomeStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepViewController.swift; sourceTree = "<group>"; };
-		9BD8FC272580E0AF006351A5 /* WelcomeStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeStepViewController.xib; sourceTree = "<group>"; };
-		9BD8FC312580E0CB006351A5 /* ListFeatureStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeatureStepViewController.swift; sourceTree = "<group>"; };
-		9BD8FC322580E0CB006351A5 /* ListFeatureStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFeatureStepViewController.xib; sourceTree = "<group>"; };
-		9BD8FC3C2580E0E2006351A5 /* SearchFeatureStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeatureStepViewController.swift; sourceTree = "<group>"; };
-		9BD8FC3D2580E0E2006351A5 /* SearchFeatureStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFeatureStepViewController.xib; sourceTree = "<group>"; };
 		9BD8FC6C25878C59006351A5 /* OnboardingStepContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepContainer.swift; sourceTree = "<group>"; };
 		9BD8FD0025879B1D006351A5 /* YotoiOSInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YotoiOSInfo.swift; sourceTree = "<group>"; };
 		9BD8FD112587A0C5006351A5 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
@@ -828,12 +820,7 @@
 		9B0C4B98258B63F7003E0405 /* All steps */ = {
 			isa = PBXGroup;
 			children = (
-				9BD8FC262580E0AE006351A5 /* WelcomeStepViewController.swift */,
-				9BD8FC272580E0AF006351A5 /* WelcomeStepViewController.xib */,
-				9BD8FC312580E0CB006351A5 /* ListFeatureStepViewController.swift */,
-				9BD8FC322580E0CB006351A5 /* ListFeatureStepViewController.xib */,
-				9BD8FC3C2580E0E2006351A5 /* SearchFeatureStepViewController.swift */,
-				9BD8FC3D2580E0E2006351A5 /* SearchFeatureStepViewController.xib */,
+				9B2A97222591ED7500343016 /* BasicOnboardingStepViewController.swift */,
 			);
 			path = "All steps";
 			sourceTree = "<group>";
@@ -866,6 +853,7 @@
 		9B27F363258B86CD00250160 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9B2A977925922DA800343016 /* UIStackView */,
 				9B27F364258B86D600250160 /* UIControl */,
 			);
 			path = UI;
@@ -889,11 +877,18 @@
 		9B27F390258B8CFA00250160 /* UI Setup */ = {
 			isa = PBXGroup;
 			children = (
-				9B27F379258B8CF000250160 /* UsesBasicUIPureSetup.swift */,
 				9B27F370258B8C0F00250160 /* UsesBasicUISetup.swift */,
 				9B27F349258B6EDC00250160 /* UsesPureLayout.swift */,
 			);
 			path = "UI Setup";
+			sourceTree = "<group>";
+		};
+		9B2A977925922DA800343016 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				9B2A977A25922DC100343016 /* NestedStackView.swift */,
+			);
+			path = UIStackView;
 			sourceTree = "<group>";
 		};
 		9B2F99B6255D4C7300510532 /* Tableview related */ = {
@@ -1705,6 +1700,7 @@
 			isa = PBXGroup;
 			children = (
 				9BCD06D7257F73C800111EFA /* OnboardingViewModel.swift */,
+				9B2A9794259B26F300343016 /* OnboardingStepModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -2269,15 +2265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB066B6254D699700B9E2ED /* GameListViewController.xib in Resources */,
-				9BD8FC342580E0CB006351A5 /* ListFeatureStepViewController.xib in Resources */,
 				9BB06713254D9CA000B9E2ED /* GameDetailsViewController.xib in Resources */,
 				9BD8FD4B2587AFE7006351A5 /* BasicTextSlide.xib in Resources */,
 				9BB065D0254B151D00B9E2ED /* SearchGameViewController.xib in Resources */,
 				9B7365D1257F8FB6003484F5 /* LaunchViewController.xib in Resources */,
-				9BD8FC3F2580E0E2006351A5 /* SearchFeatureStepViewController.xib in Resources */,
 				9B7365E4257F93E5003484F5 /* HomeTabbarController.xib in Resources */,
 				9BCD0683257E89E100111EFA /* OnboardingViewController.xib in Resources */,
-				9BD8FC292580E0AF006351A5 /* WelcomeStepViewController.xib in Resources */,
 				9BB06677254D678B00B9E2ED /* GameListTableViewCell.xib in Resources */,
 				9B1CBD94256D12FB0022A48A /* SearchGameTableViewCell.xib in Resources */,
 			);
@@ -2826,6 +2819,7 @@
 				9BB06527254B11EE00B9E2ED /* Twitch.swift in Sources */,
 				9BB066D2254D964E00B9E2ED /* GamesInMemoryRepository.swift in Sources */,
 				9BB0652D254B11EE00B9E2ED /* IGDBError.swift in Sources */,
+				9B2A9795259B26F300343016 /* OnboardingStepModel.swift in Sources */,
 				9BB06518254B11DD00B9E2ED /* SearchGameViewModel.swift in Sources */,
 				9BB06540254B11FC00B9E2ED /* SearchGamesRemoteRepository.swift in Sources */,
 				9BB0652C254B11EE00B9E2ED /* GamesTarget.swift in Sources */,
@@ -2863,7 +2857,6 @@
 				9B27F371258B8C0F00250160 /* UsesBasicUISetup.swift in Sources */,
 				9BBA3D14254DBDC6005021F0 /* YotoiOS+Injection.swift in Sources */,
 				9BD8FD0125879B1D006351A5 /* YotoiOSInfo.swift in Sources */,
-				9B27F37A258B8CF000250160 /* UsesBasicUIPureSetup.swift in Sources */,
 				9BCD06C4257E93C900111EFA /* RootViewController.swift in Sources */,
 				9B7FD31C258B5B2800B66DFC /* OnboardingStep.swift in Sources */,
 				9B1CBD95256D12FB0022A48A /* SearchGameTableDataSource.swift in Sources */,
@@ -2874,8 +2867,6 @@
 				9B1CBD93256D12FB0022A48A /* SearchGameTableViewCell.swift in Sources */,
 				9BD8FC6D25878C59006351A5 /* OnboardingStepContainer.swift in Sources */,
 				9BB06706254D9C9300B9E2ED /* GameDetailsViewController.swift in Sources */,
-				9BD8FC282580E0AF006351A5 /* WelcomeStepViewController.swift in Sources */,
-				9BD8FC3E2580E0E2006351A5 /* SearchFeatureStepViewController.swift in Sources */,
 				9BBA3D2A254DBE1E005021F0 /* SearchGame+Injection.swift in Sources */,
 				9BCD06E2257F767900111EFA /* OnboardingCoordinator.swift in Sources */,
 				9BBA3D22254DBDE5005021F0 /* GameList+Injection.swift in Sources */,
@@ -2883,7 +2874,7 @@
 				9BCE2F30258B9DEE007A24C9 /* UIView+PureLayout.swift in Sources */,
 				9BD8FD3B2587A7EE006351A5 /* BasicTextSlide.swift in Sources */,
 				9B934428257E68E2008DEE38 /* AppCoordinator.swift in Sources */,
-				9BD8FC332580E0CB006351A5 /* ListFeatureStepViewController.swift in Sources */,
+				9B2A97242591ED7500343016 /* BasicOnboardingStepViewController.swift in Sources */,
 				9BD8FD2B2587A267006351A5 /* BasicImageSlide.swift in Sources */,
 				9BD8FD122587A0C5006351A5 /* Slide.swift in Sources */,
 				9B27F34A258B6EDC00250160 /* UsesPureLayout.swift in Sources */,
@@ -2916,6 +2907,7 @@
 				9BB43545256D22AE00ED923C /* TableViewRegisterable.swift in Sources */,
 				9BB43567256E729A00ED923C /* GenericError.swift in Sources */,
 				9BB065B9254B151500B9E2ED /* Keychain.swift in Sources */,
+				9B2A977B25922DC100343016 /* NestedStackView.swift in Sources */,
 				9B827FBD2580B4950054C2DD /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

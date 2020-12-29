@@ -20,6 +20,7 @@ enum DefaultInsets: UIViewInset {
     enum BetweenComponents: CGFloat, UIViewInset {
         case standard = 12
         case large = 20
+        case extraLarge = 40
     }
 
     case custom(inset: CGFloat)

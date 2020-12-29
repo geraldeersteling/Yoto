@@ -12,7 +12,7 @@ import UIKit
 class OnboardingStepContainer {
     typealias Step = UIViewController
 
-    let steps: [Step]
+    private(set) var steps: [Step]
     var delegate: OnboardingStepContainerDelegate?
 
     var firstStep: Step? {
@@ -25,13 +25,26 @@ class OnboardingStepContainer {
 
     init(steps: [Step] = []) {
         self.steps = steps
-        self.steps.forEach {
-            if var step = $0 as? OnboardingStep {
-                step.delegate = self
-            }
-        }
+        prepareSteps()
     }
 
+    func prepareSteps() {
+        let onboardingSteps = steps.compactMap { $0 as? OnboardingStep }
+        for (i, var step) in onboardingSteps.enumerated() {
+            step.delegate = self
+
+            if steps.count > 1 {
+                step.hasNext = i < steps.count - 1
+                step.hasPrevious = i > 0
+            }
+        }
+        steps = onboardingSteps.compactMap { $0 as? Step }
+    }
+}
+
+// MARK: - Step handling -
+
+extension OnboardingStepContainer {
     func step(before step: Step) -> Step? {
         guard
             let index = steps.firstIndex(of: step),
@@ -54,6 +67,8 @@ class OnboardingStepContainer {
         steps.firstIndex(of: step)
     }
 }
+
+// MARK: - Delegation -
 
 extension OnboardingStepContainer: OnboardingStepDelegate {
     func stepForward() {

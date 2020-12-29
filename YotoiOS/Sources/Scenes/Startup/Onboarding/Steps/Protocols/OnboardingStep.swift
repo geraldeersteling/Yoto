@@ -15,4 +15,6 @@ protocol OnboardingStepDelegate {
 
 protocol OnboardingStep {
     var delegate: OnboardingStepDelegate? { get set }
+    var hasNext: Bool { get set }
+    var hasPrevious: Bool { get set }
 }
