@@ -48,24 +48,6 @@
 		9B6B3F1B255C11650049C3DA /* TwitchTargetStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E540225417E0000D89697 /* TwitchTargetStub.swift */; };
 		9B6B3F1C255C11650049C3DA /* SearchGameSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AC82B24ED5AA4005DCBAD /* SearchGameSeeds.swift */; };
 		9B6B3F1D255C11650049C3DA /* TwitchSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0631D25486B1000B9E2ED /* TwitchSeeds.swift */; };
-		9B6B4098255C15640049C3DA /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC5255BEAA60049C3DA /* GameListViewModel.swift */; };
-		9B6B4099255C15640049C3DA /* SearchGamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC9255BEAA60049C3DA /* SearchGamesRepository.swift */; };
-		9B6B409A255C15640049C3DA /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CCF255BEAA60049C3DA /* Keychain.swift */; };
-		9B6B409B255C15640049C3DA /* SearchGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC2255BEAA60049C3DA /* SearchGameRouter.swift */; };
-		9B6B409C255C15640049C3DA /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CBD255BEAA60049C3DA /* GameListTableViewCell.swift */; };
-		9B6B409D255C15640049C3DA /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CCA255BEAA60049C3DA /* GameDetailsViewModel.swift */; };
-		9B6B409E255C15640049C3DA /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CCE255BEAA60049C3DA /* KeychainError.swift */; };
-		9B6B409F255C15640049C3DA /* SearchGameTableSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC7255BEAA60049C3DA /* SearchGameTableSections.swift */; };
-		9B6B40A0255C15640049C3DA /* KeychainAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CCD255BEAA60049C3DA /* KeychainAttributes.swift */; };
-		9B6B40A1255C15640049C3DA /* SearchGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CBE255BEAA60049C3DA /* SearchGameTableViewCell.swift */; };
-		9B6B40A2255C15640049C3DA /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC6255BEAA60049C3DA /* GamesRepository.swift */; };
-		9B6B40A3255C15640049C3DA /* GamesInMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CCB255BEAA60049C3DA /* GamesInMemoryRepository.swift */; };
-		9B6B40A4255C15640049C3DA /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CBF255BEAA60049C3DA /* GameListViewController.swift */; };
-		9B6B40A5255C15640049C3DA /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC1255BEAA60049C3DA /* GameDetailsViewController.swift */; };
-		9B6B40A6255C15640049C3DA /* SearchGamesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC8255BEAA60049C3DA /* SearchGamesRemoteRepository.swift */; };
-		9B6B40A7255C15640049C3DA /* SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC4255BEAA60049C3DA /* SearchGameViewModel.swift */; };
-		9B6B40A8255C15640049C3DA /* SearchGameTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CBC255BEAA60049C3DA /* SearchGameTableDataSource.swift */; };
-		9B6B40A9255C15640049C3DA /* SearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B3CC0255BEAA60049C3DA /* SearchGameViewController.swift */; };
 		9B7365BF257F81DA003484F5 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7365BE257F81DA003484F5 /* LaunchRepository.swift */; };
 		9B7365D0257F8FB6003484F5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7365CE257F8FB6003484F5 /* LaunchViewController.swift */; };
 		9B7365D1257F8FB6003484F5 /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7365CF257F8FB6003484F5 /* LaunchViewController.xib */; };
@@ -126,8 +108,6 @@
 		9BB43545256D22AE00ED923C /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB43544256D22AE00ED923C /* TableViewRegisterable.swift */; };
 		9BB4355E256E55B500ED923C /* GameListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4355D256E55B500ED923C /* GameListTableDataSource.swift */; };
 		9BB43567256E729A00ED923C /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB43566256E729A00ED923C /* GenericError.swift */; };
-		9BB4357A256EB3C000ED923C /* GameListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB43578256EB3C000ED923C /* GameListTableDataSource.swift */; };
-		9BB4357B256EB3C000ED923C /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB43579256EB3C000ED923C /* GameListViewModel.swift */; };
 		9BBA3C4E254DAF13005021F0 /* SearchGameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */; };
 		9BBA3CDC254DB79C005021F0 /* YotoKit+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CDB254DB79C005021F0 /* YotoKit+Injection.swift */; };
 		9BBA3CE6254DBAAB005021F0 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA3CE5254DBAAB005021F0 /* Repositories+Injection.swift */; };
@@ -455,24 +435,6 @@
 		9B588E2D258B634200D4BA27 /* OnboardingStepContainerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepContainerDelegate.swift; sourceTree = "<group>"; };
 		9B6466502580C94D0075CDF5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9B6466512580C94D0075CDF5 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
-		9B6B3CBC255BEAA60049C3DA /* SearchGameTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableDataSource.swift; sourceTree = "<group>"; };
-		9B6B3CBD255BEAA60049C3DA /* GameListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
-		9B6B3CBE255BEAA60049C3DA /* SearchGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableViewCell.swift; sourceTree = "<group>"; };
-		9B6B3CBF255BEAA60049C3DA /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
-		9B6B3CC0255BEAA60049C3DA /* SearchGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameViewController.swift; sourceTree = "<group>"; };
-		9B6B3CC1255BEAA60049C3DA /* GameDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
-		9B6B3CC2255BEAA60049C3DA /* SearchGameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameRouter.swift; sourceTree = "<group>"; };
-		9B6B3CC4255BEAA60049C3DA /* SearchGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameViewModel.swift; sourceTree = "<group>"; };
-		9B6B3CC5255BEAA60049C3DA /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
-		9B6B3CC6255BEAA60049C3DA /* GamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
-		9B6B3CC7255BEAA60049C3DA /* SearchGameTableSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGameTableSections.swift; sourceTree = "<group>"; };
-		9B6B3CC8255BEAA60049C3DA /* SearchGamesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGamesRemoteRepository.swift; sourceTree = "<group>"; };
-		9B6B3CC9255BEAA60049C3DA /* SearchGamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchGamesRepository.swift; sourceTree = "<group>"; };
-		9B6B3CCA255BEAA60049C3DA /* GameDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewModel.swift; sourceTree = "<group>"; };
-		9B6B3CCB255BEAA60049C3DA /* GamesInMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInMemoryRepository.swift; sourceTree = "<group>"; };
-		9B6B3CCD255BEAA60049C3DA /* KeychainAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAttributes.swift; sourceTree = "<group>"; };
-		9B6B3CCE255BEAA60049C3DA /* KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
-		9B6B3CCF255BEAA60049C3DA /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		9B6B3EDF255C098C0049C3DA /* YotoTestSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YotoTestSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6B3EE1255C098C0049C3DA /* YotoTestSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YotoTestSupport.h; sourceTree = "<group>"; };
 		9B6B3EE2255C098C0049C3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -528,8 +490,6 @@
 		9BB43544256D22AE00ED923C /* TableViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
 		9BB4355D256E55B500ED923C /* GameListTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableDataSource.swift; sourceTree = "<group>"; };
 		9BB43566256E729A00ED923C /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
-		9BB43578256EB3C000ED923C /* GameListTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableDataSource.swift; sourceTree = "<group>"; };
-		9BB43579256EB3C000ED923C /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
 		9BBA3C3A254DAB26005021F0 /* SearchGameTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameTableDataSource.swift; sourceTree = "<group>"; };
 		9BBA3CDB254DB79C005021F0 /* YotoKit+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YotoKit+Injection.swift"; sourceTree = "<group>"; };
 		9BBA3CE5254DBAAB005021F0 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
@@ -996,63 +956,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9B6B3CBA255BEAA60049C3DA /* Cuckoo */ = {
-			isa = PBXGroup;
-			children = (
-				9B6B3CBB255BEAA60049C3DA /* YotoiOS */,
-				9B6B3CC3255BEAA60049C3DA /* YotoKit */,
-				9B6B3CCC255BEAA60049C3DA /* YotoUIKit */,
-			);
-			path = Cuckoo;
-			sourceTree = "<group>";
-		};
-		9B6B3CBB255BEAA60049C3DA /* YotoiOS */ = {
-			isa = PBXGroup;
-			children = (
-				9BB43578256EB3C000ED923C /* GameListTableDataSource.swift */,
-				9BB43579256EB3C000ED923C /* GameListViewModel.swift */,
-				9B6B3CBC255BEAA60049C3DA /* SearchGameTableDataSource.swift */,
-				9B6B3CBD255BEAA60049C3DA /* GameListTableViewCell.swift */,
-				9B6B3CBE255BEAA60049C3DA /* SearchGameTableViewCell.swift */,
-				9B6B3CBF255BEAA60049C3DA /* GameListViewController.swift */,
-				9B6B3CC0255BEAA60049C3DA /* SearchGameViewController.swift */,
-				9B6B3CC1255BEAA60049C3DA /* GameDetailsViewController.swift */,
-				9B6B3CC2255BEAA60049C3DA /* SearchGameRouter.swift */,
-			);
-			path = YotoiOS;
-			sourceTree = "<group>";
-		};
-		9B6B3CC3255BEAA60049C3DA /* YotoKit */ = {
-			isa = PBXGroup;
-			children = (
-				9B6B3CC4255BEAA60049C3DA /* SearchGameViewModel.swift */,
-				9B6B3CC5255BEAA60049C3DA /* GameListViewModel.swift */,
-				9B6B3CC6255BEAA60049C3DA /* GamesRepository.swift */,
-				9B6B3CC7255BEAA60049C3DA /* SearchGameTableSections.swift */,
-				9B6B3CC8255BEAA60049C3DA /* SearchGamesRemoteRepository.swift */,
-				9B6B3CC9255BEAA60049C3DA /* SearchGamesRepository.swift */,
-				9B6B3CCA255BEAA60049C3DA /* GameDetailsViewModel.swift */,
-				9B6B3CCB255BEAA60049C3DA /* GamesInMemoryRepository.swift */,
-			);
-			path = YotoKit;
-			sourceTree = "<group>";
-		};
-		9B6B3CCC255BEAA60049C3DA /* YotoUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				9B6B3CCD255BEAA60049C3DA /* KeychainAttributes.swift */,
-				9B6B3CCE255BEAA60049C3DA /* KeychainError.swift */,
-				9B6B3CCF255BEAA60049C3DA /* Keychain.swift */,
-			);
-			path = YotoUIKit;
-			sourceTree = "<group>";
-		};
 		9B6B3EE0255C098C0049C3DA /* YotoTestSupport */ = {
 			isa = PBXGroup;
 			children = (
 				9BB063D0254B0BF200B9E2ED /* Stubbing */,
 				9BB063D1254B0C0400B9E2ED /* Seeds */,
-				9B6B3CBA255BEAA60049C3DA /* Cuckoo */,
 				9B6B3EE1255C098C0049C3DA /* YotoTestSupport.h */,
 				9B6B3EE2255C098C0049C3DA /* Info.plist */,
 			);
@@ -2550,7 +2458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\n# OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Cuckoo/GeneratedMocks.swift\"\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\necho \"Mocks Output directory = ${OUTPUT_DIR}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\nSCENES=\"${INPUT_DIR}/Scenes\"\nSERVICES=\"${INPUT_DIR}/Services\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n# Use a directory to seperate each mock into its own file\n# We mock every Swift file in the Scenes and Services\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PRODUCT_NAME}\" \\\n--output \"${OUTPUT_DIR}\" \\\n--glob \"${INPUT_DIR}/Scenes/**/*.swift\" \"${INPUT_DIR}/Services/**/*.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate the Cuckoo directory and add it into your Xcode test target group.\necho \"Exported mocks to ${OUTPUT_DIR} -- add these to your tests in Xcode \"\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nSCENES=\"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\nSERVICES=\"${INPUT_DIR}/Services/${SWIFT_FILES}\"\nAPI=\"${INPUT_DIR}/API/${SWIFT_FILES}\"\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${SCENES}\" \"${SERVICES}\" \"${API}\"\n\n# ------\n";
 		};
 		9BB06722254D9D6A00B9E2ED /* Run Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2568,7 +2476,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\n# OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Cuckoo/GeneratedMocks.swift\"\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\necho \"Mocks Output directory = ${OUTPUT_DIR}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\nSCENES=\"${INPUT_DIR}/Scenes\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n# Use a directory to seperate each mock into its own file\n# We mock every Swift file in the Scenes and Services\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PRODUCT_NAME}\" \\\n--output \"${OUTPUT_DIR}\" \\\n--glob \"${INPUT_DIR}/Scenes/**/*.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate the Cuckoo directory and add it into your Xcode test target group.\necho \"Exported mocks to ${OUTPUT_DIR} -- add these to your tests in Xcode \"\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nROOT=\"${INPUT_DIR}/Root/${SWIFT_FILES}\"\nSCENES=\"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${ROOT}\" \"${SCENES}\"\n\n# ------\n";
 		};
 		9BB06723254D9D8B00B9E2ED /* Run Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2586,7 +2494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\n# OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Cuckoo/GeneratedMocks.swift\"\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\necho \"Mocks Output directory = ${OUTPUT_DIR}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n# Use a directory to seperate each mock into its own file\n# We mock every Swift file in the Scenes and Services\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PRODUCT_NAME}\" \\\n--output \"${OUTPUT_DIR}\" \\\n--glob \"${INPUT_DIR}/Sources/**/*.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate the Cuckoo directory and add it into your Xcode test target group.\necho \"Exported mocks to ${OUTPUT_DIR} -- add these to your tests in Xcode \"\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\n# (none, use the INPUT_DIR)\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${INPUT_DIR}\"\n\n# ------\n";
 		};
 		A706703AF09ED1F389115A7F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2774,32 +2682,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6B3F1C255C11650049C3DA /* SearchGameSeeds.swift in Sources */,
-				9B6B40A5255C15640049C3DA /* GameDetailsViewController.swift in Sources */,
-				9B6B40A2255C15640049C3DA /* GamesRepository.swift in Sources */,
-				9B6B40A1255C15640049C3DA /* SearchGameTableViewCell.swift in Sources */,
-				9B6B409B255C15640049C3DA /* SearchGameRouter.swift in Sources */,
-				9B6B40A9255C15640049C3DA /* SearchGameViewController.swift in Sources */,
 				9B6B3F1D255C11650049C3DA /* TwitchSeeds.swift in Sources */,
-				9B6B40A7255C15640049C3DA /* SearchGameViewModel.swift in Sources */,
-				9B6B409C255C15640049C3DA /* GameListTableViewCell.swift in Sources */,
 				9B6B3F18255C11650049C3DA /* GameSeeds.swift in Sources */,
-				9B6B409D255C15640049C3DA /* GameDetailsViewModel.swift in Sources */,
-				9B6B40A0255C15640049C3DA /* KeychainAttributes.swift in Sources */,
 				9B6B3F19255C11650049C3DA /* StubUtils.swift in Sources */,
-				9BB4357A256EB3C000ED923C /* GameListTableDataSource.swift in Sources */,
-				9BB4357B256EB3C000ED923C /* GameListViewModel.swift in Sources */,
-				9B6B40A3255C15640049C3DA /* GamesInMemoryRepository.swift in Sources */,
-				9B6B40A8255C15640049C3DA /* SearchGameTableDataSource.swift in Sources */,
-				9B6B4098255C15640049C3DA /* GameListViewModel.swift in Sources */,
-				9B6B40A4255C15640049C3DA /* GameListViewController.swift in Sources */,
-				9B6B409E255C15640049C3DA /* KeychainError.swift in Sources */,
-				9B6B40A6255C15640049C3DA /* SearchGamesRemoteRepository.swift in Sources */,
 				9B6B3F1A255C11650049C3DA /* GamesTargetStub.swift in Sources */,
-				9B6B4099255C15640049C3DA /* SearchGamesRepository.swift in Sources */,
-				9B6B409F255C15640049C3DA /* SearchGameTableSections.swift in Sources */,
 				9B6B3F17255C11650049C3DA /* KeychainSeeds.swift in Sources */,
 				9B6B3F1B255C11650049C3DA /* TwitchTargetStub.swift in Sources */,
-				9B6B409A255C15640049C3DA /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
