@@ -1,8 +1,21 @@
+plugin 'cocoapods-binary'
+
+# If your Pods folder is excluded from git, you may add keep_source_code_for_prebuilt_frameworks! in the head of Podfile to speed up pod install,
+# as it won't download all the sources every time prebuilt pods have changes.
+# (for more info check: https://github.com/leavez/cocoapods-binary)
+keep_source_code_for_prebuilt_frameworks!
+
+# Stop compiling pods when nothing has changed in them using `all_binary!`
+# (for more info check: https://github.com/leavez/cocoapods-binary)
+all_binary!
+
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.5'
 
 # Don't show pod warnings
 inhibit_all_warnings!
+
+use_frameworks!
 
 ####################################
 # Different pod categories
@@ -59,7 +72,6 @@ end
 ####################################
 
 target 'Yoto' do
-  use_frameworks!
 
   # Pods for Yoto
   shared_pods
@@ -76,7 +88,6 @@ target 'Yoto' do
 end
 
 target 'YotoKit' do
-  use_frameworks!
 
   # Pods for YotoKit
   shared_pods
@@ -91,7 +102,6 @@ target 'YotoKit' do
 end
 
 target 'YotoiOS' do
-  use_frameworks!
 
   # Pods for YotoKit
   shared_pods
@@ -107,7 +117,6 @@ target 'YotoiOS' do
 end
 
 target 'YotoUIKit' do
-  use_frameworks!
 
   # Pods for YotoKit
   rx_pods
@@ -121,10 +130,11 @@ target 'YotoUIKit' do
 end
 
 target 'YotoTestSupport' do
-  use_frameworks!
 
   testing_pods
   rx_pods
   networking_pods
 
 end
+
+
