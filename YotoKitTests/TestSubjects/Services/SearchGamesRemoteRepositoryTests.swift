@@ -33,7 +33,8 @@ class SearchGamesRemoteRepositoryTests: QuickSpec {
         describe("A remote search repository") {
             beforeEach {
                 HTTPStubs.onStubMissing { fail("Stub missing for request: \($0) -- \(IGDB.baseURL.host!)") }
-
+                TwitchTargetStub.stubRetrieveAccessToken()
+                
                 self.sut = Resolver.optional()
                 self.concurrentScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
                 self.bag = DisposeBag()

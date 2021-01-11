@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol SlideDelegate {
-    func nextPressed(forSlide: Slide)
-    func previousPressed(forSlide: Slide)
-}
-
 protocol Slide: UIView {
     static var nibName: String { get }
     var delegate: SlideDelegate? { get set }

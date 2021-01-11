@@ -9,14 +9,20 @@
 import Foundation
 @testable import YotoKit
 
-public struct GameSeeds {
-    public static let seeds = [
-        try! Game(JSON: ["id": 1, "name": "The Game"]),
-        try! Game(JSON: ["id": 2, "name": "The Real Game"]),
-        try! Game(JSON: ["id": 3, "name": "The Fake Game"])
-    ]
+public enum GameSeeds {
+    public static let seeds = generateGames(5)
 
     public static var firstSeed: Game {
         return seeds[0]
+    }
+
+    public static func generateGames(_ count: Int) -> [Game] {
+        var games = [Game]()
+        for i in 0 ... count {
+            games.append(
+                try! Game(JSON: ["id": i, "name": "The Game \(i)"])
+            )
+        }
+        return games
     }
 }

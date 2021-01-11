@@ -81,6 +81,10 @@ public class SearchGameViewModel {
     public func uriForGame(at index: Int) -> GameUri? {
         guard let item = item(at: index)
         else { return nil }
-        return item.identity as? GameUri
+
+        switch item {
+            case let SectionItemModel.RegularGameSectionItem(uri, _):
+                return uri
+        }
     }
 }

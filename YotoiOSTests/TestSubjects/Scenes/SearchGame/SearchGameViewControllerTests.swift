@@ -44,11 +44,13 @@ class SearchGameViewControllerTests: QuickSpec {
     func stubViewModel(_ model: MockSearchGameViewModel) {
         stub(model) { mock in
             when(mock).isSearching.get.thenReturn(Driver<Bool>.just(false))
-            when(mock).searchResults.get.thenReturn(Driver<[SearchGameTableSection]>.just([]))
+            when(mock).searchResults.get.thenReturn(Driver<[TableSectionModel]>.just([]))
             when(mock).searchQuery.get.thenReturn(PublishRelay<String>())
             when(mock).item(at: any()).then { _ in
-                let seed = GameSeeds.firstSeed
-                return SearchGameTableItem(gameUri: seed.uri, name: seed.name)
+                return SearchGameSeeds.firstSearchGameTableItem
+            }
+            when(mock).uriForGame(at: any()).then { _ in
+                GameUri(id: 1)
             }
         }
     }

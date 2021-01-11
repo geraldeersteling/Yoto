@@ -171,7 +171,7 @@ class SearchGameViewModelTests: QuickSpec {
                     //          with just toArray it keeps on blocking (because of no completed event?)
 
                     expect { self.sut.uriForGame(at: 0) }
-                        .to(equal(SearchGameSeeds.firstSearchGameTableItem.gameUri))
+                        .to(equal(SearchGameSeeds.uriForTableItem(SearchGameSeeds.firstSearchGameTableItem)))
                 }
             }
         }
