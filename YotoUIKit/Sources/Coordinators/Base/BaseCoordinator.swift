@@ -11,7 +11,9 @@ import UIKit
 
 open class BaseCoordinator: Coordinator {
     private var disposeBag = DisposeBag()
-    private var childCoordinators = [Coordinator]()
+
+    public var parent: Coordinator?
+    public private(set) var childCoordinators = [Coordinator]()
 
     public var flowViewController: UIViewController
     public var coordinatorStatus = PublishSubject<CoordinatorStatus>()
@@ -26,14 +28,22 @@ open class BaseCoordinator: Coordinator {
     }
 
     open func start(_ child: Coordinator) {
-        childCoordinators.append(child)
         bindChildCoordinator(child)
+        childCoordinators.append(child)
         child.start()
     }
 
     open func coordinatorDidFinish(_ child: Coordinator) {}
 
+    public func removeChildCoordinator(_ child: Coordinator) {
+        if let index = childCoordinators.firstIndex(where: { $0 === child }) {
+            child.parent = nil
+            childCoordinators.remove(at: index)
+        }
+    }
+
     private func bindChildCoordinator(_ child: Coordinator) {
+        child.parent = self
         child.coordinatorStatus
             .subscribe(onNext: { [weak self] in
                 self?.handleCoordinatorStatus($0, forChild: child)
@@ -41,19 +51,13 @@ open class BaseCoordinator: Coordinator {
             .disposed(by: disposeBag)
     }
 
-    func handleCoordinatorStatus(_ status: CoordinatorStatus, forChild child: Coordinator) {
+    private func handleCoordinatorStatus(_ status: CoordinatorStatus, forChild child: Coordinator) {
         switch status {
             case .didFinish:
                 if removeChildsAutomatically {
                     removeChildCoordinator(child)
                 }
                 coordinatorDidFinish(child)
-        }
-    }
-
-    private func removeChildCoordinator(_ child: Coordinator) {
-        if let index = childCoordinators.firstIndex(where: { $0 === child }) {
-            childCoordinators.remove(at: index)
         }
     }
 }

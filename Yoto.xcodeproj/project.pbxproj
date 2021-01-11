@@ -31,6 +31,64 @@
 		9B2A97242591ED7500343016 /* BasicOnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A97222591ED7500343016 /* BasicOnboardingStepViewController.swift */; };
 		9B2A977B25922DC100343016 /* NestedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A977A25922DC100343016 /* NestedStackView.swift */; };
 		9B2A9795259B26F300343016 /* OnboardingStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A9794259B26F300343016 /* OnboardingStepModel.swift */; };
+		9B324F2D25A47F56004569FD /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324F2C25A47F56004569FD /* AppCoordinatorTests.swift */; };
+		9B324FF225A48309004569FD /* YotoiOS_BasicTextSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC025A48309004569FD /* YotoiOS_BasicTextSlide.swift */; };
+		9B324FF325A48309004569FD /* YotoiOS_Home+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC125A48309004569FD /* YotoiOS_Home+Injection.swift */; };
+		9B324FF525A48309004569FD /* YotoiOS_OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC325A48309004569FD /* YotoiOS_OnboardingCoordinator.swift */; };
+		9B324FF625A48309004569FD /* YotoiOS_SearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC425A48309004569FD /* YotoiOS_SearchGameViewController.swift */; };
+		9B324FF725A48309004569FD /* YotoiOS_GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC525A48309004569FD /* YotoiOS_GameListTableViewCell.swift */; };
+		9B324FF825A48309004569FD /* YotoiOS_HomeTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC625A48309004569FD /* YotoiOS_HomeTabbarController.swift */; };
+		9B324FF925A48309004569FD /* YotoiOS_LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC725A48309004569FD /* YotoiOS_LaunchViewController.swift */; };
+		9B324FFA25A48309004569FD /* YotoiOS_OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC825A48309004569FD /* YotoiOS_OnboardingViewController.swift */; };
+		9B324FFB25A48309004569FD /* YotoiOS_AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FC925A48309004569FD /* YotoiOS_AppCoordinator.swift */; };
+		9B324FFC25A48309004569FD /* YotoiOS_SearchGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCA25A48309004569FD /* YotoiOS_SearchGameRouter.swift */; };
+		9B324FFD25A48309004569FD /* YotoiOS_OnboardingStepContainerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCB25A48309004569FD /* YotoiOS_OnboardingStepContainerDelegate.swift */; };
+		9B324FFE25A48309004569FD /* YotoiOS_BasicOnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCC25A48309004569FD /* YotoiOS_BasicOnboardingStepViewController.swift */; };
+		9B324FFF25A48309004569FD /* YotoiOS_AppLaunch+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCD25A48309004569FD /* YotoiOS_AppLaunch+Injection.swift */; };
+		9B32500025A48309004569FD /* YotoiOS_SearchGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCE25A48309004569FD /* YotoiOS_SearchGameTableViewCell.swift */; };
+		9B32500125A48309004569FD /* YotoiOS_GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FCF25A48309004569FD /* YotoiOS_GameDetailsViewController.swift */; };
+		9B32500225A48309004569FD /* YotoiOS_OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD025A48309004569FD /* YotoiOS_OnboardingStep.swift */; };
+		9B32500325A48309004569FD /* YotoiOS_GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD125A48309004569FD /* YotoiOS_GameListViewController.swift */; };
+		9B32500425A48309004569FD /* YotoiOS_SearchGame+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD225A48309004569FD /* YotoiOS_SearchGame+Injection.swift */; };
+		9B32500525A48309004569FD /* YotoiOS_BasicImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD325A48309004569FD /* YotoiOS_BasicImageSlide.swift */; };
+		9B32500625A48309004569FD /* YotoiOS_RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD425A48309004569FD /* YotoiOS_RootViewController.swift */; };
+		9B32500725A48309004569FD /* YotoiOS_GameList+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD525A48309004569FD /* YotoiOS_GameList+Injection.swift */; };
+		9B32500825A48309004569FD /* YotoiOS_SearchGameTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD625A48309004569FD /* YotoiOS_SearchGameTableDataSource.swift */; };
+		9B32500925A48309004569FD /* YotoiOS_GameListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD725A48309004569FD /* YotoiOS_GameListTableDataSource.swift */; };
+		9B32500A25A48309004569FD /* YotoiOS_Startup+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD825A48309004569FD /* YotoiOS_Startup+Injection.swift */; };
+		9B32500B25A48309004569FD /* YotoiOS_OnboardingStepContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FD925A48309004569FD /* YotoiOS_OnboardingStepContainer.swift */; };
+		9B32500C25A48309004569FD /* YotoKit_GameList+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FDB25A48309004569FD /* YotoKit_GameList+Injection.swift */; };
+		9B32500D25A48309004569FD /* YotoKit_SearchGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FDC25A48309004569FD /* YotoKit_SearchGameViewModel.swift */; };
+		9B32500E25A48309004569FD /* YotoKit_GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FDD25A48309004569FD /* YotoKit_GameDetailsViewModel.swift */; };
+		9B32500F25A48309004569FD /* YotoKit_GamesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FDE25A48309004569FD /* YotoKit_GamesTarget.swift */; };
+		9B32501025A48309004569FD /* YotoKit_GamesInMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FDF25A48309004569FD /* YotoKit_GamesInMemoryRepository.swift */; };
+		9B32501125A48309004569FD /* YotoKit_OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE025A48309004569FD /* YotoKit_OnboardingRepository.swift */; };
+		9B32501225A48309004569FD /* YotoKit_TwitchCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE125A48309004569FD /* YotoKit_TwitchCredentials.swift */; };
+		9B32501325A48309004569FD /* YotoKit_SearchGamesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE225A48309004569FD /* YotoKit_SearchGamesRemoteRepository.swift */; };
+		9B32501425A48309004569FD /* YotoKit_LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE325A48309004569FD /* YotoKit_LaunchRepository.swift */; };
+		9B32501525A48309004569FD /* YotoKit_Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE425A48309004569FD /* YotoKit_Repositories+Injection.swift */; };
+		9B32501625A48309004569FD /* YotoKit_GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE525A48309004569FD /* YotoKit_GameListViewModel.swift */; };
+		9B32501725A48309004569FD /* YotoKit_GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE625A48309004569FD /* YotoKit_GamesRepository.swift */; };
+		9B32501825A48309004569FD /* YotoKit_IGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE725A48309004569FD /* YotoKit_IGDB.swift */; };
+		9B32501925A48309004569FD /* YotoKit_SearchGame+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE825A48309004569FD /* YotoKit_SearchGame+Injection.swift */; };
+		9B32501A25A48309004569FD /* YotoKit_TwitchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FE925A48309004569FD /* YotoKit_TwitchTarget.swift */; };
+		9B32501B25A48309004569FD /* YotoKit_Twitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FEA25A48309004569FD /* YotoKit_Twitch.swift */; };
+		9B32501C25A48309004569FD /* YotoKit_SearchGamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FEB25A48309004569FD /* YotoKit_SearchGamesRepository.swift */; };
+		9B32501D25A48309004569FD /* YotoKit_OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FEC25A48309004569FD /* YotoKit_OnboardingViewModel.swift */; };
+		9B32501E25A48309004569FD /* YotoKit_IGDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FED25A48309004569FD /* YotoKit_IGDBError.swift */; };
+		9B32501F25A48309004569FD /* YotoKit_OnboardingStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FEE25A48309004569FD /* YotoKit_OnboardingStepModel.swift */; };
+		9B32502025A48309004569FD /* YotoKit_API+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FEF25A48309004569FD /* YotoKit_API+Injection.swift */; };
+		9B32502125A48309004569FD /* YotoKit_KeychainAttributes+IGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FF025A48309004569FD /* YotoKit_KeychainAttributes+IGDB.swift */; };
+		9B32502225A48309004569FD /* YotoKit_SearchGameTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B324FF125A48309004569FD /* YotoKit_SearchGameTarget.swift */; };
+		9B32502C25A5ABEF004569FD /* SlideDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32502B25A5ABEF004569FD /* SlideDelegate.swift */; };
+		9B32503625A5AC18004569FD /* YotoiOS_SlideDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32503525A5AC18004569FD /* YotoiOS_SlideDelegate.swift */; };
+		9B32504925A5B467004569FD /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32504825A5B467004569FD /* MockUserDefaults.swift */; };
+		9B32525125AC7797004569FD /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32525025AC7797004569FD /* BaseCoordinatorTests.swift */; };
+		9B32546525AC9FEC004569FD /* YotoUIKit_KeychainAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32546025AC9FEC004569FD /* YotoUIKit_KeychainAttributes.swift */; };
+		9B32546625AC9FEC004569FD /* YotoUIKit_Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32546125AC9FEC004569FD /* YotoUIKit_Keychain.swift */; };
+		9B32546725AC9FEC004569FD /* YotoUIKit_BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32546225AC9FEC004569FD /* YotoUIKit_BaseCoordinator.swift */; };
+		9B32546825AC9FEC004569FD /* YotoUIKit_KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32546325AC9FEC004569FD /* YotoUIKit_KeychainError.swift */; };
+		9B3255D925ACB4C2004569FD /* YotoUIKit_Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3255D825ACB4C2004569FD /* YotoUIKit_Coordinator.swift */; };
 		9B4A823824BF1EEB00EA430C /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A823724BF1EEA00EA430C /* BartyCrouch.swift */; };
 		9B4A824724BF219E00EA430C /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A824924BF219E00EA430C /* localization.strings */; };
 		9B4BFEF525778D5000BDCD7A /* YotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BFEF425778D5000BDCD7A /* YotoTests.swift */; };
@@ -413,6 +471,64 @@
 		9B2A977A25922DC100343016 /* NestedStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedStackView.swift; sourceTree = "<group>"; };
 		9B2A9794259B26F300343016 /* OnboardingStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepModel.swift; sourceTree = "<group>"; };
 		9B2F99CA255D537900510532 /* TableSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
+		9B324F2C25A47F56004569FD /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		9B324FC025A48309004569FD /* YotoiOS_BasicTextSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_BasicTextSlide.swift; sourceTree = "<group>"; };
+		9B324FC125A48309004569FD /* YotoiOS_Home+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoiOS_Home+Injection.swift"; sourceTree = "<group>"; };
+		9B324FC325A48309004569FD /* YotoiOS_OnboardingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		9B324FC425A48309004569FD /* YotoiOS_SearchGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_SearchGameViewController.swift; sourceTree = "<group>"; };
+		9B324FC525A48309004569FD /* YotoiOS_GameListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_GameListTableViewCell.swift; sourceTree = "<group>"; };
+		9B324FC625A48309004569FD /* YotoiOS_HomeTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_HomeTabbarController.swift; sourceTree = "<group>"; };
+		9B324FC725A48309004569FD /* YotoiOS_LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_LaunchViewController.swift; sourceTree = "<group>"; };
+		9B324FC825A48309004569FD /* YotoiOS_OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_OnboardingViewController.swift; sourceTree = "<group>"; };
+		9B324FC925A48309004569FD /* YotoiOS_AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_AppCoordinator.swift; sourceTree = "<group>"; };
+		9B324FCA25A48309004569FD /* YotoiOS_SearchGameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_SearchGameRouter.swift; sourceTree = "<group>"; };
+		9B324FCB25A48309004569FD /* YotoiOS_OnboardingStepContainerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_OnboardingStepContainerDelegate.swift; sourceTree = "<group>"; };
+		9B324FCC25A48309004569FD /* YotoiOS_BasicOnboardingStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_BasicOnboardingStepViewController.swift; sourceTree = "<group>"; };
+		9B324FCD25A48309004569FD /* YotoiOS_AppLaunch+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoiOS_AppLaunch+Injection.swift"; sourceTree = "<group>"; };
+		9B324FCE25A48309004569FD /* YotoiOS_SearchGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_SearchGameTableViewCell.swift; sourceTree = "<group>"; };
+		9B324FCF25A48309004569FD /* YotoiOS_GameDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_GameDetailsViewController.swift; sourceTree = "<group>"; };
+		9B324FD025A48309004569FD /* YotoiOS_OnboardingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_OnboardingStep.swift; sourceTree = "<group>"; };
+		9B324FD125A48309004569FD /* YotoiOS_GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_GameListViewController.swift; sourceTree = "<group>"; };
+		9B324FD225A48309004569FD /* YotoiOS_SearchGame+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoiOS_SearchGame+Injection.swift"; sourceTree = "<group>"; };
+		9B324FD325A48309004569FD /* YotoiOS_BasicImageSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_BasicImageSlide.swift; sourceTree = "<group>"; };
+		9B324FD425A48309004569FD /* YotoiOS_RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_RootViewController.swift; sourceTree = "<group>"; };
+		9B324FD525A48309004569FD /* YotoiOS_GameList+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoiOS_GameList+Injection.swift"; sourceTree = "<group>"; };
+		9B324FD625A48309004569FD /* YotoiOS_SearchGameTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_SearchGameTableDataSource.swift; sourceTree = "<group>"; };
+		9B324FD725A48309004569FD /* YotoiOS_GameListTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_GameListTableDataSource.swift; sourceTree = "<group>"; };
+		9B324FD825A48309004569FD /* YotoiOS_Startup+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoiOS_Startup+Injection.swift"; sourceTree = "<group>"; };
+		9B324FD925A48309004569FD /* YotoiOS_OnboardingStepContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_OnboardingStepContainer.swift; sourceTree = "<group>"; };
+		9B324FDB25A48309004569FD /* YotoKit_GameList+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoKit_GameList+Injection.swift"; sourceTree = "<group>"; };
+		9B324FDC25A48309004569FD /* YotoKit_SearchGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_SearchGameViewModel.swift; sourceTree = "<group>"; };
+		9B324FDD25A48309004569FD /* YotoKit_GameDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_GameDetailsViewModel.swift; sourceTree = "<group>"; };
+		9B324FDE25A48309004569FD /* YotoKit_GamesTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_GamesTarget.swift; sourceTree = "<group>"; };
+		9B324FDF25A48309004569FD /* YotoKit_GamesInMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_GamesInMemoryRepository.swift; sourceTree = "<group>"; };
+		9B324FE025A48309004569FD /* YotoKit_OnboardingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_OnboardingRepository.swift; sourceTree = "<group>"; };
+		9B324FE125A48309004569FD /* YotoKit_TwitchCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_TwitchCredentials.swift; sourceTree = "<group>"; };
+		9B324FE225A48309004569FD /* YotoKit_SearchGamesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_SearchGamesRemoteRepository.swift; sourceTree = "<group>"; };
+		9B324FE325A48309004569FD /* YotoKit_LaunchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_LaunchRepository.swift; sourceTree = "<group>"; };
+		9B324FE425A48309004569FD /* YotoKit_Repositories+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoKit_Repositories+Injection.swift"; sourceTree = "<group>"; };
+		9B324FE525A48309004569FD /* YotoKit_GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_GameListViewModel.swift; sourceTree = "<group>"; };
+		9B324FE625A48309004569FD /* YotoKit_GamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_GamesRepository.swift; sourceTree = "<group>"; };
+		9B324FE725A48309004569FD /* YotoKit_IGDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_IGDB.swift; sourceTree = "<group>"; };
+		9B324FE825A48309004569FD /* YotoKit_SearchGame+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoKit_SearchGame+Injection.swift"; sourceTree = "<group>"; };
+		9B324FE925A48309004569FD /* YotoKit_TwitchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_TwitchTarget.swift; sourceTree = "<group>"; };
+		9B324FEA25A48309004569FD /* YotoKit_Twitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_Twitch.swift; sourceTree = "<group>"; };
+		9B324FEB25A48309004569FD /* YotoKit_SearchGamesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_SearchGamesRepository.swift; sourceTree = "<group>"; };
+		9B324FEC25A48309004569FD /* YotoKit_OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_OnboardingViewModel.swift; sourceTree = "<group>"; };
+		9B324FED25A48309004569FD /* YotoKit_IGDBError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_IGDBError.swift; sourceTree = "<group>"; };
+		9B324FEE25A48309004569FD /* YotoKit_OnboardingStepModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_OnboardingStepModel.swift; sourceTree = "<group>"; };
+		9B324FEF25A48309004569FD /* YotoKit_API+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoKit_API+Injection.swift"; sourceTree = "<group>"; };
+		9B324FF025A48309004569FD /* YotoKit_KeychainAttributes+IGDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YotoKit_KeychainAttributes+IGDB.swift"; sourceTree = "<group>"; };
+		9B324FF125A48309004569FD /* YotoKit_SearchGameTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoKit_SearchGameTarget.swift; sourceTree = "<group>"; };
+		9B32502B25A5ABEF004569FD /* SlideDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDelegate.swift; sourceTree = "<group>"; };
+		9B32503525A5AC18004569FD /* YotoiOS_SlideDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoiOS_SlideDelegate.swift; sourceTree = "<group>"; };
+		9B32504825A5B467004569FD /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		9B32525025AC7797004569FD /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
+		9B32546025AC9FEC004569FD /* YotoUIKit_KeychainAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoUIKit_KeychainAttributes.swift; sourceTree = "<group>"; };
+		9B32546125AC9FEC004569FD /* YotoUIKit_Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoUIKit_Keychain.swift; sourceTree = "<group>"; };
+		9B32546225AC9FEC004569FD /* YotoUIKit_BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoUIKit_BaseCoordinator.swift; sourceTree = "<group>"; };
+		9B32546325AC9FEC004569FD /* YotoUIKit_KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoUIKit_KeychainError.swift; sourceTree = "<group>"; };
+		9B3255D825ACB4C2004569FD /* YotoUIKit_Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YotoUIKit_Coordinator.swift; sourceTree = "<group>"; };
 		9B34EDED24E69661009E9C94 /* SearchGameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewModelTests.swift; sourceTree = "<group>"; };
 		9B4A820D24BC9BBD00EA430C /* SearchGameViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameViewControllerTests.swift; sourceTree = "<group>"; };
 		9B4A822524BEDEF400EA430C /* GameListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -869,6 +985,115 @@
 			path = "Tableview related";
 			sourceTree = "<group>";
 		};
+		9B324F2B25A47EF5004569FD /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9B324F2C25A47F56004569FD /* AppCoordinatorTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		9B324FBE25A48309004569FD /* Cuckoo */ = {
+			isa = PBXGroup;
+			children = (
+				9B324FBF25A48309004569FD /* YotoiOS */,
+				9B324FDA25A48309004569FD /* YotoKit */,
+				9B32527625AC8D05004569FD /* YotoUIKit */,
+			);
+			path = Cuckoo;
+			sourceTree = "<group>";
+		};
+		9B324FBF25A48309004569FD /* YotoiOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B32503525A5AC18004569FD /* YotoiOS_SlideDelegate.swift */,
+				9B324FC025A48309004569FD /* YotoiOS_BasicTextSlide.swift */,
+				9B324FC125A48309004569FD /* YotoiOS_Home+Injection.swift */,
+				9B324FC325A48309004569FD /* YotoiOS_OnboardingCoordinator.swift */,
+				9B324FC425A48309004569FD /* YotoiOS_SearchGameViewController.swift */,
+				9B324FC525A48309004569FD /* YotoiOS_GameListTableViewCell.swift */,
+				9B324FC625A48309004569FD /* YotoiOS_HomeTabbarController.swift */,
+				9B324FC725A48309004569FD /* YotoiOS_LaunchViewController.swift */,
+				9B324FC825A48309004569FD /* YotoiOS_OnboardingViewController.swift */,
+				9B324FC925A48309004569FD /* YotoiOS_AppCoordinator.swift */,
+				9B324FCA25A48309004569FD /* YotoiOS_SearchGameRouter.swift */,
+				9B324FCB25A48309004569FD /* YotoiOS_OnboardingStepContainerDelegate.swift */,
+				9B324FCC25A48309004569FD /* YotoiOS_BasicOnboardingStepViewController.swift */,
+				9B324FCD25A48309004569FD /* YotoiOS_AppLaunch+Injection.swift */,
+				9B324FCE25A48309004569FD /* YotoiOS_SearchGameTableViewCell.swift */,
+				9B324FCF25A48309004569FD /* YotoiOS_GameDetailsViewController.swift */,
+				9B324FD025A48309004569FD /* YotoiOS_OnboardingStep.swift */,
+				9B324FD125A48309004569FD /* YotoiOS_GameListViewController.swift */,
+				9B324FD225A48309004569FD /* YotoiOS_SearchGame+Injection.swift */,
+				9B324FD325A48309004569FD /* YotoiOS_BasicImageSlide.swift */,
+				9B324FD425A48309004569FD /* YotoiOS_RootViewController.swift */,
+				9B324FD525A48309004569FD /* YotoiOS_GameList+Injection.swift */,
+				9B324FD625A48309004569FD /* YotoiOS_SearchGameTableDataSource.swift */,
+				9B324FD725A48309004569FD /* YotoiOS_GameListTableDataSource.swift */,
+				9B324FD825A48309004569FD /* YotoiOS_Startup+Injection.swift */,
+				9B324FD925A48309004569FD /* YotoiOS_OnboardingStepContainer.swift */,
+			);
+			path = YotoiOS;
+			sourceTree = "<group>";
+		};
+		9B324FDA25A48309004569FD /* YotoKit */ = {
+			isa = PBXGroup;
+			children = (
+				9B324FDB25A48309004569FD /* YotoKit_GameList+Injection.swift */,
+				9B324FDC25A48309004569FD /* YotoKit_SearchGameViewModel.swift */,
+				9B324FDD25A48309004569FD /* YotoKit_GameDetailsViewModel.swift */,
+				9B324FDE25A48309004569FD /* YotoKit_GamesTarget.swift */,
+				9B324FDF25A48309004569FD /* YotoKit_GamesInMemoryRepository.swift */,
+				9B324FE025A48309004569FD /* YotoKit_OnboardingRepository.swift */,
+				9B324FE125A48309004569FD /* YotoKit_TwitchCredentials.swift */,
+				9B324FE225A48309004569FD /* YotoKit_SearchGamesRemoteRepository.swift */,
+				9B324FE325A48309004569FD /* YotoKit_LaunchRepository.swift */,
+				9B324FE425A48309004569FD /* YotoKit_Repositories+Injection.swift */,
+				9B324FE525A48309004569FD /* YotoKit_GameListViewModel.swift */,
+				9B324FE625A48309004569FD /* YotoKit_GamesRepository.swift */,
+				9B324FE725A48309004569FD /* YotoKit_IGDB.swift */,
+				9B324FE825A48309004569FD /* YotoKit_SearchGame+Injection.swift */,
+				9B324FE925A48309004569FD /* YotoKit_TwitchTarget.swift */,
+				9B324FEA25A48309004569FD /* YotoKit_Twitch.swift */,
+				9B324FEB25A48309004569FD /* YotoKit_SearchGamesRepository.swift */,
+				9B324FEC25A48309004569FD /* YotoKit_OnboardingViewModel.swift */,
+				9B324FED25A48309004569FD /* YotoKit_IGDBError.swift */,
+				9B324FEE25A48309004569FD /* YotoKit_OnboardingStepModel.swift */,
+				9B324FEF25A48309004569FD /* YotoKit_API+Injection.swift */,
+				9B324FF025A48309004569FD /* YotoKit_KeychainAttributes+IGDB.swift */,
+				9B324FF125A48309004569FD /* YotoKit_SearchGameTarget.swift */,
+			);
+			path = YotoKit;
+			sourceTree = "<group>";
+		};
+		9B32504725A5B45A004569FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9B32504825A5B467004569FD /* MockUserDefaults.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9B32524F25AC7773004569FD /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9B32525025AC7797004569FD /* BaseCoordinatorTests.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9B32527625AC8D05004569FD /* YotoUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9B3255D825ACB4C2004569FD /* YotoUIKit_Coordinator.swift */,
+				9B32546225AC9FEC004569FD /* YotoUIKit_BaseCoordinator.swift */,
+				9B32546125AC9FEC004569FD /* YotoUIKit_Keychain.swift */,
+				9B32546025AC9FEC004569FD /* YotoUIKit_KeychainAttributes.swift */,
+				9B32546325AC9FEC004569FD /* YotoUIKit_KeychainError.swift */,
+			);
+			path = YotoUIKit;
+			sourceTree = "<group>";
+		};
 		9B4A821524BEDE8200EA430C /* GameList */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +1151,7 @@
 		9B4CA61C255C2018001B69B5 /* TestSubjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B32524F25AC7773004569FD /* Coordinators */,
 				9BB0631425484A9600B9E2ED /* Keychain */,
 			);
 			path = TestSubjects;
@@ -959,6 +1185,8 @@
 		9B6B3EE0255C098C0049C3DA /* YotoTestSupport */ = {
 			isa = PBXGroup;
 			children = (
+				9B32504725A5B45A004569FD /* Utilities */,
+				9B324FBE25A48309004569FD /* Cuckoo */,
 				9BB063D0254B0BF200B9E2ED /* Stubbing */,
 				9BB063D1254B0C0400B9E2ED /* Seeds */,
 				9B6B3EE1255C098C0049C3DA /* YotoTestSupport.h */,
@@ -1400,6 +1628,7 @@
 		9BB063CD254B0BB700B9E2ED /* TestSubjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B324F2B25A47EF5004569FD /* Root */,
 				9BB063CE254B0BBC00B9E2ED /* Scenes */,
 			);
 			path = TestSubjects;
@@ -1672,6 +1901,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD8FD112587A0C5006351A5 /* Slide.swift */,
+				9B32502B25A5ABEF004569FD /* SlideDelegate.swift */,
 				9BD8FD3A2587A7EE006351A5 /* BasicTextSlide.swift */,
 				9BD8FD4A2587AFE7006351A5 /* BasicTextSlide.xib */,
 				9BD8FD2A2587A267006351A5 /* BasicImageSlide.swift */,
@@ -2458,7 +2688,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nSCENES=\"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\nSERVICES=\"${INPUT_DIR}/Services/${SWIFT_FILES}\"\nAPI=\"${INPUT_DIR}/API/${SWIFT_FILES}\"\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${SCENES}\" \"${SERVICES}\" \"${API}\"\n\n# ------\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nFILES_TO_MOCK=(\n    \"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\n    \"${INPUT_DIR}/Services/${SWIFT_FILES}\"\n    \"${INPUT_DIR}/API/${SWIFT_FILES}\"\n)\n\n# ------\n\nMERGED=$(IFS=\\ ; echo \"${FILES_TO_MOCK[*]}\")\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${MERGED}\"\n";
 		};
 		9BB06722254D9D6A00B9E2ED /* Run Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2476,7 +2706,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nROOT=\"${INPUT_DIR}/Root/${SWIFT_FILES}\"\nSCENES=\"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${ROOT}\" \"${SCENES}\"\n\n# ------\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nFILES_TO_MOCK=(\n    \"${INPUT_DIR}/Root/${SWIFT_FILES}\"\n    \"${INPUT_DIR}/Scenes/${SWIFT_FILES}\"\n)\n\n# ------\n\nMERGED=$(IFS=\\ ; echo \"${FILES_TO_MOCK[*]}\")\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${MERGED}\"\n";
 		};
 		9BB06723254D9D8B00B9E2ED /* Run Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2494,7 +2724,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\n# (none, use the INPUT_DIR)\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" \"${INPUT_DIR}\"\n\n# ------\n";
+			shellScript = "# Default output Directory\nOUTPUT_DIR=\"${PROJECT_DIR}/YotoTestSupport/Cuckoo/${PRODUCT_NAME}\"\n\n# Main input directory \nINPUT_DIR=\"${PROJECT_DIR}/${PRODUCT_NAME}/Sources\"\n\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Convenience glob for Swift files \nSWIFT_FILES=\"**/*.swift\"\n\n# ------ Start changing things here ------\n\n# Define all files to mock\nFILES_TO_MOCK=(\n    \"${INPUT_DIR}/${SWIFT_FILES}\"\n)\n\nFILES_TO_EXCLUDE=(\n    \"${INPUT_DIR}/Extensions/TableViewRegisterable.swift\"\n)\n\n# ------\n\nMERGED=$(IFS=\\ ; echo \"${FILES_TO_MOCK[*]}\")\nMERGED_EXCLUDE=$(IFS=, ; echo \"${FILES_TO_EXCLUDE[*]}\")\n\n# Call the supporting script file to generate the mocks\n# !! Don't forget to add all defined mocks above to the end of this call !!\n${PROJECT_DIR}/Supporting\\ Scripts/buildphase_runcuckoo.sh -p \"${PRODUCT_NAME}\" -o \"${OUTPUT_DIR}\" -e \"${MERGED_EXCLUDE}\" \"${MERGED}\"\n";
 		};
 		A706703AF09ED1F389115A7F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2681,13 +2911,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B324FFB25A48309004569FD /* YotoiOS_AppCoordinator.swift in Sources */,
+				9B32500B25A48309004569FD /* YotoiOS_OnboardingStepContainer.swift in Sources */,
+				9B32502225A48309004569FD /* YotoKit_SearchGameTarget.swift in Sources */,
+				9B32502025A48309004569FD /* YotoKit_API+Injection.swift in Sources */,
 				9B6B3F1C255C11650049C3DA /* SearchGameSeeds.swift in Sources */,
+				9B32500825A48309004569FD /* YotoiOS_SearchGameTableDataSource.swift in Sources */,
+				9B32500125A48309004569FD /* YotoiOS_GameDetailsViewController.swift in Sources */,
+				9B32546825AC9FEC004569FD /* YotoUIKit_KeychainError.swift in Sources */,
+				9B32500225A48309004569FD /* YotoiOS_OnboardingStep.swift in Sources */,
+				9B32500D25A48309004569FD /* YotoKit_SearchGameViewModel.swift in Sources */,
+				9B32546625AC9FEC004569FD /* YotoUIKit_Keychain.swift in Sources */,
+				9B32501025A48309004569FD /* YotoKit_GamesInMemoryRepository.swift in Sources */,
+				9B32500E25A48309004569FD /* YotoKit_GameDetailsViewModel.swift in Sources */,
 				9B6B3F1D255C11650049C3DA /* TwitchSeeds.swift in Sources */,
+				9B324FFF25A48309004569FD /* YotoiOS_AppLaunch+Injection.swift in Sources */,
 				9B6B3F18255C11650049C3DA /* GameSeeds.swift in Sources */,
+				9B32502125A48309004569FD /* YotoKit_KeychainAttributes+IGDB.swift in Sources */,
 				9B6B3F19255C11650049C3DA /* StubUtils.swift in Sources */,
+				9B32546725AC9FEC004569FD /* YotoUIKit_BaseCoordinator.swift in Sources */,
+				9B32501325A48309004569FD /* YotoKit_SearchGamesRemoteRepository.swift in Sources */,
+				9B324FF225A48309004569FD /* YotoiOS_BasicTextSlide.swift in Sources */,
+				9B32501725A48309004569FD /* YotoKit_GamesRepository.swift in Sources */,
+				9B3255D925ACB4C2004569FD /* YotoUIKit_Coordinator.swift in Sources */,
+				9B32500725A48309004569FD /* YotoiOS_GameList+Injection.swift in Sources */,
+				9B32501A25A48309004569FD /* YotoKit_TwitchTarget.swift in Sources */,
+				9B324FF625A48309004569FD /* YotoiOS_SearchGameViewController.swift in Sources */,
+				9B32501C25A48309004569FD /* YotoKit_SearchGamesRepository.swift in Sources */,
+				9B32500625A48309004569FD /* YotoiOS_RootViewController.swift in Sources */,
+				9B32501625A48309004569FD /* YotoKit_GameListViewModel.swift in Sources */,
+				9B324FFC25A48309004569FD /* YotoiOS_SearchGameRouter.swift in Sources */,
+				9B32500325A48309004569FD /* YotoiOS_GameListViewController.swift in Sources */,
+				9B324FF325A48309004569FD /* YotoiOS_Home+Injection.swift in Sources */,
+				9B32500A25A48309004569FD /* YotoiOS_Startup+Injection.swift in Sources */,
+				9B32501F25A48309004569FD /* YotoKit_OnboardingStepModel.swift in Sources */,
 				9B6B3F1A255C11650049C3DA /* GamesTargetStub.swift in Sources */,
+				9B324FFA25A48309004569FD /* YotoiOS_OnboardingViewController.swift in Sources */,
+				9B32500C25A48309004569FD /* YotoKit_GameList+Injection.swift in Sources */,
+				9B32500025A48309004569FD /* YotoiOS_SearchGameTableViewCell.swift in Sources */,
+				9B32501125A48309004569FD /* YotoKit_OnboardingRepository.swift in Sources */,
+				9B32500525A48309004569FD /* YotoiOS_BasicImageSlide.swift in Sources */,
+				9B324FF725A48309004569FD /* YotoiOS_GameListTableViewCell.swift in Sources */,
 				9B6B3F17255C11650049C3DA /* KeychainSeeds.swift in Sources */,
+				9B32501525A48309004569FD /* YotoKit_Repositories+Injection.swift in Sources */,
+				9B32501825A48309004569FD /* YotoKit_IGDB.swift in Sources */,
+				9B32501E25A48309004569FD /* YotoKit_IGDBError.swift in Sources */,
+				9B32501425A48309004569FD /* YotoKit_LaunchRepository.swift in Sources */,
+				9B32503625A5AC18004569FD /* YotoiOS_SlideDelegate.swift in Sources */,
+				9B32501225A48309004569FD /* YotoKit_TwitchCredentials.swift in Sources */,
+				9B32500425A48309004569FD /* YotoiOS_SearchGame+Injection.swift in Sources */,
+				9B32501B25A48309004569FD /* YotoKit_Twitch.swift in Sources */,
 				9B6B3F1B255C11650049C3DA /* TwitchTargetStub.swift in Sources */,
+				9B32504925A5B467004569FD /* MockUserDefaults.swift in Sources */,
+				9B32500F25A48309004569FD /* YotoKit_GamesTarget.swift in Sources */,
+				9B324FF525A48309004569FD /* YotoiOS_OnboardingCoordinator.swift in Sources */,
+				9B324FF925A48309004569FD /* YotoiOS_LaunchViewController.swift in Sources */,
+				9B32501D25A48309004569FD /* YotoKit_OnboardingViewModel.swift in Sources */,
+				9B324FF825A48309004569FD /* YotoiOS_HomeTabbarController.swift in Sources */,
+				9B32500925A48309004569FD /* YotoiOS_GameListTableDataSource.swift in Sources */,
+				9B32546525AC9FEC004569FD /* YotoUIKit_KeychainAttributes.swift in Sources */,
+				9B324FFD25A48309004569FD /* YotoiOS_OnboardingStepContainerDelegate.swift in Sources */,
+				9B32501925A48309004569FD /* YotoKit_SearchGame+Injection.swift in Sources */,
+				9B324FFE25A48309004569FD /* YotoiOS_BasicOnboardingStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2751,6 +3036,7 @@
 				9BB066B5254D699700B9E2ED /* GameListViewController.swift in Sources */,
 				9BB06676254D678B00B9E2ED /* GameListTableViewCell.swift in Sources */,
 				9B7365E3257F93E5003484F5 /* HomeTabbarController.swift in Sources */,
+				9B32502C25A5ABEF004569FD /* SlideDelegate.swift in Sources */,
 				9BCD0682257E89E100111EFA /* OnboardingViewController.swift in Sources */,
 				9B1CBD93256D12FB0022A48A /* SearchGameTableViewCell.swift in Sources */,
 				9BD8FC6D25878C59006351A5 /* OnboardingStepContainer.swift in Sources */,
@@ -2781,6 +3067,7 @@
 			files = (
 				9BBA3D50254DBFA0005021F0 /* GameListViewControllerTests.swift in Sources */,
 				9BBA3D85254DC276005021F0 /* SearchGameViewControllerTests.swift in Sources */,
+				9B324F2D25A47F56004569FD /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2805,6 +3092,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4CA624255C2025001B69B5 /* KeychainTests.swift in Sources */,
+				9B32525125AC7797004569FD /* BaseCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
